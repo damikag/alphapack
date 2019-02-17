@@ -2,6 +2,12 @@
 
 if (isset($_POST["signup-submit"])){
 	
+	include("../classes/customer.php");
+	$dbh = new Dbh();
+	$user = new Customer($dbh);
+	$user->signup();
+	/*
+	
 	require "dbh.php";
 	
 	$username = $_POST["uid"];
@@ -75,11 +81,11 @@ mysqli_stmt_close($stmt);
 mysqli_close($conn);		
 	
 		
-}
+*/}
 
 
 else{
 	echo("PLEASE LEAVE!");
-	header("Location: ../signup.php.php");
+	header("Location: ../signup.php");
 	exit();
 }

@@ -1,12 +1,22 @@
 <?php
 
-$servername = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "dummy";
-
-$conn = mysqli_connect($servername, $dbuser, $dbpass, $dbname);
-
-if(!$conn){
-	die("Connection failed: " .mysqli_connect_error());
+class Dbh{
+	
+	private $dbServer;
+	private $dbUser;
+	private $dbPassword;
+	private $dbName;
+	
+	public function __construct(){
+		$this->dbServer = "localhost";
+		$this->dbUser = "root";
+		$this->dbPassword = "";
+		$this->dbName = "wasilk";
+	}
+	
+	public function connect(){
+		
+		$conn = new mysqli($this->dbServer,$this->dbUser,$this->dbPassword,$this->dbName);
+		return $conn;
+	}
 }
