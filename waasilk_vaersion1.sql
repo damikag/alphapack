@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `email` varchar(60) NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `confirmed_promotion` (
   PRIMARY KEY (`promo_id`),
   KEY `pr_username` (`pr_username`),
   KEY `ad_username` (`ad_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `phone_no` varchar(15) NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `password` (`password`,`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `pending_promotion` (
   `promotor` varchar(45) NOT NULL,
   PRIMARY KEY (`promo_id`),
   KEY `promotor` (`promotor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+)AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `promotion_commenting` (
   `comment` mediumtext,
   KEY `cus_username` (`cus_username`),
   KEY `promo_id` (`promo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `promotion_rating` (
   `rating` int(11) NOT NULL,
   PRIMARY KEY (`cus_username`,`promo_id`),
   KEY `promo_id` (`promo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `promotor` (
   `rating` int(11) DEFAULT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `promotor_address` (
   `pr_username` varchar(45) NOT NULL,
   `address` varchar(300) NOT NULL,
   KEY `pr_username` (`pr_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+);
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `promotor_commenting` (
   `comment` mediumtext NOT NULL,
   KEY `cus_username` (`cus_username`),
   KEY `pr_username` (`pr_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 -- --------------------------------------------------------
 
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `promotor_rating` (
   `rating` int(11) NOT NULL,
   PRIMARY KEY (`cus_username`,`pr_username`),
   KEY `pr_username` (`pr_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 -- --------------------------------------------------------
 
@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `promotor_subscribing` (
   `pr_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cus_username`,`pr_username`),
   KEY `pr_username` (`pr_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ;
 
 --
 -- Constraints for dumped tables
