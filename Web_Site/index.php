@@ -1,6 +1,7 @@
 <?php
 
 	session_start();
+		
 ?>
 
 <!doctype html>
@@ -74,7 +75,7 @@
                         <div class="search-and-language-bar pull-right">
                             <ul>
 								<?php
-									if (! isset($_SESSION["uid"])){
+									if (! isset($_SESSION["userName"])){
 										echo '<li><a href="login.php"><i class="fa fa-user"></i></a></li>';
 										
 									}
@@ -103,6 +104,7 @@
                                 </li>
                                 <li><a href="service.html">Service</a>
                                     <ul>
+										<li><a href="promoterLogin.php">Login as a promoter</a></li>
                                         <li><a href="service.html">Service Version 1</a></li>
                                         <li><a href="service-2.html">Service Version 2</a></li>
                                         <li><a href="service-3.html">Service Version 3</a></li>
@@ -128,16 +130,28 @@
                                         <li><a href="contact-2.html">Contact Version 2</a></li>
                                     </ul>
                                 </li>
-										<li class="logged-user"><a href="#">
-											</a>
-											<ul>
-												<li><a href="includes/logout.php">Log Out</a></li>
-												<li><a href="contact-2.html">Contact Version 2</a></li>
-											</ul>
-										</li>
+								<li class="logged-user">
+									<?php
 									
+									if (isset($_SESSION["userName"])){
 										
+										$username = $_SESSION["userName"];
+										echo '<a href="#" class="logged-user" background-colour="lightsalmon">
+									'.$username.'
+									</a>
+                                    <ul>
+                                        <li class="logout-submit"><a href="includes/logout.php">Logout</a></li>
+                                        <li><a href="contact-2.html">Contact Version 2</a></li>
+                                    </ul>';
+									}
+									
+									else{
+										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';
+									
+									}
 								
+								?>								
+								</li>	
                             </ul>
                         </div>
                     </div>

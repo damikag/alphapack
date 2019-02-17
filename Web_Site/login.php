@@ -25,7 +25,7 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	
-<title>Login</title>
+<title>Customer Login</title>
 </head>
 
 <body class="single-page">

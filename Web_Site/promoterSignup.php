@@ -24,7 +24,7 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	
-<title>Customer Signup</title>
+<title>Promoter Signup</title>
 </head>
 
 <body class="single-page">
@@ -43,7 +43,7 @@
 
     <!--START TOP AREA-->
     <header class="top-area single-page" id="home">
-        <div class="top-area-bg-signup" data-stellar-background-ratio="0.6"></div>
+        <div class="top-area-bg-signup-promoter" data-stellar-background-ratio="0.6"></div>
         <div class="header-top-area">
             <!--MAINMENU AREA-->
             <div class="mainmenu-area" id="mainmenu-area">
@@ -130,15 +130,20 @@
     <!--ABOUT AREA-->
 	<section class="about-area gray-bg section-padding">
 		<div class="container-signup">	
-      		<div class="form">
+      		<div class="form-promter">
 				
 			<form action="includes/signup.php" method="post">
 				<input type="text" placeholder="Enter the User name" name="uid">
-				<input type="password" placeholder="Enter the password" name="password">
-				<input type="password" placeholder="Re enter the password" name="re-password">
+				<input type="text" placeholder="Enter the Promoter name" name="promoterName">
 				<input type="email" placeholder="Enter your email" name="email">
-				<input type="number" placeholder="Enter your phone number" name="phone">
-				<button type="submit" name="signup-submit">Sign Up1</button>
+				<input type="password" placeholder="Enter the password" name"password">
+				<input type="password" placeholder="Re enter the password" name="rePassword">
+				<input type="number" placeholder="Enter your phone number" name="email">
+				<input type="text" placeholder="Enter the promoter web site*" name="promoterName">
+				<input type="text" placeholder="Enter the promoter facebook link*" name="promoterName">
+				<br />
+				<p >* Enter if any, else left blank.</p>
+				<button type="submit" name="signup-submit">Sign Up</button>
 				
 			</form>
 		

@@ -20,11 +20,12 @@
     <!--====== MAIN STYLESHEETS ======-->
 	<link rel="stylesheet" href="css/style2.css">
     <link href="style.css" rel="stylesheet">
+	
     <link href="css/responsive.css" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	
-<title>Customer Signup</title>
+<title>Promoter Login</title>
 </head>
 
 <body class="single-page">
@@ -43,7 +44,7 @@
 
     <!--START TOP AREA-->
     <header class="top-area single-page" id="home">
-        <div class="top-area-bg-signup" data-stellar-background-ratio="0.6"></div>
+        <div class="top-area-bg-login-promoter" data-stellar-background-ratio="0.6"><div class="login-top"></div></div>
         <div class="header-top-area">
             <!--MAINMENU AREA-->
             <div class="mainmenu-area" id="mainmenu-area">
@@ -118,7 +119,7 @@
                 <div class="row flex-v-center">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="welcome-text text-center">
-                            <h2>Signup to experience more!</h2>
+                            <h2>Login to enjoy!</h2>
                         </div>
                     </div>
                 </div>
@@ -129,21 +130,20 @@
 
     <!--ABOUT AREA-->
 	<section class="about-area gray-bg section-padding">
-		<div class="container-signup">	
-      		<div class="form">
-				
-			<form action="includes/signup.php" method="post">
-				<input type="text" placeholder="Enter the User name" name="uid">
-				<input type="password" placeholder="Enter the password" name="password">
-				<input type="password" placeholder="Re enter the password" name="re-password">
-				<input type="email" placeholder="Enter your email" name="email">
-				<input type="number" placeholder="Enter your phone number" name="phone">
-				<button type="submit" name="signup-submit">Sign Up1</button>
-				
-			</form>
 		
-			</div>
-		</div>	
+        <div class="container-login">
+			<div class="login-box">
+			  <form action="includes/login.php" method="post">
+					<input type="text" placeholder="Enter the user name" name="uid">
+					<input type="password" placeholder="Enter the password" name="password"><br>
+					<input type="submit" value="Login" name="login-promoter-submit"><br>
+					<a href="#">Lost your password</a><br>
+					<a href="promoterSignup.php">Don't have an account</a>
+			</form>
+
+		</div>  
+           
+        </div>
     </section>
 			
 
