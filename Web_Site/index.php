@@ -5,27 +5,12 @@
 ?>
 
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-
+<html>
 <head>
-    <!--====== USEFULL META ======-->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Transportation & Agency Template is a simple Smooth transportation and Agency Based Template" />
-    <meta name="keywords" content="Portfolio, Agency, Onepage, Html, Business, Blog, Parallax" />
-
-    <!--====== TITLE TAG ======-->
-    <title>Carries HTML5 Business Template</title>
-
-    <!--====== FAVICON ICON =======-->
+    <title>වාසි.lk</title>
     <link rel="shortcut icon" type="image/ico" href="img/favicon.png" />
-
+	
     <!--====== STYLESHEETS ======-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -33,11 +18,13 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/imagehover.min.css" rel="stylesheet">
 
     <!--====== MAIN STYLESHEETS ======-->
 	<link rel="stylesheet" href="css/style2.css">
     <link href="style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+	<link href="css/ihover.css" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <!--[if lt IE 9]>
@@ -82,7 +69,7 @@
 								?>
                                 
                                 <li class="search-box"><i class="fa fa-search"></i></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                               	</li>
                             </ul>
                             <form action="#" class="search-form">
                                 <input type="search" name="search" id="search">
@@ -92,42 +79,11 @@
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav">
 								<li><a href="index.php">home</a></li>
-                                <li><a href="about.html">about</a>
-                                    <ul>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="about-company-profile.html">About Profile</a></li>
-                                        <li><a href="about-company-history.html">About History</a></li>
-                                        <li><a href="about-company-report.html">About Report</a></li>
-                                        <li><a href="about-team.html">About Team</a></li>
-                                        <li><a href="about-support.html">About Support</a></li>
-                                    </ul>
+								<li><a href="about.html">about</a>
                                 </li>
                                 <li><a href="service.html">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-                                        <li><a href="service.html">Service Version 1</a></li>
-                                        <li><a href="service-2.html">Service Version 2</a></li>
-                                        <li><a href="service-3.html">Service Version 3</a></li>
-                                        <li><a href="single-service.html">Service Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Other Pages</a>
-                                    <ul>
-                                        <li><a href="404.html">404</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html">Blog</a>
-                                    <ul>
-                                        <li><a href="blog.html">Blog Version 1</a></li>
-                                        <li><a href="blog-2.html">Blog Version 2</a></li>
-                                        <li><a href="single-blog.html">Single Blog</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a>
-                                    <ul>
-                                        <li><a href="contact.html">Contact Version 1</a></li>
-                                        <li><a href="contact-2.html">Contact Version 2</a></li>
                                     </ul>
                                 </li>
 								<li class="logged-user">
@@ -146,10 +102,8 @@
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';
-									
+										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
 									}
-								
 								?>								
 								</li>	
                             </ul>
@@ -169,8 +123,7 @@
                                 <h1>ALL YOUR PROMOTION NEEDS IN ONE PLACE!</h1>
                                 <p>Without promotion, something terrible happens... nothing!</p>
                                 <div class="home-button">
-                                    <a href="#">Our Service</a>
-                                    <a href="#">Get A Quate</a>
+                                    <a href="#categories">Categories</a>
                                 </div>
                             </div>
                         </div>
@@ -182,11 +135,11 @@
                     <div class="row flex-v-center">
                         <div class="col-md-10 col-md-offset-1">
                             <div class="welcome-text text-center">
-                                <h1>WE MAKE STRONGEST SERVICE ABOVE THE WORLD</h1>
+                                <h1>ALL YOUR PROMOTION NEEDS IN ONE PLACE!</h1>
                                 <p>Without promotion, something terrible happens... nothing!</p>
                                 <div class="home-button">
-                                    <a href="#">Our Service</a>
-                                    <a href="#">Get A Quate</a>
+                                    <a href="#categories">Categories</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -198,11 +151,10 @@
                     <div class="row flex-v-center">
                         <div class="col-md-10 col-md-offset-1">
                             <div class="welcome-text text-center">
-                                <h1>WE MAKE STRONGEST SERVICE ABOVE THE WORLD</h1>
+                                <h1>ALL YOUR PROMOTION NEEDS IN ONE PLACE!</h1>
                                 <p>Without promotion, something terrible happens... nothing!</p>
                                 <div class="home-button">
-                                    <a href="#">Our Service</a>
-                                    <a href="#">Get A Quate</a>
+                                    <a href="#categories">Categories</a>
                                 </div>
                             </div>
                         </div>
@@ -215,51 +167,97 @@
     <!--END TOP AREA-->
 
     <!--BLOG AREA-->
-    <section class="blog-area gray-bg padding-top">
+    <section class="blog-area gray-bg padding-top" id="categories">
+		<h2 class="index-h2">OUR MAIN CATEGORIES</h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_1.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3><a href="single-blog.html">Ocean Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
+						<div class ="blog-image">
+							<figure class="imghvr-hinge-left"><img src="img/blog/04-fashion-upgrades-classic-coats.jpg" alt="example-image">
+							<figcaption>
+								<h3 align="center">FOOD</h3>
+								<p align="center">“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.” 
+								― J.R.R. Tolkien</p>
+								<p align="center">Check out food promotions here!</p>
+							</figcaption>
+							</figure>
+						</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_2.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-plane"></i></a></div>
-                            <h3><a href="single-blog.html">Air Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
+						<div class ="blog-image">
+							<figure class="imghvr-hinge-up"><img src="img/blog/04-fashion-upgrades-classic-coats (1).jpg" alt="example-image">
+							<figcaption>
+								<h3 align="center">CLOTHS &amp; ACCESSORIES</h3>
+								<p align="center">"You can have anything you want in life if you dress for it." — Edith Head.</p>
+								<p align="center">Check out cloths &amp; accessories promotions here!</p>
+							</figcaption>
+							</figure>
+						</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_3.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-truck"></i></a></div>
-                            <h3><a href="single-blog.html">Street Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
+						<div class ="blog-image">
+							<figure class="imghvr-hinge-right"><img src="img/blog/movies.jpg" alt="example-image">
+							<figcaption>
+								<h3 align="center">MOVIES</h3>
+								<p align="center">“It's funny how the colors of the real world only seem really real when you watch them on a screen.” 
+								― anthony burgess, A Clockwork Orange.</p>
+								<p align="center">Check out movies promotions here!</p>
+							</figcaption>
+							</figure>
+						</div>
+                    </div>
+                </div>
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+						<div class ="blog-image">
+							<figure class="imghvr-hinge-left"><img src="img/blog/perfect-selfie.jpg" alt="example-image">
+							<figcaption>
+								<h3 align="center">ELECTRONIC DEVICES</h3>
+								<p align="center">"The new electronic independence re-creates the world in the image of a global village"- Marshall McLuhan.</p>
+								<p align="center">Check out electronic devices promotions here!</p>
+							</figcaption>
+							</figure>
+						</div>
+                    </div>
+                </div>
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+						<a href="index.php">
+                        <div class ="blog-image">
+							<figure class="imghvr-hinge-down"><img src="img/blog/Girl_Soccer_Goalie.jpg" alt="example-image">
+							>
+							<figcaption>
+								<h3 align="center">SPORTS EQUIPMENTS</h3>
+								<p align="center">"Champions keep playing until they get it right" - Billie Jean King</p>
+								<p align="center">Check out sports equipments promotions here!</p>
+							</figcaption>
+							
+							</figure>
+						</div>
+						</a>
+                    </div>
+                </div>
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+                        <div class ="blog-image">
+							<figure class="imghvr-hinge-right"><img src="img/blog/04-fashion-upgrades-classic-coat11s.jpg" alt="example-image">
+							<figcaption>
+								<h3 align="center">OTHER</h3>
+								<p align="center">Check out other promotions here!</p>
+							</figcaption>
+							</figure>
+						</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!--BLOG AREA END-->
 
     <!--ABOUT AREA-->
@@ -566,17 +564,8 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                         <div class="subscribe-content">
-                            <h2>Weekly Newsletter</h2>
-                            <p>There are many vaiations of passages of lorem ipsum available.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <div class="subscriber-form-area">
-                            <form action="#" class="subsriber-form">
-                                <label for="subscriber-mail"><i class="fa fa-envelope-o"></i></label>
-                                <input type="email" name="subscriber-mail" id="subscriber-mail" placeholder="Enter Your Mail">
-                                <button type="submit">subscribe</button>
-                            </form>
+                            <h2>WAASI.LK</h2>
+                            <p>The biggest promotion collection in Sri Lanka.</p>
                         </div>
                     </div>
                 </div>
@@ -593,32 +582,10 @@
                     <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                         <div class="single-footer-widget footer-about">
                             <h3>About Us</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>We revolutionside the way of promotion in the country.</p>
                             <ul>
-                                <li><i class="fa fa-phone"></i> <a href="callto:+8801911854378">+8801911854378</a></li>
-                                <li><i class="fa fa-map-marker"></i> <a href="mailto:backpiper.com@gmail.com">backpiper.com@gmail.com</a></li>
-                                <li><i class="fa fa-phone"></i> Gazipur, 1704, Bangladesh. 1215.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget twitter-widget">
-                            <h3>Latest Tweets</h3>
-                            <ul>
-                                <li>
-                                    <div class="twitter-icon"><i class="fa fa-phone"></i></div>
-                                    <div class="tweet-detail">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem .</p>
-                                        <a href="#" class="tweet-meta">5 Miniutes Ago</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="twitter-icon"><i class="fa fa-phone"></i></div>
-                                    <div class="tweet-detail">
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem .</p>
-                                        <a href="#" class="tweet-meta">5 Miniutes Ago</a>
-                                    </div>
-                                </li>
+                                <li><i class="fa fa-phone"></i> <a href="callto:+8801911854378">011-299-9999</a></li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:backpiper.com@gmail.com">xxx.com@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -629,22 +596,75 @@
                                 <li><a href="#">Support Forums</a></li>
                                 <li><a href="#">Communication</a></li>
                                 <li><a href="#">FAQS</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Rules & Condition</a></li>
+								<li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+					<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                         <div class="single-footer-widget instafeed-widget">
-                            <h3>Customer Service</h3>
+                            <h3>Main Categories</h3>
                             <ul>
-                                <li><a href="#"><img src="img/instafeed/1.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/2.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/3.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/4.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/5.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/6.jpg" alt=""></a></li>
+								<li>
+								<div class="ih-item circle colored effect2 right_to_left"><a href="#">
+								<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+								<div class="info">
+								  <h3>Food</h3>
+								  <p>Promotions of food!</p>
+								</div></a></div>
+								</li>
+								
+								<li>
+								<div class="ih-item circle colored effect2 right_to_left"><a href="#">
+								<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+								<div class="info">
+								  <h3>Food</h3>
+								  <p>Promotions of food!</p>
+								</div></a></div>
+								</li>
+								
+								<li>									
+								<div class="ih-item circle colored effect2 right_to_left"><a href="#">
+								<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+								<div class="info">
+								  <h3>Food</h3>
+								  <p>Promotions of food!</p>
+								</div></a></div>
+								</li>
+								
+								<li>	
+								<div class="ih-item circle colored effect2 right_to_left"><a href="#">
+								<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+								<div class="info">
+								  <h3>Food</h3>
+								  <p>Promotions of food!</p>
+								</div></a></div>
+								</li>
+									
+								<li>
+								<div class="ih-item circle colored effect2 right_to_left"><a href="#">
+								<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+								<div class="info">
+								  <h3>Food</h3>
+								  <p>Promotions of food!</p>
+								</div></a></div>
+								</li>
+								
+								<li>	
+								<div class="ih-item circle colored effect2 right_to_left"><a href="#">
+								<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+								<div class="info">
+								  <h3>Food</h3>
+								  <p>Promotions of food!</p>
+								</div></a></div>
+								</li>
+									
+                            <!--    <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coat11s.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats (1).jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/Girl_Soccer_Goalie.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/movies.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/perfect-selfie.jpg" alt=""></a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -667,14 +687,12 @@
                     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                         <div class="footer-social-bookmark text-right wow fadeIn">
                             <ul class="social-bookmark">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="https://www.facebook.com/%E0%B7%80%E0%B7%8F%E0%B7%83%E0%B7%92lk-491144901414109/?modal=admin_todo_tour"><i class="fa fa-facebook fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
                             </ul>
                         </div>
                     </div>
+					
                 </div>
             </div>
         </div>
