@@ -217,13 +217,14 @@
 						<div class="single-sidebar-widget widget_categories">
 							<h3>Customer Rating</h3>
 							<div class="box">
-								<div class="blog-meta"> <a href=""><i class="fa-star-o"></i></a></div>
-								<a href=""><i></i></a>
-								<a href=""><i></i></a>
-								<a href=""><i></i></a>
-								<a href=""><i></i></a>
-							</div>
-                    	</div>
+									<a href=""><i class="fa fa-star fa-4x"></i></a>
+									<a href=""><i class="fa fa-star fa-4x"></i></a>
+									<a href=""><i class="fa fa-star fa-4x"></i></a>
+									<a href=""><i class="fa fa-star fa-4x"></i></a>
+									<a href=""><i class="fa fa-star fa-4x"></i></a>
+									
+                    		</div>
+						</div>
 
 						<div class="single-sidebar-widget widget_categories">
 							<h3>Give a comment</h3>
@@ -234,6 +235,11 @@
 								<button type="submit">Comment</button>
 							</form>
                     	</div>
+						
+						<div class="single-sidebar-widget widget_categories">
+							<h3>User Comments</h3>
+                    	</div>
+						
                         <div class="single-sidebar-widget widget_categories">
                             <h4>Main Categories</h4>
                             <ul>
