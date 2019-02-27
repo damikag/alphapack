@@ -84,6 +84,40 @@ h2.index-h2{
 	
 }
 
+.box{
+	direction: rtl;
+}
+
+.box a i{
+	transition: 0.3s all;
+}
+
+.box a i:hover{
+	color: #F39C12;
+}
+
+.s1:hover ~ .s2{
+	color: #F39C12;
+}
+
+.s2:hover ~ i{
+	color: #F39C12;
+}
+
+.s3:hover ~ i{
+	color: #F39C12;
+}
+
+.s4:hover ~ i{
+	color: #F39C12;
+}
+
+.s5:hover ~ i{
+	color: #F39C12;
+}
+
+
+
 /*-------------------------------------------*/
 
 /*Login-Promoter*/

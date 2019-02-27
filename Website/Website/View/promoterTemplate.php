@@ -217,11 +217,11 @@
 						<div class="single-sidebar-widget widget_categories">
 							<h3>Customer Rating</h3>
 							<div class="box">
-									<a href=""><i class="fa fa-star fa-4x"></i></a>
-									<a href=""><i class="fa fa-star fa-4x"></i></a>
-									<a href=""><i class="fa fa-star fa-4x"></i></a>
-									<a href=""><i class="fa fa-star fa-4x"></i></a>
-									<a href=""><i class="fa fa-star fa-4x"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s1"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s2"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s3"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s4"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s5"></i></a>
 									
                     		</div>
 						</div>
@@ -237,7 +237,7 @@
                     	</div>
 						
 						<div class="single-sidebar-widget widget_categories">
-							<h3>User Comments</h3>
+							<h3>Customer Comments</h3>
                     	</div>
 						
                         <div class="single-sidebar-widget widget_categories">
