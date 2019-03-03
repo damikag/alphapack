@@ -327,75 +327,6 @@
                             </ul>
                         </div>
                     </div>
-					<!--<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget instafeed-widget">
-                            <h3>Main Categories</h3>
-                            <ul>
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-								
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								
-									
-                            <!--    <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coat11s.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats (1).jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/Girl_Soccer_Goalie.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/movies.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/perfect-selfie.jpg" alt=""></a></li>-->
-                           <!-- </ul>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -420,14 +351,12 @@
                             </ul>
                         </div>
                     </div>
-					
                 </div>
             </div>
         </div>
     </div>
     <!--FOOER AREA END-->
-
-
+	
     <!--====== SCRIPTS JS ======-->
     <script src="../Extra/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="../Extra/js/vendor/bootstrap.min.js"></script>
@@ -446,5 +375,4 @@
     <!--===== ACTIVE JS=====-->
     <script src="../Extra/js/main.js"></script>
 </body>
-
 </html>

@@ -213,3 +213,8 @@ jQuery(window).on('load', function () {
     $(".preeloader").fadeOut(1000);
 
 });
+
+/*-------------------------
+	STAR RATING
+---------------------------*/
+

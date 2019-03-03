@@ -217,11 +217,11 @@
 						<div class="single-sidebar-widget widget_categories">
 							<h3>Customer Rating</h3>
 							<div class="box">
-									<a href=""><i class="fa fa-star fa-4x s1"></i></a>
-									<a href=""><i class="fa fa-star fa-4x s2"></i></a>
-									<a href=""><i class="fa fa-star fa-4x s3"></i></a>
-									<a href=""><i class="fa fa-star fa-4x s4"></i></a>
-									<a href=""><i class="fa fa-star fa-4x s5"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s1" id="1"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s2" id="2"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s3" id="3"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s4" id="4"></i></a>
+									<a href=""><i class="fa fa-star fa-4x s5" id="5"></i></a>
 									
                     		</div>
 						</div>
