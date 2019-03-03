@@ -35,7 +35,7 @@ class Customer{
 				if($row = $results->fetch_array(MYSQLI_ASSOC)){
 					$passCheck = password_verify($password,$row["password"]);
 					if ($passCheck == false){
-						header("Location: ../View/login.php?error=noUser");
+						header("Location: ../View/login.php?error=wrongPassword");
 						exit();
 					}
 					else if($passCheck==true){
@@ -152,4 +152,4 @@ class Customer{
 	}
 	
 					
-}
+}				
