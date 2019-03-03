@@ -228,11 +228,9 @@
 
 						<div class="single-sidebar-widget widget_categories">
 							<h3>Give a comment</h3>
-							<form class="quote-form" action="#">
-								<p>
+							<form class="quote-form" action="../Controller/comment.php">
 									<textarea name="quote-message" id="quote-message" cols="30" rows="4" placeholder="Your Comment..."></textarea>
-								</p>
-								<button type="submit">Comment</button>
+								<button type="submit" name="comment-submit">Comment</button>
 							</form>
                     	</div>
 						
