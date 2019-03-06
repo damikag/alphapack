@@ -66,7 +66,7 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="#home" class="navbar-brand"><img src="../Extra/img/logo.png" alt="logo"></a>
+                            <a href="index.php" class="navbar-brand"><img src="../Extra/img/logo.png" alt="logo"></a>
                         </div>
                         <div class="search-and-language-bar pull-right">
                             <ul>

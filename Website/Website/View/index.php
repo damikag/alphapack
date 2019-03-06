@@ -99,7 +99,6 @@
 									</a>
                                     <ul>
                                         <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                        <li><a href="contact-2.html">Contact Version 2</a></li>
                                     </ul>';
 									}
 									

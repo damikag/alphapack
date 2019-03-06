@@ -44,7 +44,8 @@
 
     <!--START TOP AREA-->
     <header class="top-area single-page" id="home">
-        <div class="top-area-bg-signup" data-stellar-background-ratio="0.6"></div>
+        <!--<div class="top-area-bg-signup" data-stellar-background-ratio="0.6"></div>-->
+		<div class="top-area-bg-signup-promoter" data-stellar-background-ratio="0.6"></div>
         <div class="header-top-area">
             <!--MAINMENU AREA-->
             <div class="mainmenu-area" id="mainmenu-area">
@@ -52,7 +53,7 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="#home" class="navbar-brand"><img src="../Extra/img/logo.png" alt="logo"></a>
+                            <a href="index.php" class="navbar-brand"><img src="../Extra/img/logo.png" alt="logo"></a>
                         </div>
                         <div class="search-and-language-bar pull-right">
                             <ul>
@@ -93,7 +94,6 @@
 									</a>
                                     <ul>
                                         <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                        <li><a href="contact-2.html">Contact Version 2</a></li>
                                     </ul>';
 									}
 									

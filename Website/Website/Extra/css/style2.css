@@ -184,7 +184,16 @@ h2.index-h2{
     width: 100%;
 }
 
-.top-area-bg-signup::after {
+.top-area-bg-signup::after{
+	background: #3c4147;
+	opacity: 0.9;
+	height: 100%;
+	left:0;
+	position: absolute;
+	width: 100%;
+}
+
+/*.top-area-bg-signup::after {
     background: #3c4147;
     height: 100%;
     left: 0;
@@ -192,7 +201,7 @@ h2.index-h2{
     position: absolute;
     top: 0;
     width: 100%;
-}
+}*/
 
 /*SignUp-promoter*/
 
