@@ -1,20 +1,4 @@
 
-<html>
-
-<body class="home-one">
-
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!--- PRELOADER -->
-    <div class="preeloader">
-        <div class="preloader-spinner"></div>
-    </div>
-
-    <!--SCROLL TO TOP-->
-    <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
-	
     <!--FOOER AREA-->
 	
     <div class="footer-area dark-bg">
@@ -198,6 +182,4 @@
 
     <!--===== ACTIVE JS=====-->
     <script src="Extra/js/main.js"></script>
-</body>
 
-</html>
