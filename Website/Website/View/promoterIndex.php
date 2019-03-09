@@ -116,8 +116,8 @@
                 <div class="row flex-v-center">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="welcome-text text-center">
-                            <h1>WE MAKE STRONGEST SERVICE ABOVE THE WORLD</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <h1>PROMOTE YOUR BUSINESS ALL AROUND SRI LANKA AND BEYOND</h1>
+                            <p>We have the maximum customer coverage around the country.</p>
                         </div>
                     </div>
                 </div>
@@ -132,40 +132,40 @@
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-image">
+                        <!--<div class="blog-image">
                             <img src="img/blog/blog_1.jpg" alt="">
-                        </div>
+                        </div>-->
                         <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3><a href="single-blog.html">Ocean Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
+                            <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
+                            <h3><a href="single-blog.html">ADD PROMOTIONS</a></h3>
+                            <p>Click below to add a new promotion!</p>
+                            <a href="#" class="read-more">ADD</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_2.jpg" alt="">
-                        </div>
+                    <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
+                        <!--<div class="blog-image">
+                            <img src="img/blog/blog_1.jpg" alt="">
+                        </div>-->
                         <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-plane"></i></a></div>
-                            <h3><a href="single-blog.html">Air Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
+                            <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
+                            <h3><a href="single-blog.html">UPDATE DETAILS</a></h3>
+                            <p>Click below to upadte your business details!</p>
+                            <a href="#" class="read-more">UPDATE</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_3.jpg" alt="">
-                        </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
+                        <!--<div class="blog-image">
+                            <img src="img/blog/blog_1.jpg" alt="">
+                        </div>-->
                         <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-truck"></i></a></div>
-                            <h3><a href="single-blog.html">Street Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
+                            <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
+                            <h3><a href="single-blog.html">VIEW PROMOTIONS</a></h3>
+                            <p>Click below to view promotions of your business.</p>
+                            <a href="#" class="read-more">VIEW</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
     <!--BLOG AREA END-->
 
     <!--ABOUT AREA-->
-    <section class="about-area gray-bg section-padding">
+    <!--<section class="about-area gray-bg section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
@@ -228,11 +228,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--ABOUT AREA END-->
 
     <!--SERVICE AREA-->
-    <section class="service-area-two section-padding">
+    <!--<section class="service-area-two section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
@@ -300,11 +300,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--SERVICE AREA END-->
 
     <!--BLOG AREA-->
-    <section class="blog-area blog-bottom gray-bg section-padding">
+    <!--<section class="blog-area blog-bottom gray-bg section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
@@ -357,7 +357,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--BLOG AREA END-->
 
     <!--TESTMONIAL AREA -->
@@ -434,7 +434,7 @@
             </div>
         </div>
     </section>
-    <!--TESTMONIAL AREA END -->
+    <!--TESTMONIAL AREA END --> -->
 
     <!--CLIENTS AREA-->
     <section class="clients-area section-padding gray-bg wow fadeIn">
@@ -479,7 +479,7 @@
     </section>
     <!--CLIENTS AREA END-->
 
-    <!--FOOER AREA-->
+    <!--FOOTER AREA-->
     <div class="footer-area dark-bg">
         <div class="footer-area-bg"></div>
         <div class="footer-top-area wow fadeIn">
@@ -571,7 +571,7 @@
             </div>
         </div>
     </div>
-    <!--FOOER AREA END-->
+    <!--FOOTER AREA END-->
 
 
     <!--====== SCRIPTS JS ======-->
