@@ -58,10 +58,15 @@
 				
 				<input type="text" placeholder="Enter the Title" name="title">
 				<input type="text" placeholder="Enter the Description" name="description">
-				<input type="text" placeholder="Enter the Start Date" name="start-date">
-				<input type="text" placeholder="Enter the end date" name="end-date">
-				<input type="text" placeholder="Enter your link" name="link">
-				<button type="submit" name="addPromo-submit">Sign Up</button>
+				<input type="date" placeholder="Enter the Start Date" name="start-time">
+				<input type="date" placeholder="Enter the end date" name="end-time">
+				<input type="url" placeholder="Enter your link" name="link">
+				<input type="text" placeholder="Enter the location" name="location">
+				<input type="image">
+				
+				<br>
+				
+				<button type="submit" name="addPromo-submit">Add Promo</button>
 				
 			</form>
 		

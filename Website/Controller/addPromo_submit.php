@@ -2,48 +2,59 @@
 
 if (isset($_POST["addPromo-submit"])){
 	
-	include("../Model/customer.php");
-	$dbh = new Dbh();
+	//include("../Model/customer.php");
+	//include "dbh.php";
+	//$dbh = new Dbh();
 	//$user = new Customer($dbh);
 	//$user->signup();
 	
-	private $titile=$_POST["title"];
-	private $category=$_POST["category"];
-	private $promoter;
-	private $description=$_POST["description"];
-	private $startTime=$_POST["start-time"];
-	private $endTime=$_POST["end-time"];
-	private $location=$_POST["location"];
-	private $link=$_POST["link"];
-	private $image;
-	private $state="pending";
-	private $promoID;
+	$category=$_POST["category"];
+	$title=$_POST["title"];
+	$description=$_POST["description"];
+	$startTime=$_POST['start-time'];//$_POST["start-time"];
+	$endTime=$_POST["end-time"];
+	$location=$_POST["location"];
+	$link=$_POST["link"];
+	$image="testImage";
+	$state="pending";
+	$promoID=null;
+	$pr_username="demoPromotor1";
+	$ad_username="admin1";
 	
 	
+	echo("<h1>.$title.</h1>");
+	echo("<h1>.$category.</h1>");
+	echo("<h1>.$description.</h1>");
+	echo("<h1>.$startTime.</h1>");
+	echo("<h1>.$endTime.</h1>");
+	echo("<h1>.$location.</h1>");
+	echo("<h1>.$link.</h1>");
 	
-	
-	require "dbh.php";
+	//require "dbh.php";
 	
 	if(empty($title) || empty($description)){
 		
-		header("Location: ../addPromo.php?error=emptyFields_&titile=".$titile."_&description=".$description);
+		header("Location: ../View/addPromo.php?error=emptyFields_&titile=".$titile."_&description=".$description);
 		exit();
 	}	
 	else{
-		include "../Model/Promotion.php";
+		require_once "../Model/Promotion.php";
+		
+		//$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
+		$promotion=new Promotion(null,$category,$title,$description,$image,$link,$state,$startTime,$endTime,$location,$pr_username,$ad_username	);
+		
+		Promotion::addPromotionToDB($promotion);
 		
 		
-		$promotion=new Promotion(null,$category,$promoter,$title,$description,$image,$link,$startTime,$endTime,$location,$state);
 		
-		Promotion->addPromotionToDB($promotion);
 		//header("Location: ../View/index.php");
 		exit();
 		
 		
 	}
 		
-mysqli_stmt_close($stmt);
-mysqli_close($conn);		
+//mysqli_stmt_close($stmt);
+//mysqli_close($conn);		
 	
 		
 }

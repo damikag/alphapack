@@ -5,53 +5,56 @@ include("../Controller/dbh.php");
 class Promotion{
 	
 	
-	private $dbh;
+	//private $dbh;
 	
-	private $titile;
+	private $title;
 	private $category;
-	private $promoter;
+	private $pr_username;
 	private $description;
-	private $startTime;
-	private $endTime;
+	private $startDate;
+	private $endDate;
 	private $location;
 	private $link;
 	private $image;
 	private $state;
 	private $promoID;
+	private $ad_username;
 	
-	public function __construct($promoID,$category,$promoter,$title,$description,$image,$link,$startTime,$endTime,$location,$state){
+	public function __construct($promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$pr_username,$ad_username){
 		//$this->dbh = $dbh;
 		$this->promoID=$promoID;
 		$this->category=$category;
-		$this->promoter=$promoter;
 		
-		$this->titile=$title;
+		
+		$this->title=$title;
 		$this->description=$description;
 		$this->image=$image;
 		
 		$this->link=$link;
-		$this->startTime=$startTime;
-		$this->endTime=$endTime;
+		$this->state=$state;
+		$this->startDate=$startDate;
+		$this->endDate=$endDate;
 		
 		$this->location=$location;
-		$this->state=$state;
-		
+
+		$this->pr_username=$pr_username;	
+		$this->ad_username=$ad_username;
 	}
 	
-	public function setTitile($title){
-		$this->titile=$title;
+	public function setTitle($title){
+		$this->title=$title;
 	}
 	
 	public function setDescription($description){
 		$this->description=$description;
 	}
 	
-	public function setStartTime($startTime){
-		$this->startTime=$startTime;
+	public function setStartDate($startDate){
+		$this->startDate=$startDate;
 	}
 	
-	public function setEndTime($endTime){
-		$this->endTime=$endTime;
+	public function setEndDate($endDate){
+		$this->endDate=$endDate;
 	}
 	
 	public function setLocation($location){
@@ -71,47 +74,51 @@ class Promotion{
 	}
 	
 	public function getCategory(){
-		return $category;
+		return $this->category;
 	}
 	
 	public function getTitle(){
-		return $title;
+		return $this->title;
 	}
 	
-	public function getPromoter(){
-		return $promoter;
+	public function getPr_username(){
+		return $this->pr_username;
+	}
+	
+	public function getAd_username(){
+		return $this->ad_username;
 	}
 	
 	public function getDescription(){
-		return $description;
+		return $this->description;
 	}
 	
 	public function getImage(){
-		return $image;
+		return $this->image;
 	}
 	
 	public function getLink(){
-		return $link;
+		return $this->link;
 	}
 	
 	public function getLocation(){
-		return $location;
+		return $this->location;
 	}
 	
-	public function getStartTime(){
-		return $startTime;
+	public function getStartDate(){
+		return $this->startDate;
 	}
 	
-	public function getEndTime(){
-		return $endTime;
+	public function getEndDate(){
+		return $this->endDate;
 	}
 	
 	public function getState(){
-		return $state;
+		return $this->state;
 	}
 	
 	public function getPromoID(){
-		return $promoID;
+		return $this->promoID;
 	}
 	
 	
@@ -134,6 +141,7 @@ class Promotion{
 		$results = $sql->get_result();
 		if($row = $results->fetch_array(MYSQLI_ASSOC)){
 
+			//$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
 			return new Promotion($row["promo_id"],$row["category"],$row["ad_username"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row["start_date"],$row["end_date"],$row["location"],$row["state"]);
 		}
 
@@ -143,16 +151,37 @@ class Promotion{
 	}
 	
 	public static function addPromotionToDB($promotion){
-		$dbh=new Dbh();
-			$conn = $this->dbh->connect();
+		try{
+			$dbh=new Dbh();
+			$conn = $dbh->connect();
 					
-		//$promoID,$category,$promoter,$title,$description,$image,$link,$startTime,$endTime,$location,$state
-		$sql = $conn->prepare("INSERT INTO customer(category,ad_username,titile,description,image_path,link,start_date,end_date,location,state) VALUES (?, ? ,?,?,?,?, ? ,?,?,?) ");
-		#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
-		$sql->bind_param("ssssssssss",$promotion->getCategory(), $promotion->getPromoter(),$promotion->getTitle(),$promotion->getDescription(),$promotion->getImage(),$promotion->getImage(),$promotion->getLink(),$promotion->getStartTime(),$promotion->getEndTime(),$promotion->getLocation(),$promotion->getState());
-		$sql->execute();
-		$sql->store_result();
-					
+			
+		
+			//$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
+			$sql = $conn->prepare("INSERT INTO confirmed_promotion(category,title,description,image_path,link,state,start_date,end_date,location,pr_username,ad_username) VALUES (?, ? ,?,?,?,?, ? ,?,?,?,?) ");
+			#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+			
+			$sql->bind_param('sssssssssss',$promotion->category,$promotion->title,$promotion->description,$promotion->image,$promotion->link,$promotion->state,$promotion->startDate,$promotion->endDate,$promotion->location,$promotion->pr_username,$promotion->ad_username);
+
+			
+			
+			if($sql->execute()){
+				echo("successsssssssssss");
+			}
+			else{
+				echo("faileddddddddd");
+				echo(mysqli_error($conn));
+			}
+			
+			$sql->store_result();
+		
+			//header("Location: ../View/addPromo.php?message=sucess");
+			//exit();
+
+		}
+		catch(Exception $e){
+			
+		}
 	}
 	
 	public static function updateToDB(){
