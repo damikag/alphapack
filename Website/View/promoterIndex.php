@@ -366,7 +366,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2>what client’s say</h2>
+                        <h2>what customer’s say</h2>
                     </div>
                 </div>
             </div>
