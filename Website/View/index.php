@@ -79,13 +79,14 @@
                         </div>
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav">
-								<li><a href="index.php">home</a></li>
-								<li><a href="about.html">about</a>
+								<li><a href="#">home</a></li>
+								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="service.html">Service</a>
+                                <li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
 										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
+										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
                                     </ul>
                                 </li>
 								<li class="logged-user">
@@ -262,7 +263,6 @@
     <!--END MAIN CATEGORIES AREA-->
 	
     <!--FOOER AREA-->
-	
     <div class="footer-area dark-bg">
         <div class="footer-area-bg"></div>
         <div class="footer-top-area wow fadeIn">

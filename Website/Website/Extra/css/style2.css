@@ -4,6 +4,36 @@ h2.index-h2{
 	margin-bottom: 15px;
 }
 
+/*-------------------------------------------*/
+
+/*Promoter Template*/
+.top-area-bg-promoter-index{
+	background: rgba(0, 0, 0, 0) url("../img/slider/slide_1.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.top-area-bg-promoter-index::after {
+    background: #3c4147;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/*-------------------------------------------*/
+
 /*Navigation Bar*/
 .logged-user{
 	background-color:orange;
@@ -19,6 +49,8 @@ h2.index-h2{
 	background-color: transparent;
 	transform: scale(1.05);
 }
+
+/*-------------------------------------------*/
 
 /*Navigation Bar- Promoter Template*/
 
@@ -142,6 +174,7 @@ h2.index-h2{
     width: 100%;
 }
 
+/*-------------------------------------------*/
 
 /*Login-Customer*/
 
@@ -202,6 +235,8 @@ h2.index-h2{
     top: 0;
     width: 100%;
 }*/
+
+/*-------------------------------------------*/
 
 /*SignUp-promoter*/
 

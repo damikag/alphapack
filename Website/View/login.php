@@ -73,9 +73,9 @@
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav">
 								<li><a href="index.php">home</a></li>
-								<li><a href="about.html">about</a>
+								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="service.html">Service</a>
+                                <li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
 										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
