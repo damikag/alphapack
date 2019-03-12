@@ -27,10 +27,32 @@ h2.index-h2{
     width: 100%;
 }
 
+/*-------------------------------------------*/
+
+.top-area-bg-food{
+	background: rgba(0, 0, 0, 0) url("../img/blog/04-fashion-upgrades-classic-coats.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;	
+}
+
+.top-area-bg-food::after{
+	background: #3c4147;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 
 
 
+/*-------------------------------------------*/
 
 /*-------------------------------------------*/
 

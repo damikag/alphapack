@@ -87,6 +87,7 @@
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
 										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
 										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
+										<li><a href="food.php">Login as a promoter1112</a></li>
                                     </ul>
                                 </li>
 								<li class="logged-user">
