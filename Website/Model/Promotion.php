@@ -175,8 +175,8 @@ class Promotion{
 			
 			$sql->store_result();
 		
-			//header("Location: ../View/addPromo.php?message=sucess");
-			//exit();
+			header("Location: ../View/addPromo.php?message=sucess");
+			exit();
 
 		}
 		catch(Exception $e){

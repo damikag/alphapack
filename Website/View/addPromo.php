@@ -44,7 +44,7 @@
 		<div class="container-signup">	
       		<div class="form">
 				
-			<form action="../Controller/upload.php" method="post" enctype="multipart/form-data">
+			<form action="../Controller/addPromo_submit.php" method="post" enctype="multipart/form-data">
 				
 				
 				<select name="category">
