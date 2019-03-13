@@ -44,7 +44,7 @@
 		<div class="container-signup">	
       		<div class="form">
 				
-			<form action="../Controller/addPromo_submit.php" method="post">
+			<form action="../Controller/upload.php" method="post" enctype="multipart/form-data">
 				
 				
 				<select name="category">
@@ -62,7 +62,7 @@
 				<input type="date" placeholder="Enter the end date" name="end-time">
 				<input type="url" placeholder="Enter your link" name="link">
 				<input type="text" placeholder="Enter the location" name="location">
-				<input type="image">
+				<input type="file" name="fileToUpload" id="fileToUpload">
 				
 				<br>
 				
