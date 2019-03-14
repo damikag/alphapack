@@ -150,6 +150,32 @@ class Promotion{
 		}	
 	}
 	
+	public static function validatePromotion($promotion){
+		
+		$start_date_arr=explode('-',$promotion->startDate);
+		$end_date_arr=explode('-',$promotion->endDate);
+		
+		if(empty($promotion->title)){
+			return "EmptyTitle";
+		}
+		else if(empty($promotion->description)){
+			return "EmptyDescription";
+		}
+		else if(checkdate($start_date_arr[1],$start_date_arr[2],$start_date_arr[0])==false){
+			return "InvalidStartDate".$promotion->startDate;
+		}
+		else if(checkdate($end_date_arr[1],$end_date_arr[2],$end_date_arr[0])==false){
+			return "InvalidEndDate";
+		}
+		else if($promotion->startDate>$promotion->endDate){
+			return "StartDateIsEarlierThanEndDate";
+		}
+		else{
+			return null;
+		} 
+			
+	}
+	
 	public static function addPromotionToDB($promotion){
 		try{
 			$dbh=new Dbh();
