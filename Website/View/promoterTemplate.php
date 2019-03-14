@@ -219,7 +219,7 @@
                             </ul>
                     	</div>
 						<div class="single-sidebar-widget widget_categories">
-							<h3>Give a comment</h3>
+							<h3>Star rating</h3>
 							<div class="box">
 
 							</div>
@@ -232,6 +232,11 @@
 									<textarea name="quote-message" id="quote-message" cols="30" rows="4" placeholder="Your Comment..."></textarea>
 								</p>
 								<button type="submit">Comment</button>
+							</form>
+                    	</div>
+						<div class="single-sidebar-widget widget_categories">
+							<h3>Give a comment</h3>
+							<form class="quote-form" action="#">
 							</form>
                     	</div>
                         <div class="single-sidebar-widget widget_categories">
