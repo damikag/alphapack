@@ -56,10 +56,6 @@
 		   <div class = "brand">
 			   <h2>Company Name</h2>
 			   <h3>Category : asassaas</h3> <br />
-			   <form class="quote-form subscribe" action="#">
-					<button type="submit">Subscribe</button>	
-				</form>
-			   
 		   </div>
 	   </div>
         <div class="header-top-area">
