@@ -1,19 +1,16 @@
 <?php
-	include("../Controller/dbh.php");
-	include("../Model/Administrator.php");
-	
+
 	session_start();
-	$dbh = new Dbh();
-	$admin = new Administrator($dbh);
-	$viewPromo = $admin->getViewPromotion();
+		
 ?>
+
 <!doctype html>
+
 <html class="no-js" lang="en">
-<!--<![endif]-->
 
 <head>
     <meta charset="UTF-8">
-    <title>ADMIN</title>
+    <title>වාසි.lk</title>
     <link rel="shortcut icon" type="image/ico" href="../Extra/img/favicon.png" />
 	
     <!--====== STYLESHEETS ======-->
@@ -57,7 +54,7 @@
     <header class="top-area single-page-promoter" id="home">
        <div class="top-area-bg-promoter-template" data-stellar-background-ratio="0.6">
 		   <div class = "brand admin">
-			   <h2>ADMINSTRATOR</h2>
+		
 		   </div>
 	   </div>
         <div class="header-top-area">
@@ -144,158 +141,21 @@
     </header>
     <!--END TOP AREA-->
 
-    <!--BLOG AREA-->
-    <section class="blog-area section-padding">
+    <!--CONTACT US AREA-->
+    <section class="error-area section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-					<?php
-					
-						for($i=0; $i< count($viewPromo); $i++){
-								$temp = strval($viewPromo[$i][0]);
-								$_SESSION[$temp] = $viewPromo[$i];
-								$$temp = -1;
-								echo('<div class="single-blog wow fadeIn">
-							<div class="blog-image">
-								<img src="'.$viewPromo[$i][2].'" alt="">
-							</div>
-							<div class="blog-details">
-								<div class="blog-meta"></div>
-								<h3>Promoter Username- '.$viewPromo[$i][5].'</h3>
-								<h4>Category - '.$viewPromo[$i][1].'</h4>
-								<div class="post-date"><a href="#"><i class="fa fa-calendar"></i>'.$viewPromo[$i][3].'</a>&nbsp; &nbsp; to &nbsp; &nbsp; <a href="#"><i class="fa fa-calendar"></i>'.$viewPromo[$i][4].'</a></div>
-								<br />
-								<h5>content</h5>
-								<p>'.$viewPromo[$i][6].'</p>
-								<a href="../Controller/acceptRejectPromotion.php?acceptedAdID='.$viewPromo[$i][0].'" class="read-more">ACCEPT</a>
-								&nbsp; &nbsp; &nbsp;
-								<a href="../Controller/acceptRejectPromotion.php?rejectedAdID='.$viewPromo[$i][0].'" class="read-more">REJECT</a>
-							</div>
-						</div><br />');
-							
-						}
-					?>
-                  <!-- <div class="single-blog wow fadeIn">
-                        <div class="blog-image">
-                            <img src="../Extra/img/blog/blog_7.jpg" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta"></div>
-                            <h3><a href="single-blog.html">Quick Transportation Service in the world</a></h3>
-                            <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a>&nbsp; &nbsp; &nbsp;<a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a></div>
-							
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <a href="single-blog.html" class="read-more">ACCEPT</a>
-							&nbsp; &nbsp; &nbsp;
-							<a href="single-blog.html" class="read-more">REJECT</a>
-                        </div>
+                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+                    <div class="error-content text-center">
+                        <img src="../Extra/img/404.png" alt="">
+                        <h3>page not found</h3>
+                        <h2>Opps !</h2>
                     </div>
-                    <div class="single-blog wow fadeIn">
-                        <div class="blog-image">
-                            <img src="../Extra/img/blog/blog_8.jpg" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3><a href="single-blog.html">Quick Transportation Service in the world</a></h3>
-                            <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a></div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                    <div class="single-blog wow fadeIn">
-                        <div class="blog-image">
-                            <img src="../Extra/img/blog/blog_9.jpg" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3><a href="single-blog.html">Quick Transportation Service in the world</a></h3>
-                            <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a></div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                    <div class="single-blog wow fadeIn">
-                        <div class="blog-image">
-                            <img src="../Extra/img/blog/blog_10.jpg" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3><a href="single-blog.html">Quick Transportation Service in the world</a></h3>
-                            <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a></div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>-->
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="sidebar-area wow fadeIn">
-                        <div class="single-sidebar-widget widget_categories">
-                            <h4>Main Categories</h4>
-                            <ul>
-                                <li><a href="food.php">Food</a></li>
-                                <li><a href="#">Cloths and Accessories</a></li>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Electronic Devices</a></li>
-                                <li><a href="#">Sports Equipments</a></li>
-								<li><a href="#">Other</a></li>
-                            </ul>
-                        </div>
-                       <!--<div class="single-sidebar-widget widget_recent_entries">
-                            <h4>Latest Post</h4>
-                            <ul>
-                                <li>
-                                    <div class="alignleft"><img src="img/blog/thumb-1.jpg" alt=""></div>
-                                    <a href="#">2016 Latest News From Logistics Transportation Service.</a>
-                                </li>
-                                <li>
-                                    <div class="alignleft"><img src="img/blog/thumb-2.jpg" alt=""></div>
-                                    <a href="#">2016 Latest News From Logistics Cargo Service.</a>
-                                </li>
-                                <li>
-                                    <div class="alignleft"><img src="img/blog/thumb-3.jpg" alt=""></div>
-                                    <a href="#">2016 Latest News From Logistics Transportation Service.</a>
-                                </li>
-                                <li>
-                                    <div class="alignleft"><img src="img/blog/thumb-4.jpg" alt=""></div>
-                                    <a href="#">2016 Latest News From Logistics Cargo Service.</a>
-                                </li>
-                            </ul>
-                        </div>-->
-                       <!-- <div class="single-sidebar-widget widget_tag_cloud">
-                            <h4>Pupular Tags</h4>
-                            <div class="tagcloud">
-                                <a href="#">Design</a>
-                                <a href="#">Transport</a>
-                                <a href="#">Cargo</a>
-                                <a href="#">Freight</a>
-                                <a href="#">Logistic</a>
-                                <a href="#">Truck</a>
-                                <a href="#">Shipping</a>
-                                <a href="#">ware house</a>
-                            </div>
-                        </div>-->
-                    </div>
-                </div> 
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-xs-12">
-                    <ul class="pagination">
-                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!--BLOG AREA END-->
+    <!--CONTACT US AREA END-->
 
   <!--FOOER AREA-->
     <div class="footer-area dark-bg">
@@ -478,7 +338,6 @@
 
     <!--===== ACTIVE JS=====-->
     <script src="../Extra/js/main.js"></script>
-
 </body>
 
 </html>
