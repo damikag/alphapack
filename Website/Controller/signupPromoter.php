@@ -2,11 +2,12 @@
 
 if (isset($_POST["signup-submit"])){
 	
-	include("../Model/customer.php");
+	include("../Model/promoter.php");
 	//$dbh = new Dbh();
-	//$user = new Customer($dbh);
+	//$user = new Promoter($dbh);
 	//$user->signup();
-	Customer::signup();
+	
+	Promoter::signup();
 	/*
 	
 	require "dbh.php";

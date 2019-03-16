@@ -4,6 +4,58 @@ h2.index-h2{
 	margin-bottom: 15px;
 }
 
+/*-------------------------------------------*/
+
+/*Promoter Template*/
+.top-area-bg-promoter-index{
+	background: rgba(0, 0, 0, 0) url("../img/slider/slide_1.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.top-area-bg-promoter-index::after {
+    background: #3c4147;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*-------------------------------------------*/
+
+.top-area-bg-food{
+	background: rgba(0, 0, 0, 0) url("../img/blog/04-fashion-upgrades-classic-coats.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;	
+}
+
+.top-area-bg-food::after{
+	background: #3c4147;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+
+
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+
 /*Navigation Bar*/
 .logged-user{
 	background-color:orange;
@@ -19,6 +71,8 @@ h2.index-h2{
 	background-color: transparent;
 	transform: scale(1.05);
 }
+
+/*-------------------------------------------*/
 
 /*Navigation Bar- Promoter Template*/
 
@@ -85,13 +139,37 @@ h2.index-h2{
 }
 
 .box{
-	background-color: #5D6B82;
-	opacity: 0.1;
 }
 
-.box a{
-	background-color: antiquewhite;
+.box a i{
+	transition: 0.3s all;
 }
+
+.box a i:hover{
+	color: #F39C12;
+}
+
+.s1:hover ~ i{
+	color: #F39C12;
+}
+
+.s2:hover ~ i{
+	color: #F39C12;
+}
+
+.s3:hover ~ i{
+	color: #F39C12;
+}
+
+.s4:hover ~ i{
+	color: #F39C12;
+}
+
+.s5:hover ~ i{
+	color: #F39C12;
+}
+
+
 
 /*-------------------------------------------*/
 
@@ -118,6 +196,7 @@ h2.index-h2{
     width: 100%;
 }
 
+/*-------------------------------------------*/
 
 /*Login-Customer*/
 
@@ -160,7 +239,16 @@ h2.index-h2{
     width: 100%;
 }
 
-.top-area-bg-signup::after {
+.top-area-bg-signup::after{
+	background: #3c4147;
+	opacity: 0.9;
+	height: 100%;
+	left:0;
+	position: absolute;
+	width: 100%;
+}
+
+/*.top-area-bg-signup::after {
     background: #3c4147;
     height: 100%;
     left: 0;
@@ -168,7 +256,9 @@ h2.index-h2{
     position: absolute;
     top: 0;
     width: 100%;
-}
+}*/
+
+/*-------------------------------------------*/
 
 /*SignUp-promoter*/
 

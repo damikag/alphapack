@@ -3,10 +3,9 @@
 if (isset($_POST["signup-submit"])){
 	
 	include("../Model/customer.php");
-	//$dbh = new Dbh();
-	//$user = new Customer($dbh);
-	//$user->signup();
-	Customer::signup();
+	$dbh = new Dbh();
+	$user = new Customer($dbh);
+	$user->signup();
 	/*
 	
 	require "dbh.php";
