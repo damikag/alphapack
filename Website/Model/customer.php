@@ -1,20 +1,60 @@
 <?php
 
-include("../Controller/dbh.php");
+include_once("../Controller/dbh.php");
 
 class Customer{
 	
-	/*private $uName;
+	private $username;
 	private $email;
-	private $phoneNo;*/
-	private $dbh;
+	private $password;
+	private $phoneNumber;
 	
-	public function __construct($dbh){
-		$this->dbh = $dbh;
+	//private $dbh;
+	
+	public function __construct($username,$password,$email,$phoneNumber){
+		$this->username=$username;
+		$this->email=$email;
+		$this->password=$password;
+		$this->phoneNumber=$phoneNumber;
+		//$this->dbh = $dbh;
+		
 	}
 	
-	private function loginFunction(){
-			
+	public function getUsername(){
+		return $this->username;
+	}
+	
+	public function getEmail(){
+		return $this->email;
+	}
+	
+	public function getPassword(){
+		return $this->password;
+	}
+	
+	public function getPhoneNumber(){
+		return $this->phoneNumber;
+	}
+	
+	public function setUsername($username){
+		$this->username=$username;
+	}
+	
+	public function setPassword($password){
+		$this->password=$password;
+	}
+	public function setEmail($email){
+		$this->email=$email;
+	}
+
+	public function setPhoneNumber($phoneNumber){
+		$this->phoneNumber=$phoneNumber;
+	}
+
+	public static function login(){
+		
+		$dbh=new Dbh();
+		
 		$username = $_POST["uid"];
 		$password = $_POST["password"];
 
@@ -26,7 +66,7 @@ class Customer{
 		}
 
 		else{
-			$conn = $this->dbh->connect();
+			$conn = $dbh->connect();
 			$sql = $conn->prepare("SELECT * from customer WHERE username = ? OR email  =?");
 				
 				$sql->bind_param("ss", $username, $username);
@@ -34,6 +74,13 @@ class Customer{
 				$results = $sql->get_result();
 				if($row = $results->fetch_array(MYSQLI_ASSOC)){
 					$passCheck = password_verify($password,$row["password"]);
+					
+					if($password==$row["password"]){
+						$passCheck=true;
+					}
+					else $passCheck=false;
+					
+					
 					if ($passCheck == false){
 						header("Location: ../View/login.php?error=wrongPassword");
 						exit();
@@ -63,13 +110,15 @@ class Customer{
 		}
 	}
 	
-	private function signupFunction(){
+	public static function signup(){
 		$username = $_POST["uid"];
 		$uemail = $_POST["email"];
 		$password = $_POST["password"];
 		$re_password = $_POST["re-password"];
 		$phone = $_POST["phone"];
-
+		
+		$dbh=new Dbh();
+		
 		if(empty($username) || empty($uemail) || empty($password) || empty($re_password) || empty($phone)){
 
 			header("Location: ../View/signup.php?error=emptyFields_&uid=".$username."_&email=".$uemail."_&phone=".$phone);
@@ -100,7 +149,7 @@ class Customer{
 
 		else{
 			
-			$conn = $this->dbh->connect();
+			$conn = $dbh->connect();
 			$sql = $conn->prepare("SELECT * FROM customer WHERE username=?");
 			#$sql = "SELECT username FROM users WHERE username=?";
 			#$stmt = mysqli_stmt_init($conn);
@@ -119,11 +168,12 @@ class Customer{
 
 				}
 				else{
-					$conn = $this->dbh->connect();
+					$conn = $dbh->connect();
 					#$sql = "INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ";
 					$sql = $conn->prepare("INSERT INTO customer(username, password, email,phone_no) VALUES (?, ? ,?,?) ");
 					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
 					$hPassword = password_hash($password, PASSWORD_DEFAULT);
+					$hPassword=$password;
 					$sql->bind_param("ssss", $username,$hPassword,$uemail,$phone);
 					$sql->execute();
 					$sql->store_result();
@@ -193,13 +243,13 @@ class Customer{
 	
 	public function comment(){}
 	
-	public function login(){
+	/*public function login(){
 		$this->loginFunction();
 	}
 	
 	public function signup(){
 		$this->signupFunction();
-	}
+	}*/
 	
 					
 }				

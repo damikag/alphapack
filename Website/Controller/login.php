@@ -1,9 +1,18 @@
 <?php
 
-include("../Model/customer.php");
-$dbh = new Dbh();
-$customer = new Customer($dbh);
+include_once("../Model/customer.php");
+include_once("../Model/promoter.php");
+
+//$dbh = new Dbh();
+//$customer = new Customer($dbh);
+//$promoter=new Promoter($dbh);
+
 
 if (isset($_POST["login-submit"])){
-	$customer->login();
+	if(Promoter::isPromoter()){
+		Promoter::login();
+	}
+	else{
+		Customer::login();
+	}
 }
