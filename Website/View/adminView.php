@@ -1,5 +1,5 @@
 <?php
-	include("../Controller/dbh.php");
+	//include("../Controller/dbh.php");
 	include("../Model/Administrator.php");
 	
 	session_start();
@@ -150,32 +150,42 @@
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 					<?php
+					//View Pending promotion to admin to accept or reject
+						if(empty($viewPromo)){
+							echo('<div class="single-blog wow fadeIn">
+								<div class="blog-details">
+									<div class="blog-meta"></div>
+									<h3>NO PENDING PROMOTIONS</h3>
+								</div>
+							</div><br />');
+						}
 					
-						for($i=0; $i< count($viewPromo); $i++){
-								$temp = strval($viewPromo[$i][0]);
-								$_SESSION[$temp] = $viewPromo[$i];
-								$$temp = -1;
-								echo('<div class="single-blog wow fadeIn">
-							<div class="blog-image">
-								<img src="'.$viewPromo[$i][2].'" alt="">
-							</div>
-							<div class="blog-details">
-								<div class="blog-meta"></div>
-								<h3>Promoter Username- '.$viewPromo[$i][5].'</h3>
-								<h4>Category - '.$viewPromo[$i][1].'</h4>
-								<div class="post-date"><a href="#"><i class="fa fa-calendar"></i>'.$viewPromo[$i][3].'</a>&nbsp; &nbsp; to &nbsp; &nbsp; <a href="#"><i class="fa fa-calendar"></i>'.$viewPromo[$i][4].'</a></div>
-								<br />
-								<h5>content</h5>
-								<p>'.$viewPromo[$i][6].'</p>
-								<a href="../Controller/acceptRejectPromotion.php?acceptedAdID='.$viewPromo[$i][0].'" class="read-more">ACCEPT</a>
-								&nbsp; &nbsp; &nbsp;
-								<a href="../Controller/acceptRejectPromotion.php?rejectedAdID='.$viewPromo[$i][0].'" class="read-more">REJECT</a>
-							</div>
-						</div><br />');
+						else{
 							
+							$len = count($viewPromo);
+							for ($i=0; $i<$len; $i++){
+								$tempPromo = $viewPromo[$i];
+								echo('<div class="single-blog wow fadeIn">
+								<div class="blog-image">
+									<img src="'.$tempPromo->getImage().'" alt="">
+								</div>
+								<div class="blog-details">
+									<div class="blog-meta"></div>
+									<h3>Promoter Username- '.$tempPromo->getPr_username().'</h3>
+									<h4>Category - '.$tempPromo->getCategory().'</h4>
+									<div class="post-date"><a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getStartDate().'</a>&nbsp; &nbsp; to &nbsp; &nbsp; <a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getEndDate().'</a></div>
+									<br />
+									<h5>content</h5>
+									<p>'.$tempPromo->getDescription().'</p>
+									<a href="../Controller/acceptRejectPromotion.php?acceptedPromoID='.$tempPromo->getPromoID().'" class="read-more">ACCEPT</a>
+									&nbsp; &nbsp; &nbsp;
+									<a href="../Controller/acceptRejectPromotion.php?rejectedPromoID='.$tempPromo->getPromoID().'" class="read-more">REJECT</a>
+								</div>
+							</div><br />');
+							}							
 						}
 					?>
-                  <!-- <div class="single-blog wow fadeIn">
+                   <!--<div class="single-blog wow fadeIn">
                         <div class="blog-image">
                             <img src="../Extra/img/blog/blog_7.jpg" alt="">
                         </div>
@@ -281,7 +291,7 @@
                     </div>
                 </div> 
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-md-12 col-xs-12">
                     <ul class="pagination">
                         <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
@@ -292,7 +302,7 @@
                         <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
     <!--BLOG AREA END-->

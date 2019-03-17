@@ -1,10 +1,11 @@
 <?php
 
-//include("../Controller/dbh.php");
+require_once("../Model/Promotion.php");
 
 class Administrator{
 	
 	private $dbh;
+	private $viewPromo;
 	
 	public function __construct($dbh){
 		$this->dbh = $dbh;
@@ -59,34 +60,42 @@ class Administrator{
 	private function viewPromotion(){
 		
 		$conn = $this->dbh->connect();
-		$sql = $conn->prepare("SELECT * from pending_promotion");
+		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE state = 'Pending'");
 		$sql->execute();
 		$results = $sql->get_result();
 		$i = 0;
 		while($row = $results->fetch_array(MYSQLI_ASSOC)){
-			$viewPromo[$i] = array($row['promo_id'],$row['category'],$row['image_path'],$row['start_date'],$row['end_date'],$row['promotor'],$row['content']);
+			$tempPromo = new Promotion($row['promo_id'],$row['category'],$row['title'],$row['description'],$row['image_path'],$row['link'],$row['state'],$row['start_date'],$row['end_date'],$row['location'],$row['pr_username'],null);
+			
+			$this->viewPromo[$i] = $tempPromo;
 			$i = $i +1;
 		}
-		return $viewPromo;
+		return $this->viewPromo;
 
 	}
 	
-	private function acceptPromotion($singlePromo){
+	private function acceptPromotion($promoID){
 		
 		$conn = $this->dbh->connect();
-		$sql = $conn->prepare("INSERT INTO `confirmed_promotion`(`promo_id`, `category`, `image_path`, `state`, `start_date`, `end_date`, `pr_username`, `ad_username`, `content`) VALUES (".$singlePromo[0].",".$singlePromo[1].",".$singlePromo[2].",'Accepted',".$singlePromo[3].",".$singlePromo[4].",".$singlePromo[5].",",$_SESSION['userName'].",".$singlePromo[6].")");
-		$sql->execute();
-		$sql = $conn->prepare("DELETE FROM `pending_promotion` WHERE `promo_id` =".$singlePromo[0].";");
+		$sql = $conn->prepare("UPDATE `confirmed_promotion` SET state='Accepted' WHERE `promo_id` =".$promoID.";");
 		$sql->execute();
 		
 	}
 	
-	private function removePromotion($singlePromo){
+	private function rejectPromotion($promoID){
 		
 		$conn = $this->dbh->connect();
-		$sql = $conn->prepare("DELETE FROM `pending_promotion` WHERE `movie_id` =".$singlePromo[0].";");
+		$sql = $conn->prepare("UPDATE `confirmed_promotion` SET state='Rejected' WHERE `promo_id` =".$promoID.";");
 		$sql->execute();
 		
+	}
+	
+	public function getAcceptedPromotion($promoID){
+		$this->acceptPromotion($promoID);
+	}
+	
+	public function getRejecteddPromotion($promoID){
+		$this->rejectPromotion($promoID);
 	}
 	
 	public function login(){
