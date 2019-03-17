@@ -1,7 +1,7 @@
 <?php
 
 include_once("../Controller/dbh.php");
-
+include_once("../Model/Promotion.php");
 class Promoter{
 	
 	private $username;
@@ -13,6 +13,7 @@ class Promoter{
 	private $webLink;
 	private $fbLink;
 	private $rating;
+	private $promotionList;
 	
 	public function __construct($username,$promoterName,$email,$password,$mapLocation,$phoneNo,$weblink,$fblink,$rating){
 		
@@ -25,6 +26,7 @@ class Promoter{
 		$this->weblink=$weblink;
 		$this->fbLink=$fblink;
 		$this->rating=$rating;
+		$this->promotionList = array();
 		
 	}
 	
@@ -275,5 +277,46 @@ class Promoter{
 				mysqli_stmt_close($stmt);
 				mysqli_close($conn);		
 	}
-					
+	
+	public function addPromotion($promotion){			//a promotion is added to the prevailing list of promotions 
+		array_push($this->promotionList,$promotion);
+	}
+	
+	public function subscribedCustomerCount(){			//number of subscirbed customers retrieved and returned
+		$dbh=new Dbh();
+		$conn = $dbh->connect();
+		
+		$stmt =  "SELECT COUNT(DISTINCT cus_username) FROM promotor_subscribing WHERE pr_username = (?)";
+		
+		$sql = $conn->prepare($stmt);
+		$sql->bind_param("i", $this->username);
+		$sql->execute();
+		$sql ->store_result();
+		$sql -> bind_result($customerCount);
+		$sql -> fetch();
+		
+		return $customerCount;
+		
+	}
+	
+	public function readPromotionsFromDB(){		//promotions are read and added to the DB
+		$dbh=new Dbh();
+		$conn = $dbh->connect();
+		
+		$stmt =  "SELECT promo_id,category,title,description,image_path,link,state,start_date,end_date,location,pr_username,ad_username FROM confirmed_promotion WHERE pr_username = (?)";
+		
+		$sql = $conn->prepare($stmt);
+		$sql->bind_param("i", $this->username);
+		$sql->execute();
+		$sql ->store_result();
+		$sql -> bind_result($id,$category,$title,$description,$image_path,$link,$state,$start_date,$end_date,$location,$pr_username,$ad_username);
+		
+		while($sql -> fetch()){
+			$promotion = new Promotion($id,$category,$title,$description,$image_path,$link,$state,$start_date,$end_date,$location,$pr_username,$ad_username);
+			echo $promotion->getCategory();
+			$this->addPromotion($promotion);
+		}		
+		
+	}
+						
 }
