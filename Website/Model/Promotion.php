@@ -193,16 +193,20 @@ class Promotion{
 			
 			if($sql->execute()){
 				echo("successsssssssssss");
+				$sql->store_result();
+				header("Location: ../View/promoterIndex.php?message=sucess");
+			exit();
 			}
 			else{
 				echo("faileddddddddd");
 				echo(mysqli_error($conn));
+				//var_dump($promotion);
+				
+				//var_dump($_SESSION[]);
+				header("Location: ../View/addPromo.php?error=UnableToRecordTheEntry");
+				exit();
 			}
 			
-			$sql->store_result();
-		
-			header("Location: ../View/addPromo.php?message=sucess");
-			exit();
 
 		}
 		catch(Exception $e){
