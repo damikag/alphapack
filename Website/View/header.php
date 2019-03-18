@@ -36,8 +36,8 @@
                                 </li>
                                 <li><a href="service.html">Service</a>
                                     <ul>
-										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
+										<li><a href="promoterSignup.php">Register as a Promoter</a></li>
+										
                                     </ul>
                                 </li>
 								<li class="logged-user">
@@ -51,12 +51,12 @@
 									</a>
                                     <ul>
                                         <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                        <li><a href="contact-2.html">Contact Version 2</a></li>
+                                        
                                     </ul>';
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
+										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
 								</li>	

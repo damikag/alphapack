@@ -166,20 +166,21 @@
 
 
     <!--====== SCRIPTS JS ======-->
-    <script src="Extra/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="Extra/js/vendor/bootstrap.min.js"></script>
+    <script src="../Extra/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../Extra/js/vendor/bootstrap.min.js"></script>
 
     <!--====== PLUGINS JS ======-->
-    <script src="Extra/js/vendor/jquery.easing.1.3.js"></script>
-    <script src="Extra/js/vendor/jquery-migrate-1.2.1.min.js"></script>
-    <script src="Extra/js/vendor/jquery.appear.js"></script>
-    <script src="Extra/js/owl.carousel.min.js"></script>
-    <script src="Extra/js/stellar.js"></script>
-    <script src="Extra/js/wow.min.js"></script>
-    <script src="Extra/js/stellarnav.min.js"></script>
-    <script src="Extra/js/contact-form.js"></script>
-    <script src="Extra/js/jquery.sticky.js"></script>
+    <script src="../Extra/js/vendor/jquery.easing.1.3.js"></script>
+    <script src="../Extra/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../Extra/js/vendor/jquery.appear.js"></script>
+    <script src="../Extra/js/owl.carousel.min.js"></script>
+    <script src="../Extra/js/stellar.js"></script>
+    <script src="../Extra/js/wow.min.js"></script>
+    <script src="../Extra/js/stellarnav.min.js"></script>
+    <script src="../Extra/js/contact-form.js"></script>
+    <script src="../Extra/js/jquery.sticky.js"></script>
 
     <!--===== ACTIVE JS=====-->
-    <script src="Extra/js/main.js"></script>
+    <script src="../Extra/js/main.js"></script>
+
 
