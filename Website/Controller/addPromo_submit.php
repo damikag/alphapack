@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (isset($_POST["addPromo-submit"])){
 	
 	//include("../Model/customer.php");
@@ -20,6 +20,7 @@ if (isset($_POST["addPromo-submit"])){
 	$promoID=null;
 	$pr_username="demoPromotor1";
 	$ad_username="admin1";
+	
 	
 	require_once "../Model/Promotion.php";
 
@@ -88,7 +89,10 @@ if (isset($_POST["addPromo-submit"])){
 	}
 	// End of file upload
 
-
+	//$promotion->image=("../Extra/img/users/promotions/".$image);
+	$tmp=$_SESSION["userName"];
+	$promotion=new Promotion(null,$category,$title,$description,("../Extra/img/users/promotions/".$image),$link,$state,$startTime,$endTime,$location,$tmp,null);
+	
 	Promotion::addPromotionToDB($promotion);
 
 
