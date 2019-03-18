@@ -16,3 +16,9 @@ if (isset($_POST["login-submit"])){
 		Customer::login();
 	}
 }
+
+else{
+	header("Location: ../View/404.php");
+	exit();
+
+}

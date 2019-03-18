@@ -92,6 +92,10 @@
 	.brand p{
 		margin: 0px 190px 0px 0px;
 	}
+	
+	.admin h2{
+		margin-right: 0px;
+	}
 }
 
 @media (max-width: 1919px) and (min-width: 993px){
@@ -116,6 +120,9 @@
 	.brand p{
 		margin: 0px 190px 0px 0px;
 	}
+		.admin h2{
+			margin-right: 0px;
+		}
 
 }
 
@@ -178,6 +185,10 @@
 	.brand p{
 		margin: 0px 120px 0px 0px;
 	}
+	
+		.admin h2{
+			margin-right: 0px;
+		}
 
 
 }
@@ -373,7 +384,9 @@
 			font-size: 13px;
 		}
 
-
+		.admin h2{
+			margin-right: 0px;
+		}
 }
 
 /*----------------------------------
@@ -616,7 +629,10 @@
 			margin: 0px 20px 0px 0px;
 			font-size: 13px;
 		}
-
+	
+		.admin h2{
+			margin-right: 0px;
+		}
 
 }
 
@@ -671,6 +687,9 @@
 			margin: 0px 20px 0px 0px;
 			font-size: 13px;
 		}
-
+			
+		.admin h2{
+			margin-right: 0px;
+		}
 
 }

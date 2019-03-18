@@ -49,7 +49,7 @@ class Customer{
 						header("Location: ../View/index.php");
 						exit();
 					}
-					else{
+/*					else{
 						header("Location: ../View/login.php?error=noUser");
 						exit();
 					}
@@ -58,9 +58,10 @@ class Customer{
 				else{
 					header("Location: ../View/login.php?error=nouser");
 					exit();
-				}
+				}*/
 			
 		}
+	}
 	}
 	
 	private function signupFunction(){
