@@ -1,3 +1,8 @@
+<?php
+
+	session_start();
+		
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -43,8 +48,90 @@
     <!--SCROLL TO TOP-->
     <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
 
-    <?php include "header.php";?>
+    <?php //include "header.php";?>
     
+    <header class="top-area" id="home">
+        <div class="top-area-bg-promoter-index" data-stellar-background-ratio="0.6"></div>
+        <div class="header-top-area">
+            <!--MAINMENU AREA-->
+            <div class="mainmenu-area" id="mainmenu-area">
+                <div class="mainmenu-area-bg"></div>
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="#home" class="navbar-brand"><img src="../Extra/img/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="search-and-language-bar pull-right">
+                            <ul>
+								<?php
+									if (! isset($_SESSION["userName"])){
+										echo '<li><a href="login.php"><i class="fa fa-user"></i></a></li>';
+										
+									}
+								?>
+                                
+                                <li class="search-box"><i class="fa fa-search"></i></li>
+                               	</li>
+                            </ul>
+                            <form action="#" class="search-form">
+                                <input type="search" name="search" id="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="main-nav" class="stellarnav">
+                            <ul id="nav" class="nav navbar-nav">
+								<li><a href="#">home</a></li>
+								<li><a href="#">about</a>
+                                </li>
+                                <li><a href="#">Service</a>
+                                    <ul>
+										<li><a href="promoterLogin.php">Login as a promoter</a></li>
+										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
+										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
+                                    </ul>
+                                </li>
+								<li class="logged-user">
+									<?php
+									
+									if (isset($_SESSION["userName"])){
+										
+										$username = $_SESSION["userName"];
+										echo '<a href="#" class="logged-user" background-colour="lightsalmon">
+									'.$username.'
+									</a>
+                                    <ul>
+                                        <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
+                                    </ul>';
+									}
+									
+									else{
+										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
+									}
+								?>								
+								</li>	
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--END MAINMENU AREA END-->
+        </div>
+        <div class="welcome-area">
+          <div class="welcome-area-bg"></div>
+            <div class="container">
+                <div class="row flex-v-center">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="welcome-text text-center">
+                            <h1>PROMOTE YOUR BUSINESS ALL AROUND SRI LANKA AND BEYOND</h1>
+                            <p>We have the maximum customer coverage around the country.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END TOP AREA-->
+
     <!--BLOG AREA-->
     <section class="blog-area gray-bg">
         <div class="container">
@@ -56,9 +143,9 @@
                         </div>-->
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
-                            <h3><a href="single-blog.html">ADD PROMOTIONS</a></h3>
+                            <h3><a href="addPromo.php">ADD PROMOTIONS</a></h3>
                             <p>Click below to add a new promotion!</p>
-                            <a href="#" class="read-more">ADD</a>
+                            <a href="addPromo.php" class="read-more">ADD</a>
                         </div>
                     </div>
                 </div>
