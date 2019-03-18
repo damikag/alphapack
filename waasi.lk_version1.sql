@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `confirmed_promotion` (
   `end_date` varchar(15) NOT NULL,
   `location` varchar(400),
   `pr_username` varchar(45) NOT NULL,
-  `ad_username` varchar(45) NOT NULL,
+  `ad_username` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`promo_id`),
   KEY `pr_username` (`pr_username`),
   KEY `ad_username` (`ad_username`)
