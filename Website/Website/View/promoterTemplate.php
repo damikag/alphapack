@@ -56,7 +56,6 @@
 		   <div class = "brand">
 			   <h2>Company Name</h2>
 			   <h3>Category : asassaas</h3> <br />
-			   <p>Description</p>
 		   </div>
 	   </div>
         <div class="header-top-area">
@@ -203,6 +202,11 @@
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="sidebar-area wow fadeIn">
+					  <div class="single-sidebar-widget widget_categories">
+							<form class="quote-form subscribe" action="#">
+								<button type="submit">Subscribe</button>	
+							</form>
+                   	  </div>
                         <div class="single-sidebar-widget widget_search">
                             <h4>Search</h4>
                             <form action="#">
@@ -219,7 +223,7 @@
                             </ul>
                     	</div>
 						<div class="single-sidebar-widget widget_categories">
-							<h3>Give a comment</h3>
+							<h3>Star rating</h3>
 							<div class="box">
 
 							</div>
@@ -234,10 +238,15 @@
 								<button type="submit">Comment</button>
 							</form>
                     	</div>
+						<div class="single-sidebar-widget widget_categories">
+							<h3>Give a comment</h3>
+							<form class="quote-form" action="#">
+							</form>
+                    	</div>
                         <div class="single-sidebar-widget widget_categories">
                             <h4>Main Categories</h4>
                             <ul>
-                                <li><a href="#">Food</a></li>
+                                <li><a href="food.php">Food</a></li>
                                 <li><a href="#">Cloths and Accessories</a></li>
                                 <li><a href="#">Movies</a></li>
                                 <li><a href="#">Electronic Devices</a></li>
@@ -342,7 +351,7 @@
                         <div class="single-footer-widget list-widget">
                             <h3>Main Catgories</h3>
                             <ul>
-                                <li><a href="#">Food</a></li>
+                                <li><a href="food.php">Food</a></li>
                                 <li><a href="#">Movies</a></li>
                                 <li><a href="#">Cloths and Accessories</a></li>
 								<li><a href="#">Electronic Equipments</a></li>
