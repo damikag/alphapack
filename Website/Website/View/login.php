@@ -128,8 +128,8 @@
         <div class="container-login">
 			<div class="login-box">
 			  <form action="../Controller/login.php" method="post">
-					<input type="text" placeholder="Enter the user name" name="uid">
-					<input type="password" placeholder="Enter the password" name="password"><br>
+					<input type="text" placeholder="Enter the user name" name="uid" required>
+					<input type="password" placeholder="Enter the password" name="password" required><br>
 					<input type="submit" value="Login" name="login-submit"><br>
 					<a href="#">Lost your password</a><br>
 					<a href="signup.php">Don't have an account</a>

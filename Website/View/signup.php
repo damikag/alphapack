@@ -79,8 +79,8 @@
                                 </li>
                                 <li><a href="#">Service</a>
                                     <ul>
-										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
+										<li><a href="promoterSignup.php">Register as a Promoter</a></li>
+										
                                     </ul>
                                 </li>
 								<li class="logged-user">
@@ -98,7 +98,7 @@
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
+										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
 								</li>	

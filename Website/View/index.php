@@ -84,10 +84,10 @@
                                 </li>
                                 <li><a href="#">Service</a>
                                     <ul>
-										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
-										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
-										<li><a href="food.php">Login as a promoter1112</a></li>
+										
+										
+										
+										<li><a href="promoterSignup.php">Register as a Promoter</a></li>
                                     </ul>
                                 </li>
 								<li class="logged-user">
@@ -105,7 +105,7 @@
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
+										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
 								</li>	
@@ -170,12 +170,13 @@
     <!--END TOP AREA-->
 
     <!--MAIN CATEGORIES AREA-->
-    <section class="blog-area gray-bg padding-top" id="categories">
+    <section class="blog-area gray-bg" id="categories">
 		<h2 class="index-h2">OUR MAIN CATEGORIES</h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
+						<a href="food.php">
 						<div class ="blog-image">
 							<figure class="imghvr-hinge-left"><img src="../Extra/img/blog/04-fashion-upgrades-classic-coats.jpg" alt="example-image">
 							<figcaption>
@@ -186,10 +187,12 @@
 							</figcaption>
 							</figure>
 						</div>
+						</a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
+						<a href="cloths.php">
 						<div class ="blog-image">
 							<figure class="imghvr-hinge-up"><img src="../Extra/img/blog/04-fashion-upgrades-classic-coats (1).jpg" alt="example-image">
 							<figcaption>
@@ -199,10 +202,12 @@
 							</figcaption>
 							</figure>
 						</div>
+						</a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+						<a href= "movies.php">
 						<div class ="blog-image">
 							<figure class="imghvr-hinge-right"><img src="../Extra/img/blog/movies.jpg" alt="example-image">
 							<figcaption>
@@ -213,10 +218,12 @@
 							</figcaption>
 							</figure>
 						</div>
+						</a>
                     </div>
                 </div>
 				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
+						<a href="electronic.php">
 						<div class ="blog-image">
 							<figure class="imghvr-hinge-left"><img src="../Extra/img/blog/perfect-selfie.jpg" alt="example-image">
 							<figcaption>
@@ -226,14 +233,14 @@
 							</figcaption>
 							</figure>
 						</div>
+						</a>
                     </div>
                 </div>
 				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-						<a href="index.php">
+						<a href="sports.php">
                         <div class ="blog-image">
 							<figure class="imghvr-hinge-down"><img src="../Extra/img/blog/Girl_Soccer_Goalie.jpg" alt="example-image">
-							>
 							<figcaption>
 								<h3 align="center">SPORTS EQUIPMENTS</h3>
 								<p align="center">"Champions keep playing until they get it right" - Billie Jean King</p>

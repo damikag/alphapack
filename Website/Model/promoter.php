@@ -182,16 +182,16 @@ class Promoter{
 						header("Location: ../View/promoterIndex.php");
 						exit();
 					}
-					else{
+					/*else{
 						header("Location: ../View/login.php?error=noUser");
 						exit();
-					}
+					}*/
 				}
 
-				else{
+				/*else{
 					header("Location: ../View/login.php?error=nouser");
 					exit();
-				}
+				}*/
 			
 		}
 	}

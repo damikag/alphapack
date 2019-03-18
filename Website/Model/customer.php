@@ -108,6 +108,7 @@ class Customer{
 				}
 			
 		}
+	
 	}
 	
 	public static function signup(){

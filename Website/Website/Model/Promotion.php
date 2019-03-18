@@ -1,6 +1,6 @@
 <?php
 
-include_once("../Controller/dbh.php");
+require_once("../Controller/dbh.php");
 
 class Promotion{
 	
@@ -193,20 +193,16 @@ class Promotion{
 			
 			if($sql->execute()){
 				echo("successsssssssssss");
-				$sql->store_result();
-				header("Location: ../View/promoterIndex.php?message=sucess");
-			exit();
 			}
 			else{
 				echo("faileddddddddd");
 				echo(mysqli_error($conn));
-				//var_dump($promotion);
-				
-				//var_dump($_SESSION[]);
-				header("Location: ../View/addPromo.php?error=UnableToRecordTheEntry");
-				exit();
 			}
 			
+			$sql->store_result();
+		
+			header("Location: ../View/addPromo.php?message=sucess");
+			exit();
 
 		}
 		catch(Exception $e){
@@ -336,7 +332,6 @@ class Promotion{
 						/*mysqli_stmt_bind_param($stmt, "sss", $username, $uemail,$hPassword);
 						mysqli_stmt_execute($stmt);
 						mysqli_stmt_store_result($stmt);*/
-					
 						header("Location: ../View/login.php");
 						exit();
 
@@ -346,16 +341,16 @@ class Promotion{
 
 				mysqli_stmt_close($stmt);
 				mysqli_close($conn);		
-	}
+	} 
 	
 	
-	public function login(){
+	/*public function login(){
 		$this->loginFunction();
 	}
 	
 	public function signup(){
 		$this->signupFunction();
-	}
+	}*/
 	
 					
 }

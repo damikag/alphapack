@@ -1,7 +1,5 @@
 <?php
 
-include("../Controller/dbh.php");
-
 class Promoter{
 	
 	/*private $userName;

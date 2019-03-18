@@ -5,7 +5,9 @@
 ?>
 
 <!doctype html>
-<html>
+
+<html class="no-js" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>වාසි.lk</title>
@@ -34,7 +36,7 @@
         <![endif]-->
 </head>
 
-<body class="home-one">
+<body class="single-page">
 
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -49,8 +51,12 @@
     <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
 
     <!--START TOP AREA-->
-    <header class="top-area" id="home">
-        <div class="top-area-bg" data-stellar-background-ratio="0.6"></div>
+    <header class="top-area single-page-promoter" id="home">
+       <div class="top-area-bg-promoter-template" data-stellar-background-ratio="0.6">
+		   <div class = "brand admin">
+		
+		   </div>
+	   </div>
         <div class="header-top-area">
             <!--MAINMENU AREA-->
             <div class="mainmenu-area" id="mainmenu-area">
@@ -79,15 +85,13 @@
                         </div>
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav">
-								<li><a href="#">home</a></li>
-								<li><a href="#">about</a>
+								<li><a href="index.php">home</a></li>
+								<li><a href="about.html">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <li><a href="service.html">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
 										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
-										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
-										<li><a href="food.php">Login as a promoter1112</a></li>
                                     </ul>
                                 </li>
 								<li class="logged-user">
@@ -101,6 +105,7 @@
 									</a>
                                     <ul>
                                         <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
+                                        <li><a href="contact-2.html">Contact Version 2</a></li>
                                     </ul>';
 									}
 									
@@ -116,161 +121,43 @@
             </div>
             <!--END MAINMENU AREA END-->
         </div>
-        <!--HOME SLIDER AREA-->
-        <div class="welcome-slider-area">
-            <div class="welcome-single-slide slider-bg-one">
-                <div class="container">
-                    <div class="row flex-v-center">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="welcome-text text-center">
-                                <h1>ALL YOUR PROMOTION NEEDS IN ONE PLACE!</h1>
-                                <p>Without promotion, something terrible happens... nothing!</p>
-                                <div class="home-button">
-                                    <a href="#categories">Categories</a>
-                                </div>
-                            </div>
+       <!-- <div class="welcome-area">
+            <div class="area-bg"></div>
+            <div class="container">
+                <div class="row flex-v-center">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="welcome-text text-center">
+                            <h2>Blog</h2>
+                            <ul class="page-location">
+                                <li><a href="#">Home</a></li>
+                                <li>/</li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="welcome-single-slide slider-bg-two">
-                <div class="container">
-                    <div class="row flex-v-center">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="welcome-text text-center">
-                                <h1>ALL YOUR PROMOTION NEEDS IN ONE PLACE!</h1>
-                                <p>Without promotion, something terrible happens... nothing!</p>
-                                <div class="home-button">
-                                    <a href="#categories">Categories</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="welcome-single-slide slider-bg-three">
-                <div class="container">
-                    <div class="row flex-v-center">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="welcome-text text-center">
-                                <h1>ALL YOUR PROMOTION NEEDS IN ONE PLACE!</h1>
-                                <p>Without promotion, something terrible happens... nothing!</p>
-                                <div class="home-button">
-                                    <a href="#categories">Categories</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END HOME SLIDER AREA-->
+        </div> -->
     </header>
     <!--END TOP AREA-->
 
-    <!--MAIN CATEGORIES AREA-->
-    <section class="blog-area gray-bg" id="categories">
-		<h2 class="index-h2">OUR MAIN CATEGORIES</h2>
+    <!--CONTACT US AREA-->
+    <section class="error-area section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
-						<a href="food.php">
-						<div class ="blog-image">
-							<figure class="imghvr-hinge-left"><img src="../Extra/img/blog/04-fashion-upgrades-classic-coats.jpg" alt="example-image">
-							<figcaption>
-								<h3 align="center">FOOD</h3>
-								<p align="center">“If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.” 
-								― J.R.R. Tolkien</p>
-								<p align="center">Check out food promotions here!</p>
-							</figcaption>
-							</figure>
-						</div>
-						</a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
-						<a href="cloths.php">
-						<div class ="blog-image">
-							<figure class="imghvr-hinge-up"><img src="../Extra/img/blog/04-fashion-upgrades-classic-coats (1).jpg" alt="example-image">
-							<figcaption>
-								<h3 align="center">CLOTHS &amp; ACCESSORIES</h3>
-								<p align="center">"You can have anything you want in life if you dress for it." — Edith Head.</p>
-								<p align="center">Check out cloths &amp; accessories promotions here!</p>
-							</figcaption>
-							</figure>
-						</div>
-						</a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-						<a href= "movies.php">
-						<div class ="blog-image">
-							<figure class="imghvr-hinge-right"><img src="../Extra/img/blog/movies.jpg" alt="example-image">
-							<figcaption>
-								<h3 align="center">MOVIES</h3>
-								<p align="center">“It's funny how the colors of the real world only seem really real when you watch them on a screen.” 
-								― anthony burgess, A Clockwork Orange.</p>
-								<p align="center">Check out movies promotions here!</p>
-							</figcaption>
-							</figure>
-						</div>
-						</a>
-                    </div>
-                </div>
-				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-						<a href="electronic.php">
-						<div class ="blog-image">
-							<figure class="imghvr-hinge-left"><img src="../Extra/img/blog/perfect-selfie.jpg" alt="example-image">
-							<figcaption>
-								<h3 align="center">ELECTRONIC DEVICES</h3>
-								<p align="center">"The new electronic independence re-creates the world in the image of a global village"- Marshall McLuhan.</p>
-								<p align="center">Check out electronic devices promotions here!</p>
-							</figcaption>
-							</figure>
-						</div>
-						</a>
-                    </div>
-                </div>
-				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-						<a href="sports.php">
-                        <div class ="blog-image">
-							<figure class="imghvr-hinge-down"><img src="../Extra/img/blog/Girl_Soccer_Goalie.jpg" alt="example-image">
-							<figcaption>
-								<h3 align="center">SPORTS EQUIPMENTS</h3>
-								<p align="center">"Champions keep playing until they get it right" - Billie Jean King</p>
-								<p align="center">Check out sports equipments promotions here!</p>
-							</figcaption>
-							
-							</figure>
-						</div>
-						</a>
-                    </div>
-                </div>
-				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-                        <div class ="blog-image">
-							<figure class="imghvr-hinge-right"><img src="../Extra/img/blog/04-fashion-upgrades-classic-coat11s.jpg"="example-image">
-							<figcaption>
-								<h3 align="center">OTHER</h3>
-								<p align="center">Check out other promotions here!</p>
-							</figcaption>
-							</figure>
-						</div>
+                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+                    <div class="error-content text-center">
+                        <img src="../Extra/img/404.png" alt="">
+                        <h3>page not found</h3>
+                        <h2>Opps !</h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!--CONTACT US AREA END-->
 
-    <!--END MAIN CATEGORIES AREA-->
-	
-    <!--FOOER AREA-->
+  <!--FOOER AREA-->
     <div class="footer-area dark-bg">
         <div class="footer-area-bg"></div>
         <div class="footer-top-area wow fadeIn">
@@ -314,7 +201,7 @@
                         <div class="single-footer-widget list-widget">
                             <h3>Main Catgories</h3>
                             <ul>
-                                <li><a href="#">Food</a></li>
+                                <li><a href="food.php">Food</a></li>
                                 <li><a href="#">Movies</a></li>
                                 <li><a href="#">Cloths and Accessories</a></li>
 								<li><a href="#">Electronic Equipments</a></li>
@@ -334,6 +221,75 @@
                             </ul>
                         </div>
                     </div>
+					<!--<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="single-footer-widget instafeed-widget">
+                            <h3>Main Categories</h3>
+                            <ul>
+								<li>
+								<div class="ih-item square colored effect4"><a href="#">
+									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+									<div class="mask1"></div>
+									<div class="mask2"></div>
+									<div class="info">
+										<h3>Food</h3>
+								</li>
+									
+								<li>
+								<div class="ih-item square colored effect4"><a href="#">
+									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+									<div class="mask1"></div>
+									<div class="mask2"></div>
+									<div class="info">
+										<h3>Food</h3>
+								</li>
+								
+								<li>
+								<div class="ih-item square colored effect4"><a href="#">
+									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+									<div class="mask1"></div>
+									<div class="mask2"></div>
+									<div class="info">
+										<h3>Food</h3>
+								</li>
+									
+								<li>
+								<div class="ih-item square colored effect4"><a href="#">
+									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+									<div class="mask1"></div>
+									<div class="mask2"></div>
+									<div class="info">
+										<h3>Food</h3>
+								</li>
+									
+								<li>
+								<div class="ih-item square colored effect4"><a href="#">
+									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+									<div class="mask1"></div>
+									<div class="mask2"></div>
+									<div class="info">
+										<h3>Food</h3>
+								</li>
+									
+								<li>
+								<div class="ih-item square colored effect4"><a href="#">
+									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
+									<div class="mask1"></div>
+									<div class="mask2"></div>
+									<div class="info">
+										<h3>Food</h3>
+								</li>
+									
+								
+									
+                            <!--    <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coat11s.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats (1).jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/Girl_Soccer_Goalie.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/movies.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="img/instafeed/perfect-selfie.jpg" alt=""></a></li>-->
+                           <!-- </ul>
+                        </div>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -358,12 +314,13 @@
                             </ul>
                         </div>
                     </div>
+					
                 </div>
             </div>
         </div>
     </div>
-    <!--FOOER AREA END-->
-	
+   <!--FOOER AREA END-->
+
     <!--====== SCRIPTS JS ======-->
     <script src="../Extra/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="../Extra/js/vendor/bootstrap.min.js"></script>
@@ -382,4 +339,5 @@
     <!--===== ACTIVE JS=====-->
     <script src="../Extra/js/main.js"></script>
 </body>
+
 </html>
