@@ -1,6 +1,6 @@
 <?php
 
-include("../Controller/dbh.php");
+include_once("../Controller/dbh.php");
 
 class Promotion{
 	
@@ -332,6 +332,7 @@ class Promotion{
 						/*mysqli_stmt_bind_param($stmt, "sss", $username, $uemail,$hPassword);
 						mysqli_stmt_execute($stmt);
 						mysqli_stmt_store_result($stmt);*/
+					
 						header("Location: ../View/login.php");
 						exit();
 
