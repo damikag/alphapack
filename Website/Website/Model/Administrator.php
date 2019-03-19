@@ -1,18 +1,20 @@
 <?php
 
 require_once("../Model/Promotion.php");
+require_once("../Model/Person.php");
 
-class Administrator{
+class Administrator extends Person{
 	
 	private $dbh;
 	private $viewPromo;
 	
-	public function __construct($dbh){
-		$this->dbh = $dbh;
+	public function __construct(){
+		$this->dbh = new Dbh();
 	}
 	
-	private function loginFunction(){
-			
+	public static function login(){
+		$dbh=new Dbh();
+		
 		$username = $_POST["uid"];
 		$password = $_POST["password"];
 
@@ -24,7 +26,7 @@ class Administrator{
 		}
 
 		else{
-			$conn = $this->dbh->connect();
+			$conn = $dbh->connect();
 			$sql = $conn->prepare("SELECT * from admin WHERE username = ? OR email  =?");
 				
 				$sql->bind_param("ss", $username, $username);
@@ -98,9 +100,9 @@ class Administrator{
 		$this->rejectPromotion($promoID);
 	}
 	
-	public function login(){
-		$this->loginFunction();
-	}
+	/*public static function login(){
+		loginFunction();
+	}*/
 	
 	public function getViewPromotion(){
 		$temp = $this->viewPromotion();

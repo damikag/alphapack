@@ -1,5 +1,6 @@
 <?php
 
+
 class Dbh{
 	
 	private $dbServer;
@@ -20,3 +21,35 @@ class Dbh{
 		return $conn;
 	}
 }
+
+
+/*class Dbh {
+  
+  private static $conn = null;
+  
+  private $dbServer;
+  private $dbUser;
+  private $dbPassword;
+  private $dbName;
+
+	private function __construct(){
+		$this->dbServer = "localhost";
+		$this->dbUser = "root";
+		$this->dbPassword = "";
+		$this->dbName = "waasi.lk_version2";
+		
+		$conn = new mysqli($this->dbServer,$this->dbUser,$this->dbPassword,$this->dbName);
+	}
+
+	
+  public static function getInstance()
+  {
+    if (self::$conn == null)
+    {
+      self::$conn = new Dbh();
+    }
+ 
+    return self::$conn;
+  }
+}
+*/ 

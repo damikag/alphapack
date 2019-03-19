@@ -1,8 +1,9 @@
 <?php
 
 include_once("../Controller/dbh.php");
+require_once("../Model/Person.php");
 
-class Customer{
+class Customer extends Person{
 	
 	private $username;
 	private $email;

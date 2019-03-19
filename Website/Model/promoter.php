@@ -2,7 +2,9 @@
 
 include_once("../Controller/dbh.php");
 include_once("../Model/Promotion.php");
-class Promoter{
+require_once("../Model/Person.php");
+
+class Promoter extends Person{
 	
 	private $username;
 	private $password;

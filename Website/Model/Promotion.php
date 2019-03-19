@@ -121,15 +121,33 @@ class Promotion{
 		return $this->promoID;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	/*public static function readPromotionFromDBCategory($category){
+		
+		$dbh=new Dbh();
+		$conn = $this->dbh->connect();
+		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE category = ? and state='Accepted'" );
+				
+		$sql->bind_param("s", $category);
+		$sql->execute();
+		$results = $sql->get_result();
+		$viewPromotion;
+		while($row = $results->fetch_array(MYSQLI_ASSOC)){
+			$tempPromo = new Promotion($row['promo_id'],$row['category'],$row['title'],$row['description'],$row['image_path'],$row['link'],$row['state'],$row['start_date'],$row['end_date'],$row['location'],$row['pr_username'],$row['ad_username']);
+			
+			$this->viewPromo[$i] = $tempPromo;
+			$i = $i +1;
+		}
+		
+		return $viewPromo;
+		/*if($row = $results->fetch_array(MYSQLI_ASSOC)){
+			//$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
+			return new Promotion($row["promo_id"],$row["category"],$row["ad_username"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row["start_date"],$row["end_date"],$row["location"],$row["state"]);
+		}
+
+		else{
+			return null;
+		}*/	
+	//}
 	
 	public static function readPromotionFromDB($promoID){
 		$dbh=new Dbh();
@@ -218,7 +236,7 @@ class Promotion{
 		
 	}
 	
-	private function loginFunction(){
+	/*private function loginFunction(){
 			
 		$username = $_POST["uid"];
 		$password = $_POST["password"];
@@ -268,7 +286,7 @@ class Promotion{
 		}
 	}
 	
-	private function signupFunction(){
+	/*private function signupFunction(){
 		$username = $_POST["uid"];
 		$uemail = $_POST["email"];
 		$password = $_POST["password"];
@@ -337,7 +355,7 @@ class Promotion{
 						mysqli_stmt_execute($stmt);
 						mysqli_stmt_store_result($stmt);*/
 					
-						header("Location: ../View/login.php");
+						/*header("Location: ../View/login.php");
 						exit();
 
 
@@ -346,16 +364,16 @@ class Promotion{
 
 				mysqli_stmt_close($stmt);
 				mysqli_close($conn);		
-	}
+	}*/
 	
 	
-	public function login(){
+	/*public function login(){
 		$this->loginFunction();
 	}
 	
 	public function signup(){
 		$this->signupFunction();
-	}
+	}*/
 	
 					
 }
