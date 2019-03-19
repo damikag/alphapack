@@ -1,8 +1,9 @@
 <?php
 	
-	include("../Model/Promotion.php");
+	include("../Model/Person.php");
 	session_start();
-	$tempPromo = new Promotion();
+	$person = new Person();
+	$viewPromo = $person->readPromotionFromDBCategory("food");
 
 ?>
 
@@ -312,9 +313,40 @@
                             <div class="row">
 								
 								<?php
-								
-								
-								
+									
+									if(empty($viewPromo)){
+										echo('<div class="single-blog wow fadeIn">
+											<div class="blog-details">
+												<div class="blog-meta"></div>
+												<h3>NO PENDING PROMOTIONS</h3>
+											</div>
+										</div><br />');
+									}
+									else{
+
+										$len = count($viewPromo);
+										for ($i=0; $i<$len; $i++){
+											$tempPromo = $viewPromo[$i];
+											echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                    <div class="single-team">
+                                        <div class="member-image">
+                                            <img src="'.$tempPromo->getImage().'" alt="">
+                                        </div>
+                                        <div class="member-details">
+                                            <h3>Company : '.$tempPromo->getPr_username().'</h3>
+                                            <p>'.$tempPromo->getDescription().'</p>
+                                            <div class="member-social-bookmark">
+                                                <ul class="social-bookmark">
+                                                    <li><a href="#"><i class="fa fa-phone"></i></a></li>
+													 <li><a href="#"><i class="fa fa-book"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>');
+
+										}
+									}
 								
 								
 								
@@ -327,7 +359,7 @@
 								
 								
 								
-                                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                <!--<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                                     <div class="single-team">
                                         <div class="member-image">
                                             <img src="img/team/member-1.jpg" alt="">
@@ -440,7 +472,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!--<div id="support" class="support-content tab-pane fade">

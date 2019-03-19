@@ -44,12 +44,12 @@
                         <div class="single-footer-widget list-widget">
                             <h3>Main Catgories</h3>
                             <ul>
-                                <li><a href="#">Food</a></li>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Cloths and Accessories</a></li>
-								<li><a href="#">Electronic Equipments</a></li>
-                                <li><a href="#">Sports Equipments</a></li>
-								<li><a href="#">Other</a></li>
+                                <li><a href="food.php">Food</a></li>
+                                <li><a href="movies.php">Movies</a></li>
+                                <li><a href="cloths.php">Cloths and Accessories</a></li>
+								<li><a href="electronic.php">Electronic Equipments</a></li>
+                                <li><a href="sports.php">Sports Equipments</a></li>
+								<li><a href="other.php">Other</a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,75 +64,7 @@
                             </ul>
                         </div>
                     </div>
-					<!--<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget instafeed-widget">
-                            <h3>Main Categories</h3>
-                            <ul>
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-								
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								<li>
-								<div class="ih-item square colored effect4"><a href="#">
-									<div class="img"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt="img"></div>
-									<div class="mask1"></div>
-									<div class="mask2"></div>
-									<div class="info">
-										<h3>Food</h3>
-								</li>
-									
-								
-									
-                            <!--    <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coat11s.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats (1).jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/04-fashion-upgrades-classic-coats.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/Girl_Soccer_Goalie.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/movies.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="img/instafeed/perfect-selfie.jpg" alt=""></a></li>-->
-                           <!-- </ul>
-                        </div>
-                    </div> -->
+
                 </div>
                 <div class="row">
                     <div class="col-md-12">
