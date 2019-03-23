@@ -19,6 +19,7 @@ class Promotion{
 	private $state;
 	private $promoID;
 	private $ad_username;
+	private $pr_name;
 	
 	public function __construct($promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$pr_username,$ad_username){
 		//$this->dbh = $dbh;
@@ -43,6 +44,14 @@ class Promotion{
 	
 	public function setTitle($title){
 		$this->title=$title;
+	}
+	
+	public function setPr_username($pr_username){
+		$this->pr_username = $pr_username;
+	}
+	
+	public function setPr_name($pr_name){
+		$this->pr_name = $pr_name;
 	}
 	
 	public function setDescription($description){
@@ -83,6 +92,10 @@ class Promotion{
 	
 	public function getPr_username(){
 		return $this->pr_username;
+	}
+	
+	public function getPr_name(){
+		return $this->pr_name;
 	}
 	
 	public function getAd_username(){

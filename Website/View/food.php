@@ -3,7 +3,7 @@
 	include("../Model/Person.php");
 	session_start();
 	$person = new Person();
-	$viewPromo = $person->readPromotionFromDBCategory("food");
+	$viewPromo = $person->getReadPromotionFromDBCategory("food");
 
 ?>
 
@@ -14,7 +14,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Food</title>
+    <title>Food Promotions</title>
     <link rel="shortcut icon" type="image/ico" href="../Extra/img/favicon.png" />
 	
     <!--====== STYLESHEETS ======-->
@@ -333,12 +333,12 @@
                                             <img src="'.$tempPromo->getImage().'" alt="">
                                         </div>
                                         <div class="member-details">
-                                            <h3>Company : '.$tempPromo->getPr_username().'</h3>
+                                            <h3>Company : '.$tempPromo->getPr_name().'</h3>
                                             <p>'.$tempPromo->getDescription().'</p>
                                             <div class="member-social-bookmark">
                                                 <ul class="social-bookmark">
-                                                    <li><a href="#"><i class="fa fa-phone"></i></a></li>
-													 <li><a href="#"><i class="fa fa-book"></i></a></li>
+                                                    <li><a href="promotor"><i class="fa fa-phone"></i></a></li>
+													 <li><a href="promoterTemplate?pr_username='.$tempPromo->getPr_username().'"><i class="fa fa-book"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
