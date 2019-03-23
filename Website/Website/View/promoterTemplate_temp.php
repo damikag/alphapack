@@ -54,7 +54,7 @@
        <div class="top-area-bg-promoter-template" data-stellar-background-ratio="0.6">
 		   <div class = "service-image"></div>
 		   <div class = "brand">
-			   <h2>Company Name</h2>
+			   <h1>Company Name</h1>
 			   <h3>Category : asassaas</h3> <br />
 		   </div>
 	   </div>

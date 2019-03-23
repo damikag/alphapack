@@ -337,8 +337,8 @@
                                             <p>'.$tempPromo->getDescription().'</p>
                                             <div class="member-social-bookmark">
                                                 <ul class="social-bookmark">
-                                                    <li><a href="promotor"><i class="fa fa-phone"></i></a></li>
-													 <li><a href="promoterTemplate?pr_username='.$tempPromo->getPr_username().'"><i class="fa fa-book"></i></a></li>
+                                                    <li><a href="promoterTemplate.php?pr_username='.$tempPromo->getPr_username().'"><i class="fa fa-phone"></i></a></li>
+													 <li><a href="#"><i class="fa fa-book"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
