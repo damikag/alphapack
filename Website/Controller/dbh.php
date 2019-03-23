@@ -12,7 +12,7 @@ class Dbh{
 		$this->dbServer = "localhost";
 		$this->dbUser = "root";
 		$this->dbPassword = "";
-		$this->dbName = "waasi.lk_version2";
+		$this->dbName = "wasilk";
 	}
 	
 	public function connect(){
