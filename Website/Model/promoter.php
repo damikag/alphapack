@@ -67,6 +67,10 @@ class Promoter extends Person{
 		return $this->rating;
 	}
 	
+	public function getPromotionList(){
+		return $this->promotionList;
+	}
+	
 	public function setUsername($username){
 		$this->username=$username;
 	}
@@ -98,6 +102,7 @@ class Promoter extends Person{
 	public function setRating($rating){
 		$this->rating=$rating;
 	}
+	
 	
 	public static function isPromoter(){
 		
@@ -281,6 +286,7 @@ class Promoter extends Person{
 	}
 	
 	public function addPromotion($promotion){			//a promotion is added to the prevailing list of promotions 
+//		echo $promotion->getTitle();
 		array_push($this->promotionList,$promotion);
 	}
 	
@@ -301,7 +307,7 @@ class Promoter extends Person{
 		
 	}
 	
-	public function readPromotionsFromDB(){		//promotions are read and added to the DB
+	public function readActivePromotionsFromDB(){		//promotions are read and added to the DB
 		$dbh=new Dbh();
 		$conn = $dbh->connect();
 		
@@ -314,9 +320,25 @@ class Promoter extends Person{
 		$sql -> bind_result($id,$category,$title,$description,$image_path,$link,$state,$start_date,$end_date,$location,$pr_username,$ad_username);
 		
 		while($sql -> fetch()){
-			$promotion = new Promotion($id,$category,$title,$description,$image_path,$link,$state,$start_date,$end_date,$location,$pr_username,$ad_username);
-			echo $promotion->getCategory();
-			$this->addPromotion($promotion);
+			$time_zone = new DateTimeZone('Asia/Colombo');
+			$current_time = new DateTime("now",$time_zone);
+//			echo gettype($start_date),$end_date;
+			$start_date_full = $start_date." 23:59:59";
+			$end_date_full = $end_date." 23:59:59";
+			$format = 'Y-m-d H:i:s';
+//			echo gettype($start_date),$end_date;
+			$startDT = DateTime::createFromFormat ( $format, $start_date_full);
+			$endDT = DateTime::createFromFormat ( $format, $end_date_full);
+//			echo "Hi<br>";
+//			echo date_format($current_time,"Y/m/d H:i:s")."<br>";
+//			echo date_format($startDT,"Y/m/d H:i:s")."<br>";
+//			echo date_format($endDT,"Y/m/d H:i:s")."<br>";
+			if($startDT<=$current_time and $endDT>$current_time){
+				$promotion = new Promotion($id,$category,$title,$description,$image_path,$link,$state,$start_date,$end_date,$location,$pr_username,$ad_username);
+//				echo $promotion->getTitle()."<br>";
+				$this->addPromotion($promotion);
+				
+			}
 		}		
 		
 	}
