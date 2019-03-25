@@ -1,11 +1,7 @@
 <?php
-	//include("../Controller/dbh.php");
-	include("../Model/Administrator.php");
-	
+
 	session_start();
-	$dbh = new Dbh();
-	$admin = new Administrator($dbh);
-	$viewPromo = $admin->getViewPromotion();
+		
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -13,7 +9,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ADMIN</title>
+    <title>Promoter Template</title>
     <link rel="shortcut icon" type="image/ico" href="../Extra/img/favicon.png" />
 	
     <!--====== STYLESHEETS ======-->
@@ -56,8 +52,10 @@
     <!--START TOP AREA-->
     <header class="top-area single-page-promoter" id="home">
        <div class="top-area-bg-promoter-template" data-stellar-background-ratio="0.6">
-		   <div class = "brand admin">
-			   <h2>ADMINSTRATOR</h2>
+		   <div class = "service-image"></div>
+		   <div class = "brand">
+			   <h1>Company Name</h1>
+			   <h3>Category : asassaas</h3> <br />
 		   </div>
 	   </div>
         <div class="header-top-area">
@@ -93,6 +91,7 @@
                                 </li>
                                 <li><a href="service.html">Service</a>
                                     <ul>
+										<li><a href="promoterLogin.php">Login as a promoter</a></li>
 										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
                                     </ul>
                                 </li>
@@ -107,12 +106,12 @@
 									</a>
                                     <ul>
                                         <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                        
+                                        <li><a href="contact-2.html">Contact Version 2</a></li>
                                     </ul>';
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN</a>';		
+										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
 									}
 								?>								
 								</li>	
@@ -144,60 +143,21 @@
     <!--END TOP AREA-->
 
     <!--BLOG AREA-->
-    <section class="blog-area section-padding">
+    <section class="blog-area blog-page section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-					<?php
-					//View Pending promotion to admin to accept or reject
-						if(empty($viewPromo)){
-							echo('<div class="single-blog wow fadeIn">
-								<div class="blog-details">
-									<div class="blog-meta"></div>
-									<h3>NO PENDING PROMOTIONS</h3>
-								</div>
-							</div><br />');
-						}
-					
-						else{
-							
-							$len = count($viewPromo);
-							for ($i=0; $i<$len; $i++){
-								$tempPromo = $viewPromo[$i];
-								echo('<div class="single-blog wow fadeIn">
-								<div class="blog-image">
-									<img src="'.$tempPromo->getImage().'" alt="">
-								</div>
-								<div class="blog-details">
-									<div class="blog-meta"></div>
-									<h3>Promoter Username- '.$tempPromo->getPr_username().'</h3>
-									<h4>Category - '.$tempPromo->getCategory().'</h4>
-									<div class="post-date"><a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getStartDate().'</a>&nbsp; &nbsp; to &nbsp; &nbsp; <a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getEndDate().'</a></div>
-									<br />
-									<h5>content</h5>
-									<p>'.$tempPromo->getDescription().'</p>
-									<a href="../Controller/acceptRejectPromotion.php?acceptedPromoID='.$tempPromo->getPromoID().'" class="read-more">ACCEPT</a>
-									&nbsp; &nbsp; &nbsp;
-									<a href="../Controller/acceptRejectPromotion.php?rejectedPromoID='.$tempPromo->getPromoID().'" class="read-more">REJECT</a>
-								</div>
-							</div><br />');
-							}							
-						}
-					?>
-                   <!--<div class="single-blog wow fadeIn">
+                    <div class="single-blog wow fadeIn">
                         <div class="blog-image">
                             <img src="../Extra/img/blog/blog_7.jpg" alt="">
                         </div>
                         <div class="blog-details">
-                            <div class="blog-meta"></div>
+                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
                             <h3><a href="single-blog.html">Quick Transportation Service in the world</a></h3>
-                            <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a>&nbsp; &nbsp; &nbsp;<a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a></div>
-							
+                            <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January, 2015</a></div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            <a href="single-blog.html" class="read-more">ACCEPT</a>
-							&nbsp; &nbsp; &nbsp;
-							<a href="single-blog.html" class="read-more">REJECT</a>
+                            <a href="single-blog.html" class="read-more">Read More</a>
                         </div>
                     </div>
                     <div class="single-blog wow fadeIn">
@@ -238,10 +198,51 @@
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                             <a href="single-blog.html" class="read-more">Read More</a>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="sidebar-area wow fadeIn">
+					  <div class="single-sidebar-widget widget_categories">
+							<form class="quote-form subscribe" action="#">
+								<button type="submit">Subscribe</button>	
+							</form>
+                   	  </div>
+                        <div class="single-sidebar-widget widget_search">
+                            <h4>Search</h4>
+                            <form action="#">
+                                <input type="text" name="s" id="s" placeholder="Search Here...">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+						<div class="single-sidebar-widget widget_search">
+							<h4>Contact us</h4>
+							<ul>
+                                <li><i class="fa fa-phone"></i> <a href="callto:+8801911854378">&nbsp;&nbsp;011-299-9999</a></li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:backpiper.com@gmail.com">&nbsp;xxx.com@gmail.com</a></li>
+								<li><i class="fa fa-facebook"></i> <a href="#">&nbsp;&nbsp;&nbsp;Facebook Link</a></li>
+                            </ul>
+                    	</div>
+						<div class="single-sidebar-widget widget_categories">
+							<h3>Star rating</h3>
+							<div class="box">
+
+							</div>
+                    	</div>
+
+						<div class="single-sidebar-widget widget_categories">
+							<h3>Give a comment</h3>
+							<form class="quote-form" action="#">
+								<p>
+									<textarea name="quote-message" id="quote-message" cols="30" rows="4" placeholder="Your Comment..."></textarea>
+								</p>
+								<button type="submit">Comment</button>
+							</form>
+                    	</div>
+						<div class="single-sidebar-widget widget_categories">
+							<h3>Give a comment</h3>
+							<form class="quote-form" action="#">
+							</form>
+                    	</div>
                         <div class="single-sidebar-widget widget_categories">
                             <h4>Main Categories</h4>
                             <ul>
@@ -288,9 +289,9 @@
                             </div>
                         </div>-->
                     </div>
-                </div> 
+                </div>
             </div>
-            <!--<div class="row">
+            <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <ul class="pagination">
                         <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
@@ -301,7 +302,7 @@
                         <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
-            </div>-->
+            </div>
         </div>
     </section>
     <!--BLOG AREA END-->

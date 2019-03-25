@@ -1,8 +1,9 @@
 <?php
 
 require_once("../Model/Promotion.php");
+require_once("../Model/Person.php");
 
-class Administrator{
+class Administrator extends Person{
 	
 	private $dbh;
 	private $viewPromo;
