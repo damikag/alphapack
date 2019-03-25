@@ -45,25 +45,26 @@ class Monthly_report{
 			echo "Execute failed";
 		}
 		$stmt->store_result();
-//		return $stmt;
-//		$stmt = $this->prepared_statement($conn,$sql);
 		$stmt->bind_result($username,$promoterName,$email,$password,$mapLocation,$phoneNo,$weblink,$fblink,$rating);
 		$stmt->fetch();
 		
 		$promoter = new Promoter($username,$promoterName,$email,$password,$mapLocation,$phoneNo,$weblink,$fblink,$rating);
-//		echo $promoter->getEmail();
 		
 		$subscribeCount = $promoter->subscribedCustomerCount();
-//		echo $subscribeCount;
 		
 		$promoter->readActivePromotionsFromDB();
 		
 		$promotionList = $promoter->getPromotionList();
-//		echo $promoter->getPromotionList()[0]->getPr_username();
-		include("../View/monthlyReport.php");
+		
+		$_SESSION['promoter'] = $promoter;
+		$_SESSION['promotionList'] = $promotionList;
+		$_SESSION['subscribeCount'] = $subscribeCount;
+	
 	}
 }
 
+//session_start();
+//$_SESSION['']
 
 $main = new Monthly_report("Food City");
 $main->generateMonReport();
