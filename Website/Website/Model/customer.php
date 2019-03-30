@@ -7,15 +7,15 @@ class Customer extends Person{
 	
 	private $username;
 	private $email;
-	private $password;
+	//private $password;
 	private $phoneNumber;
 	
 	//private $dbh;
 	
-	public function __construct($username,$password,$email,$phoneNumber){
+	public function __construct($username/*$password*/,$email,$phoneNumber){
 		$this->username=$username;
 		$this->email=$email;
-		$this->password=$password;
+		//$this->password=$password;
 		$this->phoneNumber=$phoneNumber;
 		//$this->dbh = $dbh;
 		
@@ -29,9 +29,9 @@ class Customer extends Person{
 		return $this->email;
 	}
 	
-	public function getPassword(){
+	/*public function getPassword(){
 		return $this->password;
-	}
+	}*/
 	
 	public function getPhoneNumber(){
 		return $this->phoneNumber;
@@ -41,9 +41,9 @@ class Customer extends Person{
 		$this->username=$username;
 	}
 	
-	public function setPassword($password){
+	/*public function setPassword($password){
 		$this->password=$password;
-	}
+	}*/
 	public function setEmail($email){
 		$this->email=$email;
 	}
@@ -195,53 +195,21 @@ class Customer extends Person{
 				mysqli_close($conn);		
 	}
 	
+	private function subscribeFunction($pr_username){
+		$dbh = new Dbh();
+		$conn = $dbh->connect();
+		$sql = $conn->prepare("INSERT INTO promotor_subscribing(cus_username, pr_username) VALUES (?, ?) ");
+		$sql->bind_param("ss", $username,$pr_username);
+		$sql->execute();
+		$sql->store_result();
+	}
+	
+	public function subscribe($pr_username){
+		$this->subscribeFunction($pr_username);
+	}
+	
 	private function commentFunction(){
 		
-		$quote = $_POST["quote-message"];
-
-		if(empty($quote)){
-
-			header("Location: ../View/promterLogin.php?error=emptyComment");
-			exit();
-
-		}
-
-		else{
-			$conn = $this->dbh->connect();
-			$sql = $conn->prepare("SELECT * from customer WHERE username = ? OR email  =?");
-				
-				$sql->bind_param("ss", $username, $username);
-				$sql->execute();
-				$results = $sql->get_result();
-				if($row = $results->fetch_array(MYSQLI_ASSOC)){
-					$passCheck = password_verify($password,$row["password"]);
-					if ($passCheck == false){
-						header("Location: ../View/login.php?error=noUser");
-						exit();
-					}
-					else if($passCheck==true){
-						session_start();
-
-						$_SESSION['userName']= $row['username'];
-						$_SESSION['uemail']= $row['email'];
-						$_SESSION['phone'] = $row['phone'];
-						
-
-						header("Location: ../View/index.php");
-						exit();
-					}
-					else{
-						header("Location: ../View/login.php?error=noUser");
-						exit();
-					}
-				}
-
-				else{
-					header("Location: ../View/login.php?error=nouser");
-					exit();
-				}
-			
-		}
 	}
 	
 	public function comment(){}

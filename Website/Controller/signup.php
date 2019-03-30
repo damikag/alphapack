@@ -2,7 +2,7 @@
 
 if (isset($_POST["signup-submit"])){
 	
-	include("../Model/customer.php");
+	include_once("../Model/customer.php");
 	//$dbh = new Dbh();
 	//$user = new Customer($dbh);
 	//$user->signup();
@@ -86,7 +86,7 @@ mysqli_close($conn);
 
 
 else{
-	echo("PLEASE LEAVE!");
-	header("Location: ../View/signup.php");
+	//echo("PLEASE LEAVE!");
+	header("Location: ../View/404.php");
 	exit();
 }

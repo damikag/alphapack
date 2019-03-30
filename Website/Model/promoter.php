@@ -160,10 +160,10 @@ class Promoter extends Person{
 				if($row = $results->fetch_array(MYSQLI_ASSOC)){
 					$passCheck = password_verify($password,$row["password"]);
 					
-					if($password==$row["password"]){
+					/*if($password==$row["password"]){
 						$passCheck=true;
 					}
-					else $passCheck=false;
+					else $passCheck=false;*/
 					
 					if ($passCheck == false){
 						header("Location: ../View/login.php?error=wrongPassword");
@@ -267,7 +267,7 @@ class Promoter extends Person{
 					$sql = $conn->prepare("INSERT INTO promotor(username, password, email,phone_no,promotor_name,website,fb_link) VALUES (?, ? ,?,?,?,?,?) ");
 					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
 					$hPassword = password_hash($password, PASSWORD_DEFAULT);
-					$hPassword=$password;
+					//$hPassword=$password;
 					$sql->bind_param("sssssss", $username,$hPassword,$uemail,$phone,$promoterName,$website,$fblink);
 					$sql->execute();
 					$sql->store_result();

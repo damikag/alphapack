@@ -212,11 +212,22 @@
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="sidebar-area wow fadeIn">
-					  <div class="single-sidebar-widget widget_categories">
-							<form class="quote-form subscribe" action="#">
-								<button type="submit">Subscribe</button>	
+					  <?php
+						
+						if (isset($_SESSION['userNameCustomer'])){
+							echo('<div class="single-sidebar-widget widget_categories">
+								<form class="quote-form subscribe" action="../Controller/subscribeCompany.php?pr_username='.$_GET['pr_username'].'" method="post">
+								<button type="submit" name="subscribe-submit">Subscribe</button>	
+								</form>
+                   	  			</div>');
+						}
+						
+					  ?>
+					 <!-- <div class="single-sidebar-widget widget_categories">
+							<form class="quote-form subscribe" action="../Controller/subscribeCompany.php" method='post'>
+								<button type="submit" name="subscribe-submit">Subscribe</button>	
 							</form>
-                   	  </div>
+                   	  </div>-->
                         <div class="single-sidebar-widget widget_search">
                             <h4>Search</h4>
                             <form action="#">
@@ -294,7 +305,7 @@
 							</form>
                     	</div>
 						<div class="single-sidebar-widget widget_categories">
-							<h3>Give a comment</h3>
+							<h3>comments</h3>
 							<form class="quote-form" action="#">
 							</form>
                     	</div>
