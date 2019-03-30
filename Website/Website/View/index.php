@@ -1,6 +1,11 @@
 <?php
 
 	session_start();
+	if(isset($_SESSION['userNameCustomer'])){
+		include_once("../Model/customer.php");
+		$tempCustomer = new Customer($_SESSION['userName'],$_SESSION['uemail'],$_SESSION['phone']);
+		$subscribedCompanies = $tempCustomer->getSubscribedCompanies();
+	}
 		
 ?>
 
@@ -82,26 +87,41 @@
 								<li><a href="#">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <?php
+									if(!(isset($_SESSION["userNamePromoter"]))){
+										echo ('<li><a href="#">Service</a>
                                     <ul>
-										
-										
-										
-										<li><a href="promoterSignup.php">Register as a Promoter</a></li>
+										<li><a href="promoterSignup.php">Register as a promoter</a></li>
                                     </ul>
-                                </li>
+                                </li>');
+									}
+								?>
 								<li class="logged-user">
 									<?php
 									
 									if (isset($_SESSION["userName"])){
 										
 										$username = $_SESSION["userName"];
-										echo '<a href="#" class="logged-user" background-colour="lightsalmon">
-									'.$username.'
-									</a>
-                                    <ul>
-                                        <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                    </ul>';
+										if (isset($_SESSION['userNameCustomer'])){
+											echo '<a href="index.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';
+										}
+										elseif(isset($_SESSION['userNamePromoter'])){
+											echo '<a href="promoterIndex.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										else{
+											echo '<a href="adminView.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										
+
+										echo '<ul>
+											<li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
+										</ul>';
 									}
 									
 									else{
@@ -170,8 +190,15 @@
     <!--END TOP AREA-->
 
     <!--MAIN CATEGORIES AREA-->
-    <section class="blog-area gray-bg" id="categories">
-		<h2 class="index-h2">OUR MAIN CATEGORIES</h2>
+    <section class="service-area-three section-padding" id="categories">
+		<div class="row">
+			<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+				<div class="area-title text-center wow fadeIn">
+					<h2>Main Categories</h2>
+					<p>We have divided our vast majority of promotions into six main groups.</p>
+				</div>
+			</div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
@@ -267,6 +294,110 @@
             </div>
         </div>
     </section>
+	
+	<?php
+	
+		if(isset($_SESSION['userNameCustomer'])){
+			
+			echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2>Subscribed Promoters</h2>
+                        <p>List of promoters I have subscribed.</p>
+                    </div>
+                	</div>
+            		</div>
+            		<div class="row">');
+			
+			if(empty($subscribedCompanies)){
+				echo('<div class="single-blog wow fadeIn">
+				<div class="blog-details">
+				<div class="blog-meta"></div>
+				<h3>You have not subscribed any promoters</h3>
+				</div>
+				</div><br />');				
+			}
+			else{
+				
+				$len = sizeof($subscribedCompanies);
+				for ($i=0; $i<$len ; $i++){
+					$temp = $subscribedCompanies[$i];
+					$tempCompanyName = $temp[1];
+					$tempPrUsername = $temp[0];
+					echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-building"></i></div>
+                        <a href = "promoterTemplate.php?pr_username='.$tempPrUsername.'"><h4>'.$tempCompanyName.'</h4></a>
+                    	</div>
+                		</div>');
+				}
+				
+			}
+			echo('</div>
+				</div>
+    			</section>');
+		}
+	
+	
+	?>
+	<!--<section class="service-area-three section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2>Subscribed Promoters</h2>
+                        <p>List of promoters I have subscribed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-truck"></i></div>
+                        <h4>road freight</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-icon-three"><i class="fa fa-plane"></i></div>
+                        <h4>air freight</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-icon-three"><i class="fa fa-ship"></i></div>
+                        <h4>sea freight</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-icon-three"><i class="fa fa-dropbox"></i></div>
+                        <h4>ware house</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-icon-three"><i class="fa fa-cog"></i></div>
+                        <h4>consulting</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-icon-three"><i class="fa fa-bicycle"></i></div>
+                        <h4>fast delevary</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
 
     <!--END MAIN CATEGORIES AREA-->
 	

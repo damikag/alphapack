@@ -48,6 +48,7 @@ class Person{
 		return $viewPromo;
 	}
 	
+	
 	private function viewPromoterDetails($pr_username){
 		
 		$dbh=new Dbh();

@@ -2,6 +2,7 @@
 
 include_once("../Controller/dbh.php");
 require_once("../Model/Person.php");
+require_once("../Model/promoter.php");
 
 class Customer extends Person{
 	
@@ -230,9 +231,16 @@ class Customer extends Person{
 			//$tempCustomerUsername = $row['cus_username'];
 			$tempPromoterUsername = $row['pr_username'];
 			$temp = [];
-			//$temp[0] = $tempCustomerUsername;
-			//$temp[1] = $tempPromoterUsername;
-			$this->subscribedPromoters[$i] = $tempPromoterUsername; 
+			$sql1 = $conn->prepare("SELECT promotor_name from promotor WHERE username= ?");
+			$sql1->bind_param("s",$tempPromoterUsername);
+			$sql1 ->execute();
+			$results1 = $sql1->get_result();
+			if ($row1 = $results1->fetch_array(MYSQLI_ASSOC)){
+				$tempCompanyName = $row1['promotor_name'];
+			}
+			$temp[0] = $tempPromoterUsername;
+			$temp[1] = $tempCompanyName;
+			$this->subscribedPromoters[$i] = $temp; 
 			//$tempPromo= new Promotion($row["promo_id"],$row["category"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row['state'],$row["start_date"],$row["end_date"],$row['location'],$row["pr_username"],$row["ad_username"]);
 			
 			//$viewPromo[$i] = $tempPromo;
@@ -249,7 +257,8 @@ class Customer extends Person{
 		$len = sizeof($tempSubscribedList);
 		$check = false;
 		for ($i=0;$i<$len;$i++){
-			if ($tempSubscribedList[$i]==$pr_username){
+			$temp = $tempSubscribedList[$i];
+			if ($temp[0]==$pr_username){
 				$check = true;
 				break;
 			}
@@ -295,7 +304,7 @@ class Customer extends Person{
 		
 	}
 	public function unsubscribe($pr_username){
-		$this->unsubscribeFunction();
+		$this->unsubscribeFunction($pr_username);
 	}
 	
 	private function commentFunction(){
