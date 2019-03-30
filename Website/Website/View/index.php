@@ -342,62 +342,6 @@
 	
 	
 	?>
-	<!--<section class="service-area-three section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>Subscribed Promoters</h2>
-                        <p>List of promoters I have subscribed.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
-                        <div class="service-icon-three"><i class="fa fa-truck"></i></div>
-                        <h4>road freight</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-icon-three"><i class="fa fa-plane"></i></div>
-                        <h4>air freight</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-icon-three"><i class="fa fa-ship"></i></div>
-                        <h4>sea freight</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-icon-three"><i class="fa fa-dropbox"></i></div>
-                        <h4>ware house</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-icon-three"><i class="fa fa-cog"></i></div>
-                        <h4>consulting</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-service-three wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-icon-three"><i class="fa fa-bicycle"></i></div>
-                        <h4>fast delevary</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, lorem Ipsu.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
 
     <!--END MAIN CATEGORIES AREA-->
 	

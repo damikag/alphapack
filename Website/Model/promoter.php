@@ -160,10 +160,10 @@ class Promoter extends Person{
 				if($row = $results->fetch_array(MYSQLI_ASSOC)){
 					$passCheck = password_verify($password,$row["password"]);
 					
-					/*if($password==$row["password"]){
+					if($password==$row["password"]){
 						$passCheck=true;
 					}
-					else $passCheck=false;*/
+					else $passCheck=false;
 					
 					if ($passCheck == false){
 						header("Location: ../View/login.php?error=wrongPassword");
@@ -171,9 +171,9 @@ class Promoter extends Person{
 					}
 					else if($passCheck==true){
 						session_start();
-
-						$_SESSION['userNamePromoter']= $row['username'];
-						$_SESSION['userName'] = $row['username'];
+						
+						$_SESSION['userNamePromoter'] = $row['username'];
+						$_SESSION['userName']= $row['username'];
 						$_SESSION['promoterName'] = $row['promotor_name'];
 						$_SESSION['uemail']= $row['email'];
 						$_SESSION['mapLocation'] = $row['map_location'];
@@ -262,7 +262,7 @@ class Promoter extends Person{
 
 				}
 				else{
-					$conn = $dbh->connect();
+					//$conn = $dbh->connect();
 					#$sql = "INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ";
 					$sql = $conn->prepare("INSERT INTO promotor(username, password, email,phone_no,promotor_name,website,fb_link) VALUES (?, ? ,?,?,?,?,?) ");
 					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
@@ -282,7 +282,7 @@ class Promoter extends Person{
 				}
 		}
 
-				mysqli_stmt_close($stmt);
+				//mysqli_stmt_close($stmt);
 				mysqli_close($conn);		
 	}
 	

@@ -307,11 +307,48 @@ class Customer extends Person{
 		$this->unsubscribeFunction($pr_username);
 	}
 	
-	private function commentFunction(){
+	private function commentFunction($pr_username, $comment){
 		
+		$dbh = new Dbh();
+		$conn = $dbh->connect();
+		$sql = $conn->prepare("SELECT * FROM promotor_commenting WHERE cus_username = ? and pr_username = ?");
+		#$sql = "SELECT username FROM users WHERE username=?";
+		#$stmt = mysqli_stmt_init($conn);
+		$sql->bind_param("ss", $this->username,$pr_username);
+		$sql->execute();
+		$sql->store_result();
+		$resultCheck = $sql->num_rows();
+		
+		if ($resultCheck>0){
+			//UPDATE `confirmed_promotion` SET state='Rejected' WHERE `promo_id` =".$promoID.";
+			$sql = $conn->prepare("UPDATE promotor_commenting set comment = ? WHERE cus_username = ? and pr_username = ? ");
+			#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+			//$hPassword = $password;
+			$sql->bind_param("sss", $comment,$this->username,$pr_username);
+			$sql->execute();
+			$sql->store_result();			
+			
+		}
+		else{
+			$sql = $conn->prepare("INSERT INTO promotor_commenting(cus_username, pr_username,comment) VALUES (?, ? ,?) ");
+			#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+			//$hPassword = $password;
+			$sql->bind_param("sss", $this->username,$pr_username,$comment);
+			$sql->execute();
+			$sql->store_result();
+		}
+		
+		#$sql = "INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ";
+
+					
+		/*mysqli_stmt_bind_param($stmt, "sss", $username, $uemail,$hPassword);
+		mysqli_stmt_execute($stmt);
+		mysqli_stmt_store_result($stmt);*/	
 	}
 	
-	public function comment(){}
+	public function comment($pr_username,$comment){
+		$this->commentFunction($pr_username,$comment);
+	}
 	
 	/*public function login(){
 		$this->loginFunction();

@@ -6,6 +6,7 @@
 	$person = new Person();
 	$tempPromoter = $person->getViewPromterDetails($_GET['pr_username']);
 	$viewPromo = $person->getViewPromotionByPromoter($_GET['pr_username']);
+	$comments = $person->getCommentPromoter($_GET['pr_username']);
 	if (isset($_SESSION['userNameCustomer'])){
 		include_once("../Model/customer.php");
 		$tempCustomer = new Customer($_SESSION['userName'],$_SESSION['uemail'],$_SESSION['phone']);
@@ -310,30 +311,64 @@
 
 							</div>
                     	</div>
-
-						<div class="single-sidebar-widget widget_categories">
-							<h3>Give a comment</h3>
-							<form class="quote-form" action="#">
-								<p>
-									<textarea name="quote-message" id="quote-message" cols="30" rows="4" placeholder="Your Comment..."></textarea>
-								</p>
-								<button type="submit">Comment</button>
-							</form>
-                    	</div>
-						<div class="single-sidebar-widget widget_categories">
+						<?php
+							
+							if(isset($_SESSION['userNameCustomer'])){
+								echo('<div class="single-sidebar-widget widget_categories">
+									<h3>Give a comment</h3>
+									<form class="quote-form" action="../Controller/commentPromoter.php?pr_username='.$_GET['pr_username'].'" method = "post">
+									<p>
+									<textarea name="comment" id="quote-message" cols="30" rows="4" placeholder="Your Comment..."></textarea>
+									</p>
+									<button type="submit" name="commentPromoter">Comment</button>
+									</form>
+                    				</div>');
+							}
+						
+							$len = sizeof($comments);
+							echo('<div class="single-sidebar-widget widget_categories">
+								<h3>comments</h3>
+								<ul>');
+						
+							if ($len>0){
+								
+								if ($len>5){
+									for($i=0;$i<5;$i++){
+										$temp = $comments[$i];
+										echo('<li><h5>"'.$temp[1].'"&nbsp;-&nbsp;'.$temp[0].'</h5></li>');		
+									}
+								}
+								else{
+									for($i=0;$i<$len;$i++){
+										$temp = $comments[$i];
+										echo('<li><h5>"'.$temp[1].'"&nbsp;-&nbsp;'.$temp[0].'</h5></li>');					
+									}
+									
+								}
+							}
+							else{
+								echo('<li><a href="#">No comments just yet!</a></li>');
+							}
+							
+							echo ('</ul>
+							</div>');
+							
+						?>
+						<!--<div class="single-sidebar-widget widget_categories">
 							<h3>comments</h3>
 							<form class="quote-form" action="#">
 							</form>
-                    	</div>
+                    	</div>-->
+						
                         <div class="single-sidebar-widget widget_categories">
                             <h4>Main Categories</h4>
                             <ul>
                                 <li><a href="food.php">Food</a></li>
-                                <li><a href="#">Cloths and Accessories</a></li>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Electronic Devices</a></li>
-                                <li><a href="#">Sports Equipments</a></li>
-								<li><a href="#">Other</a></li>
+                                <li><a href="cloths.php">Cloths and Accessories</a></li>
+                                <li><a href="movies.php">Movies</a></li>
+                                <li><a href="electronic.php">Electronic Devices</a></li>
+                                <li><a href="sports.php">Sports Equipments</a></li>
+								<li><a href="other.php">Other</a></li>
                             </ul>
                         </div>
                        <!--<div class="single-sidebar-widget widget_recent_entries">

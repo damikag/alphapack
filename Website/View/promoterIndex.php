@@ -1,10 +1,14 @@
 <?php
-
+	include_once("../Model/Person.php");
 	session_start();
 	if(!(isset($_SESSION['userNamePromoter']))){
 		header("Location: ../View/404.php");
 		exit();
 	}
+	$tempPerson = new Person();
+	$username = $_SESSION['userNamePromoter'];
+	//$comments = $tempPerson->getCommentPromoter($_SESSION['userName']);
+	$comments = $tempPerson->getCommentPromoter($username);
 		
 ?>
 <!doctype html>
@@ -183,7 +187,49 @@
     <!--BLOG AREA END-->
 
     <!--TESTMONIAL AREA -->
-    <section class="testmonial-area section-padding">
+		<?php			
+			echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2>What does customers says..</h2>
+                        <p>Customer comments.</p>
+                    </div>
+                	</div>
+            		</div>
+            		<div class="row">');
+			
+			if(empty($comments)){
+				echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-comment"></i></div>
+                        <h4>No comments just yet..</h4>
+                    	</div>
+                		</div>');
+			}
+			else{
+				
+				$len = sizeof($comments);
+				for ($i=0; $i<$len ; $i++){
+					$temp = $comments[$i];
+					echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-comment"></i></div>
+                        <h4>'.$temp[1].'</h4>
+						<h5>'.$temp[0].'</h5>
+                    	</div>
+                		</div>');
+				}
+				
+			}
+			echo('</div>
+				</div>
+    			</section>');
+	
+	
+	?>
+<!-- <section class="testmonial-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
@@ -192,24 +238,25 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
                     <div class="client-photo-list wow fadeIn">
                         <div class="client_photo">
                             <div class="item">
-                                <img src="img/testmonial/1.jpg" alt="">
+                                <!--<img src="img/testmonial/1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="img/testmonial/2.jpg" alt="">
+                                <!--<img src="img/testmonial/1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="img/testmonial/3.jpg" alt="">
+                               <!--<img src="img/testmonial/1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="img/testmonial/1.jpg" alt="">
+                                <!--<img src="img/testmonial/1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img src="img/testmonial/2.jpg" alt="">
+                                <!--<img src="img/testmonial/1.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -225,6 +272,7 @@
                 <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
                     <div class="client-details-content wow fadeIn">
                         <div class="client_details">
+							
                             <div class="item">
                                 <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
                                 <h3>JABIN KANE</h3>
@@ -255,11 +303,11 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!--TESTMONIAL AREA END --> -->
+    </section>-->
+    <!--TESTMONIAL AREA END -->
 
     <!--CLIENTS AREA-->
-    <section class="clients-area section-padding gray-bg wow fadeIn">
+    <!--<section class="clients-area section-padding gray-bg wow fadeIn">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -298,7 +346,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--CLIENTS AREA END-->
 
    <?php include "footer.php";?>
