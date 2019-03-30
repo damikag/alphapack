@@ -216,9 +216,14 @@ class Customer extends Person{
 		$dbh = new Dbh();
 		$conn = $dbh->connect();
 		$sql = $conn->prepare("INSERT INTO promotor_subscribing(cus_username, pr_username) VALUES (?, ?) ");
-		$sql->bind_param("ss", $username,$pr_username);
+		#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+		//$hPassword = password_hash($password, PASSWORD_DEFAULT);
+		//$hPassword = $password;
+		$sql->bind_param("ss", $this->username,$pr_username);
 		$sql->execute();
 		$sql->store_result();
+		//header("Location ../View/promoterTemplate.php");
+		//exit();
 	}
 	
 	public function subscribe($pr_username){

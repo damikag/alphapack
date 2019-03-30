@@ -76,10 +76,10 @@ class Customer extends Person{
 				if($row = $results->fetch_array(MYSQLI_ASSOC)){
 					$passCheck = password_verify($password,$row["password"]);
 					
-					if($password==$row["password"]){
+					/*if($password==$row["password"]){
 						$passCheck=true;
 					}
-					else $passCheck=false;
+					else $passCheck=false;*/
 					
 					
 					if ($passCheck == false){
@@ -171,12 +171,29 @@ class Customer extends Person{
 
 				}
 				else{
+					/*$conn = $dbh->connect();
+					#$sql = "INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ";
+					$sql = $conn->prepare("INSERT INTO promotor(username, password, email,phone_no,promotor_name,website,fb_link) VALUES (?, ? ,?,?,?,?,?) ");
+					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+					$hPassword = password_hash($password, PASSWORD_DEFAULT);
+					$hPassword=$password;
+					$sql->bind_param("sssssss", $username,$hPassword,$uemail,$phone,$promoterName,$website,$fblink);
+					$sql->execute();
+					$sql->store_result();
+					
+						/*mysqli_stmt_bind_param($stmt, "sss", $username, $uemail,$hPassword);
+						mysqli_stmt_execute($stmt);
+						mysqli_stmt_store_result($stmt);
+						header("Location: ../View/login.php");
+						exit();*/
+					
+					
 					$conn = $dbh->connect();
 					#$sql = "INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ";
 					$sql = $conn->prepare("INSERT INTO customer(username, password, email,phone_no) VALUES (?, ? ,?,?) ");
 					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
 					$hPassword = password_hash($password, PASSWORD_DEFAULT);
-					$hPassword=$password;
+					//$hPassword = $password;
 					$sql->bind_param("ssss", $username,$hPassword,$uemail,$phone);
 					$sql->execute();
 					$sql->store_result();
@@ -199,9 +216,14 @@ class Customer extends Person{
 		$dbh = new Dbh();
 		$conn = $dbh->connect();
 		$sql = $conn->prepare("INSERT INTO promotor_subscribing(cus_username, pr_username) VALUES (?, ?) ");
-		$sql->bind_param("ss", $username,$pr_username);
+		#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+		//$hPassword = password_hash($password, PASSWORD_DEFAULT);
+		//$hPassword = $password;
+		$sql->bind_param("ss", $this->username,$pr_username);
 		$sql->execute();
 		$sql->store_result();
+		//header("Location ../View/promoterTemplate.php");
+		//exit();
 	}
 	
 	public function subscribe($pr_username){

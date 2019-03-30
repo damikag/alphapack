@@ -102,7 +102,7 @@
 								<li><a href="index.php">home</a></li>
 								<li><a href="about.html">about</a>
                                 </li>
-								<?php
+                        		<?php
 									if(!(isset($_SESSION["userNamePromoter"]))){
 										echo ('<li><a href="#">Service</a>
                                     <ul>
@@ -110,28 +110,40 @@
                                     </ul>
                                 </li>');
 									}
-								
 								?>
-                                
 								<li class="logged-user">
 									<?php
 									
 									if (isset($_SESSION["userName"])){
 										
 										$username = $_SESSION["userName"];
-										echo '<a href="#" class="logged-user" background-colour="lightsalmon">
-									'.$username.'
-									</a>
-                                    <ul>
-                                        <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                    </ul>';
+										if (isset($_SESSION['userNameCustomer'])){
+											echo '<a href="index.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';
+										}
+										elseif(isset($_SESSION['userNamePromoter'])){
+											echo '<a href="promoterIndex.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										else{
+											echo '<a href="adminView.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										
+
+										echo '<ul>
+											<li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
+										</ul>';
 									}
 									
 									else{
 										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
-								</li>	
+								</li>>	
                             </ul>
                         </div>
                     </div>
@@ -200,11 +212,22 @@
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="sidebar-area wow fadeIn">
-					  <div class="single-sidebar-widget widget_categories">
-							<form class="quote-form subscribe" action="#">
-								<button type="submit">Subscribe</button>	
+					  <?php
+						
+						if (isset($_SESSION['userNameCustomer'])){
+							echo('<div class="single-sidebar-widget widget_categories">
+								<form class="quote-form subscribe" action="../Controller/subscribeCompany.php?pr_username='.$_GET['pr_username'].'" method="post">
+								<button type="submit" name="subscribe-submit">Subscribe</button>	
+								</form>
+                   	  			</div>');
+						}
+						
+					  ?>
+					 <!-- <div class="single-sidebar-widget widget_categories">
+							<form class="quote-form subscribe" action="../Controller/subscribeCompany.php" method='post'>
+								<button type="submit" name="subscribe-submit">Subscribe</button>	
 							</form>
-                   	  </div>
+                   	  </div>-->
                         <div class="single-sidebar-widget widget_search">
                             <h4>Search</h4>
                             <form action="#">
@@ -282,7 +305,7 @@
 							</form>
                     	</div>
 						<div class="single-sidebar-widget widget_categories">
-							<h3>Give a comment</h3>
+							<h3>comments</h3>
 							<form class="quote-form" action="#">
 							</form>
                     	</div>
