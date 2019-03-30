@@ -79,12 +79,12 @@
 								<li><a href="index.php">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <!--<li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterSignup.php">Register as a Promoter</a></li>
 										
                                     </ul>
-                                </li>
+                                </li>-->
 								<li class="logged-user">
 									<?php
 									

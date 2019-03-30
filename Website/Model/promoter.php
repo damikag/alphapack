@@ -172,7 +172,8 @@ class Promoter extends Person{
 					else if($passCheck==true){
 						session_start();
 
-						$_SESSION['userName']= $row['username'];
+						$_SESSION['userNamePromoter']= $row['username'];
+						$_SESSION['userName'] = $row['username'];
 						$_SESSION['promoterName'] = $row['promotor_name'];
 						$_SESSION['uemail']= $row['email'];
 						$_SESSION['mapLocation'] = $row['map_location'];

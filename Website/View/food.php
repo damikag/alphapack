@@ -84,29 +84,45 @@
 								<li><a href="#">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                        		<?php
+									if(!(isset($_SESSION["userNamePromoter"]))){
+										echo ('<li><a href="#">Service</a>
                                     <ul>
-										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
-										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
+										<li><a href="promoterSignup.php">Register as a promoter</a></li>
                                     </ul>
-                                </li>
+                                </li>');
+									}
+								?>
 								<li class="logged-user">
 									<?php
 									
 									if (isset($_SESSION["userName"])){
 										
 										$username = $_SESSION["userName"];
-										echo '<a href="#" class="logged-user" background-colour="lightsalmon">
-									'.$username.'
-									</a>
-                                    <ul>
-                                        <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                    </ul>';
+										if (isset($_SESSION['userNameCustomer'])){
+											echo '<a href="index.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';
+										}
+										elseif(isset($_SESSION['userNamePromoter'])){
+											echo '<a href="promoterIndex.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										else{
+											echo '<a href="adminView.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										
+
+										echo '<ul>
+											<li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
+										</ul>';
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
+										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
 								</li>	
@@ -138,177 +154,6 @@
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="tab-content about-details-content">
-                        <!--<div id="company" class="about-company tab-pane fade">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <img src="img/about/about-cargo.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <h3>Our Mission</h3>
-                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <a href="#" class="read-more">Learn More</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <img src="img/about/about-details-bottom.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <h3>Our Vision</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                        <ul>
-                                            <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet, consectetur.</li>
-                                            <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet, consectetur.</li>
-                                            <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet, consectetur.</li>
-                                        </ul>
-                                        <a href="#" class="read-more">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="history" class="company-history tab-pane fade">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                    <div class="about-history-content">
-                                        <img src="img/about/about-cargo.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                                    <div class="about-history-content history-list">
-                                        <div class="single-history">
-                                            <div class="history-year">
-                                                <p>2011</p>
-                                            </div>
-                                            <h4>we start our business</h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                        </div>
-                                        <div class="single-history">
-                                            <div class="history-year">
-                                                <p>2012</p>
-                                            </div>
-                                            <h4>we co-opperate problem solution</h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                        </div>
-                                        <div class="single-history">
-                                            <div class="history-year">
-                                                <p>2014</p>
-                                            </div>
-                                            <h4>we are expanding our network </h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                        </div>
-                                        <div class="single-history">
-                                            <div class="history-year">
-                                                <p>2016</p>
-                                            </div>
-                                            <h4>we are serve worldwide </h4>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="report" class="company-anual-reports tab-pane fade">
-                            <div class="row">
-                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                                    <div class="annual-reports">
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2012.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2015.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2016.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2017.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
                         <div id="team" class="team-list tab-pane fade in active">
                             <div class="row">
 								

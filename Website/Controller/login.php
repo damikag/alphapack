@@ -11,10 +11,10 @@ include_once("../Model/Administrator.php");
 if (isset($_POST["login-submit"])){
 	
 	Promoter::login();
-	if(!isset($_SESSION["userName"])){
+	if(!isset($_SESSION["userNamePromoter"])){
 		Administrator::login();
 		
-		if(!isset($_SESSION["userName"])){
+		if(!isset($_SESSION["userNameAdmin"])){
 			Customer::login();
 		}
 		

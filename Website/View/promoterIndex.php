@@ -1,6 +1,10 @@
 <?php
 
 	session_start();
+	if(!(isset($_SESSION['userNamePromoter']))){
+		header("Location: ../View/404.php");
+		exit();
+	}
 		
 ?>
 <!doctype html>
@@ -83,13 +87,11 @@
 								<li><a href="#">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <!--<li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
-										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
                                     </ul>
-                                </li>
+                                </li>-->
 								<li class="logged-user">
 									<?php
 									

@@ -89,7 +89,8 @@ class Customer extends Person{
 					else if($passCheck==true){
 						session_start();
 
-						$_SESSION['userName']= $row['username'];
+						$_SESSION['userNameCustomer']= $row['username'];
+						$_SESSION['userName'] = $row['username'];
 						$_SESSION['uemail']= $row['email'];
 						$_SESSION['phone'] = $row['phone'];
 						

@@ -1,3 +1,13 @@
+<?php
+	
+	if(isset($_SESSION['userName'])){
+		header("Location: ../View/404.php");
+		exit();		
+	}
+
+
+?>
+
 <!doctype html>
 <html>
 <head>

@@ -102,11 +102,17 @@
 								<li><a href="index.php">home</a></li>
 								<li><a href="about.html">about</a>
                                 </li>
-                                <li><a href="service.html">Service</a>
+								<?php
+									if(!(isset($_SESSION["userNamePromoter"]))){
+										echo ('<li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterSignup.php">Register as a promoter</a></li>
                                     </ul>
-                                </li>
+                                </li>');
+									}
+								
+								?>
+                                
 								<li class="logged-user">
 									<?php
 									

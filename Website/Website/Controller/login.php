@@ -1,21 +1,32 @@
 <?php
 
-include("../Model/customer.php");
-include("../Model/Administrator.php");
-include("../Model/promoter.php");
-$dbh = new Dbh();
-$customer = new Customer($dbh);
-$administrator = new Administrator($dbh);
-$promoter = new Promoter($dbh);
+include_once("../Model/customer.php");
+include_once("../Model/promoter.php");
+include_once("../Model/Administrator.php");
+//$dbh = new Dbh();
+//$customer = new Customer($dbh);
+//$promoter=new Promoter($dbh);
+
 
 if (isset($_POST["login-submit"])){
-	$customer->login();
-	if (!(isset ($_SESSION['userName']))){
-		$administrator->login();
+	
+	Promoter::login();
+	if(!isset($_SESSION["userNamePromoter"])){
+		Administrator::login();
+		
+		if(!isset($_SESSION["userNameAdmin"])){
+			Customer::login();
+		}
+		
+		
+	}
+	
+	/*if(Promoter::isPromoter()){
+		Promoter::login();
 	}
 	else{
-		$promoter->login();
-	}
+		Customer::login();
+	}*/
 }
 
 else{

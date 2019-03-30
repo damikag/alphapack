@@ -1,11 +1,19 @@
 <?php
 	//include("../Controller/dbh.php");
-	include("../Model/Administrator.php");
+	include_once("../Model/Administrator.php");
 	
 	session_start();
-	$dbh = new Dbh();
-	$admin = new Administrator($dbh);
-	$viewPromo = $admin->getViewPromotion();
+	if(isset($_SESSION['userNameAdmin'])){
+		$dbh = new Dbh();
+		$admin = new Administrator($dbh);
+		$viewPromo = $admin->getViewPromotion();
+	}
+	else{
+		header("Location: ../View/404.php");
+		exit();
+
+	}
+	
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
