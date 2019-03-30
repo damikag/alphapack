@@ -9,6 +9,7 @@ class Customer extends Person{
 	private $email;
 	//private $password;
 	private $phoneNumber;
+	private $subscribedPromoters;
 	
 	//private $dbh;
 	
@@ -18,6 +19,7 @@ class Customer extends Person{
 		//$this->password=$password;
 		$this->phoneNumber=$phoneNumber;
 		//$this->dbh = $dbh;
+		$this->subscribedPromoters=[];
 		
 	}
 	
@@ -212,6 +214,53 @@ class Customer extends Person{
 				mysqli_close($conn);		
 	}
 	
+	private function getSubscribedCompaniesFunction(){
+		
+		$dbh=new Dbh();
+		$conn = $dbh->connect();
+		$sql = $conn->prepare("SELECT * from promotor_subscribing WHERE cus_username = ?");
+				
+		$sql->bind_param("s", $this->username);
+		$sql->execute();
+		$results = $sql->get_result();
+		$i = 0;
+		while($row = $results->fetch_array(MYSQLI_ASSOC)){
+			
+			//__construct($promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$pr_username,$ad_username)
+			//$tempCustomerUsername = $row['cus_username'];
+			$tempPromoterUsername = $row['pr_username'];
+			$temp = [];
+			//$temp[0] = $tempCustomerUsername;
+			//$temp[1] = $tempPromoterUsername;
+			$this->subscribedPromoters[$i] = $tempPromoterUsername; 
+			//$tempPromo= new Promotion($row["promo_id"],$row["category"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row['state'],$row["start_date"],$row["end_date"],$row['location'],$row["pr_username"],$row["ad_username"]);
+			
+			//$viewPromo[$i] = $tempPromo;
+			
+			$i++;
+		}
+		
+		return $this->subscribedPromoters;
+		
+	}
+	
+	public function checkPromterIsSubscribed($pr_username){
+		$tempSubscribedList = $this->getSubscribedCompanies();
+		$len = sizeof($tempSubscribedList);
+		$check = false;
+		for ($i=0;$i<$len;$i++){
+			if ($tempSubscribedList[$i]==$pr_username){
+				$check = true;
+				break;
+			}
+		}
+		return $check;
+	}
+	
+	public function getSubscribedCompanies(){
+		return $this->getSubscribedCompaniesFunction();
+	}
+	
 	private function subscribeFunction($pr_username){
 		$dbh = new Dbh();
 		$conn = $dbh->connect();
@@ -228,6 +277,25 @@ class Customer extends Person{
 	
 	public function subscribe($pr_username){
 		$this->subscribeFunction($pr_username);
+	}
+	
+	private function unsubscribeFunction($pr_username){
+		$dbh = new Dbh();
+		$conn = $dbh->connect();
+		//DELETE FROM `table_name` [WHERE condition];
+		$sql = $conn->prepare("DELETE FROM promotor_subscribing WHERE cus_username = ? AND pr_username = ? ");
+		#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
+		//$hPassword = password_hash($password, PASSWORD_DEFAULT);
+		//$hPassword = $password;
+		$sql->bind_param("ss", $this->username,$pr_username);
+		$sql->execute();
+		$sql->store_result();
+		//header("Location ../View/promoterTemplate.php");
+		//exit();
+		
+	}
+	public function unsubscribe($pr_username){
+		$this->unsubscribeFunction();
 	}
 	
 	private function commentFunction(){

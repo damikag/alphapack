@@ -76,7 +76,7 @@ class Person{
 	private function viewPromotionByPromoter($pr_username){
 		$dbh=new Dbh();
 		$conn = $dbh->connect();
-		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE pr_username = ?");
+		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE pr_username = ? and state = 'Accepted'");
 				
 		$sql->bind_param("s", $pr_username);
 		$sql->execute();

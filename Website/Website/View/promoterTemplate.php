@@ -1,10 +1,16 @@
 <?php
 
 	include_once("../Model/Person.php");
+	
 	session_start();
 	$person = new Person();
 	$tempPromoter = $person->getViewPromterDetails($_GET['pr_username']);
 	$viewPromo = $person->getViewPromotionByPromoter($_GET['pr_username']);
+	if (isset($_SESSION['userNameCustomer'])){
+		include_once("../Model/customer.php");
+		$tempCustomer = new Customer($_SESSION['userName'],$_SESSION['uemail'],$_SESSION['phone']);
+		$check = $tempCustomer->checkPromterIsSubscribed($_GET['pr_username']);
+	}
 		
 ?>
 <!doctype html>
@@ -143,7 +149,7 @@
 										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
-								</li>>	
+								</li>
                             </ul>
                         </div>
                     </div>
@@ -215,11 +221,21 @@
 					  <?php
 						
 						if (isset($_SESSION['userNameCustomer'])){
-							echo('<div class="single-sidebar-widget widget_categories">
+							if ($check){
+								echo('<div class="single-sidebar-widget widget_categories">
+								<form class="quote-form subscribe" action="../Controller/unsubscribeCompany.php?pr_username='.$_GET['pr_username'].'" method="post">
+								<button type="submit" name="subscribe-submit">unSubscribe</button>	
+								</form>
+                   	  			</div>');
+							}
+							else{
+								echo('<div class="single-sidebar-widget widget_categories">
 								<form class="quote-form subscribe" action="../Controller/subscribeCompany.php?pr_username='.$_GET['pr_username'].'" method="post">
 								<button type="submit" name="subscribe-submit">Subscribe</button>	
 								</form>
                    	  			</div>');
+							}
+							
 						}
 						
 					  ?>
