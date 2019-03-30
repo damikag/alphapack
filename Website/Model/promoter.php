@@ -266,8 +266,8 @@ class Promoter extends Person{
 					#$sql = "INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ";
 					$sql = $conn->prepare("INSERT INTO promotor(username, password, email,phone_no,promotor_name,website,fb_link) VALUES (?, ? ,?,?,?,?,?) ");
 					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
-					$hPassword = password_hash($password, PASSWORD_DEFAULT);
-					//$hPassword=$password;
+					//$hPassword = password_hash($password, PASSWORD_DEFAULT);
+					$hPassword=$password;
 					$sql->bind_param("sssssss", $username,$hPassword,$uemail,$phone,$promoterName,$website,$fblink);
 					$sql->execute();
 					$sql->store_result();
