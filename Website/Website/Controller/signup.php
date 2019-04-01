@@ -2,10 +2,11 @@
 
 if (isset($_POST["signup-submit"])){
 	
-	include("../Model/customer.php");
-	$dbh = new Dbh();
-	$user = new Customer($dbh);
-	$user->signup();
+	include_once("../Model/customer.php");
+	//$dbh = new Dbh();
+	//$user = new Customer($dbh);
+	//$user->signup();
+	Customer::signup();
 	/*
 	
 	require "dbh.php";
@@ -85,7 +86,7 @@ mysqli_close($conn);
 
 
 else{
-	echo("PLEASE LEAVE!");
-	header("Location: ../View/signup.php");
+	//echo("PLEASE LEAVE!");
+	header("Location: ../View/404.php");
 	exit();
 }

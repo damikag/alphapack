@@ -136,9 +136,16 @@
     
     <!--ABOUT AREA-->
 	<section class="about-area gray-bg section-padding">
+	 <!--<section class="service-area-three section-padding" id="categories">-->
+		<!--<div class = "row">-->
+		<!--<div class="single-blog wow fadeIn">-->
+		<!--<div class="blog-image">-->
+			
+		<!--<div class="area-title text-center wow fadeIn">-->
 		
         <div class="container-login">
-			<div class="login-box">
+			<!--<div class = "row">-->
+			<div class="blog-image login-box">
 			  <form action="../Controller/login.php" method="post">
 					<input type="text" placeholder="Enter the user name" name="uid" required>
 					<input type="password" placeholder="Enter the password" name="password" required><br>
@@ -146,10 +153,10 @@
 					<a href="#">Lost your password</a><br>
 					<a href="signup.php">Don't have an account</a>
 			</form>
-
-		</div>  
-           
-        </div>
+				</div>
+			</div>
+			 
+        
     </section>
 		
 	<?php include "footer.php";?>

@@ -6,8 +6,9 @@ if (isset($_POST["signup-submit"])){
 	//$dbh = new Dbh();
 	//$user = new Promoter($dbh);
 	//$user->signup();
-	
-	Promoter::signup();
+	$tempPromoter = new Promoter(null,null,null,null,null,null,null,null,null);
+	$tempPromoter->signup();
+	//Promoter::signup();
 	/*
 	
 	require "dbh.php";

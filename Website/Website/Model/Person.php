@@ -124,6 +124,7 @@ class Person{
 		}
 		
 		$viewComments = array_reverse($viewComments,true);
+		mysqli_close($conn);	
 		return $viewComments;
 		
 	}
