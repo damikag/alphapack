@@ -1,14 +1,15 @@
 <?php
-	include_once("../Model/Person.php");
+	include_once("../Model/promoter.php");
 	session_start();
 	if(!(isset($_SESSION['userNamePromoter']))){
 		header("Location: ../View/404.php");
 		exit();
 	}
-	$tempPerson = new Person();
+	$tempPerson = new Promoter($_SESSION['userName'],$_SESSION['promoterName'],$_SESSION['uemail'],null,$_SESSION['mapLocation'],$_SESSION['phone'],$_SESSION['webLink'],$_SESSION['fbLink'],$_SESSION['rating']);
 	$username = $_SESSION['userNamePromoter'];
 	//$comments = $tempPerson->getCommentPromoter($_SESSION['userName']);
 	$comments = $tempPerson->getCommentPromoter($username);
+	$subCount = $tempPerson->subscribedCustomerCount();
 		
 ?>
 <!doctype html>
@@ -129,7 +130,6 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="welcome-text text-center">
                             <h1>PROMOTE YOUR BUSINESS ALL AROUND SRI LANKA AND BEYOND</h1>
-                            <p>We have the maximum customer coverage around the country.</p>
                         </div>
                     </div>
                 </div>
@@ -175,9 +175,15 @@
                         </div>-->
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
-                            <h3><a href="single-blog.html">VIEW PROMOTIONS</a></h3>
+							<?php
+							echo('<h3><a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'">VIEW PROMOTIONS</a></h3>');
+							?>
+                            
                             <p>Click below to view promotions of your business.</p>
-                            <a href="#" class="read-more">VIEW</a>
+							<?php
+							echo('<a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'" class="read-more">VIEW</a>');
+							?>
+                          
                         </div>
                     </div>
                 </div>
@@ -187,7 +193,9 @@
     <!--BLOG AREA END-->
 
     <!--TESTMONIAL AREA -->
-		<?php			
+	
+	<!-- COMMENT SECTION -->
+	<?php			
 			echo('<section class="service-area-three section-padding">
         			<div class="container">
             		<div class="row">
@@ -227,6 +235,35 @@
 				</div>
     			</section>');
 	
+	
+	?>
+	
+	<!--SUBSCRIBERS SECTION-->
+	<?php
+	
+		echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2>Subscribers count</h2>
+                        <p>People who have subscribed you!</p>
+                    </div>
+                	</div>
+            		</div>
+            		<div class="row">');
+	
+	
+		echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+             <div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+             <div class="service-icon-three"><i class="fa fa-users"></i></div>
+             <h4>'.$subCount.'</h4>
+             </div>
+               </div>');
+	
+		echo('</div>
+			</div>
+    		</section>');
 	
 	?>
 
