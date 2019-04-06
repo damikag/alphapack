@@ -1,8 +1,8 @@
 <?php
 
-require_once("../Model/IStrategySignup");
+require_once("../Model/IStrategySignup.php");
 
-class StrategyCustomerSignup implements IStrategySignup{
+class StrategyPromoterSignup implements IStrategySignup{
 	
 	private $dbh;
 	

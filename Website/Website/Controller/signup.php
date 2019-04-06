@@ -2,11 +2,12 @@
 
 if (isset($_POST["signup-submit"])){
 	
-	include_once("../Model/customer.php");
+	require_once("../Model/StrategyCustomerSignup.php");
 	//$dbh = new Dbh();
 	//$user = new Customer($dbh);
 	//$user->signup();
-	Customer::signup();
+	$tempSignup = new StrategyCustomerSignup();
+	$tempSignup->signup();
 	/*
 	
 	require "dbh.php";

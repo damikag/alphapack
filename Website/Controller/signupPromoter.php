@@ -2,12 +2,12 @@
 
 if (isset($_POST["signup-submit"])){
 	
-	include("../Model/promoter.php");
+	require_once("../Model/StrategyPromoterSignup.php");
 	//$dbh = new Dbh();
 	//$user = new Promoter($dbh);
 	//$user->signup();
-	$tempPromoter = new Promoter(null,null,null,null,null,null,null,null,null);
-	$tempPromoter->signup();
+	$tempSignup = new StrategyPromoterSignup();
+	$tempSignup->signup();
 	//Promoter::signup();
 	/*
 	
