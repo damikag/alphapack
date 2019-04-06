@@ -13,7 +13,7 @@ require_once("../Model/StrategyAdministratorLogin.php");
 if (isset($_POST["login-submit"])){
 	
 	$tempLogin = new StrategyPromoterLogin();
-	Promoter::login();
+	
 	if(!isset($_SESSION["userNamePromoter"])){
 		Administrator::login();
 		
