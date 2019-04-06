@@ -16,6 +16,6 @@
 <file name="customer.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989887084285534" remote="131989887080000000" Dst="0" />
 <file name="IStrategyLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989910962100208" remote="131989910960000000" Dst="0" />
 <file name="StrategyCustomerLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989911477665684" remote="131989911470000000" Dst="0" />
-<file name="StrategyAdministratorLogin.php.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989913670625132" remote="131989913670000000" Dst="0" />
-<file name="StrategyPromoterLogin.php.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989917785725339" remote="131989917780000000" Dst="0" />
+<file name="StrategyPromoterLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989917785725339" remote="131989917780000000" Dst="0" />
+<file name="StrategyAdministratorLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989913670625132" remote="131989913670000000" Dst="0" />
 </dwsync>
