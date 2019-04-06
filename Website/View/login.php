@@ -12,7 +12,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Customer Login</title>
+    <title>Login</title>
     <link rel="shortcut icon" type="image/ico" href="../Extra/img/favicon.png" />
 	
     <!--====== STYLESHEETS ======-->
