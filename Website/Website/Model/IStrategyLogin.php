@@ -4,9 +4,7 @@
 // here we implement the real login funciton in the loginFunction() method.
 require_once('../Controller/dbh.php');
 
-interface Login{
-	
-	public function loginFunction();
+interface IStrategyLogin{
 	
 	public function login();
 }

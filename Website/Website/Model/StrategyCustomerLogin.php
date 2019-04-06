@@ -1,14 +1,17 @@
 <?php
 
-require_once("IStrategyLogin.php");
+require_once("../Model/IStrategyLogin.php");
 
 class StrategyCustomerLogin implements IStrategyLogin{
 	
+	private $dbh;
+	
+	public function __construct(){
+		$this->dbh = new Dbh();
+	}
+	
 	private function loginFunction(){
-		
-		
-		$dbh=new Dbh();
-		
+				
 		$username = $_POST["uid"];
 		$password = $_POST["password"];
 
@@ -20,7 +23,7 @@ class StrategyCustomerLogin implements IStrategyLogin{
 		}
 
 		else{
-			$conn = $dbh->connect();
+			$conn = $this->dbh->connect();
 			$sql = $conn->prepare("SELECT * from customer WHERE username = ? OR email  =?");
 				
 				$sql->bind_param("ss", $username, $username);

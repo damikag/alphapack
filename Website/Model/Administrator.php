@@ -41,6 +41,7 @@ class Administrator extends Person{
 						session_start();
 
 						$_SESSION['userName']= $row['username'];
+						$_SESSION['userNameAdmin'] = $row['username'];
 						header("Location: ../View/adminView.php");
 						exit();
 					}

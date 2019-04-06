@@ -6,5 +6,7 @@ require_once('../Controller/dbh.php');
 
 interface IStrategyLogin{
 	
+	public function loginFunction();
+	
 	public function login();
 }
