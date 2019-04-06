@@ -1,6 +1,6 @@
 <?php
 
-include_once("../Controller/dbh.php");
+require_once("../Controller/dbh.php");
 require_once("../Model/Person.php");
 require_once("../Model/promoter.php");
 

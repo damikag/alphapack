@@ -1,7 +1,7 @@
 <?php
 
-include_once("../Controller/dbh.php");
-include_once("../Model/Promotion.php");
+require_once("../Controller/dbh.php");
+require_once("../Model/Promotion.php");
 require_once("../Model/Person.php");
 
 class Promoter extends Person{

@@ -1,6 +1,6 @@
 <?php
 
-include_once("../Controller/dbh.php");
+require_once("../Controller/dbh.php");
 
 class Promotion{
 	

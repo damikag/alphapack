@@ -1,7 +1,7 @@
 <?php
 
-include_once("../Model/Promotion.php");
-include_once("../Model/promoter.php");
+require_once("../Model/Promotion.php");
+require_once("../Model/promoter.php");
 
 class Person{
 	

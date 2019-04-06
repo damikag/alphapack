@@ -9,9 +9,11 @@
 <file name="Person.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131978153748456266" remote="131978153740000000" Dst="0" />
 <file name="customer.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131974499438390170" remote="131974499430000000" Dst="0" />
 <file name="promoter.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131974499559744629" remote="131974499550000000" Dst="0" />
-<file name="promoter.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986012637816332" remote="131986012630000000" Dst="0" />
-<file name="Promotion.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983930451521238" remote="131983930450000000" Dst="0" />
-<file name="Person.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131984530561350423" remote="131984530560000000" Dst="0" />
+<file name="promoter.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989886440341792" remote="131989886440000000" Dst="0" />
+<file name="Promotion.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989887036729178" remote="131989887030000000" Dst="0" />
+<file name="Person.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989887051903654" remote="131989887050000000" Dst="0" />
 <file name="Administrator.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983930451491708" remote="131983930450000000" Dst="0" />
-<file name="customer.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131984465923057143" remote="131984465920000000" Dst="0" />
+<file name="customer.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989887084285534" remote="131989887080000000" Dst="0" />
+<file name="IStrategyLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989902667972779" remote="131989902660000000" Dst="0" />
+<file name="StrategyCustomerLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989903472397710" remote="131989903470000000" Dst="0" />
 </dwsync>
