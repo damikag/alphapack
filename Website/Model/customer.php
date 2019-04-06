@@ -55,7 +55,7 @@ class Customer extends Person{
 		$this->phoneNumber=$phoneNumber;
 	}
 
-	public static function login(){
+	/*public static function login(){
 		
 		$dbh=new Dbh();
 		
@@ -82,7 +82,7 @@ class Customer extends Person{
 					/*if($password==$row["password"]){
 						$passCheck=true;
 					}
-					else $passCheck=false;*/
+					else $passCheck=false;
 					
 					
 					if ($passCheck == false){
@@ -114,7 +114,7 @@ class Customer extends Person{
 			
 		}
 	
-	}
+	}*/
 	
 	public static function signup(){
 		$username = $_POST["uid"];

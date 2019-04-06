@@ -136,7 +136,7 @@ class Promoter extends Person{
 		}
 	}
 	
-	public static function login(){
+	/*public static function login(){
 			
 		$dbh= new Dbh();
 		
@@ -194,10 +194,10 @@ class Promoter extends Person{
 				/*else{
 					header("Location: ../View/login.php?error=nouser");
 					exit();
-				}*/
+				}
 			
 		}
-	}
+	}*/
 	
 	public static function signup(){
 		
