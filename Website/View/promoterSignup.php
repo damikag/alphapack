@@ -79,12 +79,12 @@
 								<li><a href="index.php">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <!--<li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterSignup.php">Register as a Promoter</a></li>
 										
                                     </ul>
-                                </li>
+                                </li>-->
 								<li class="logged-user">
 									<?php
 									
@@ -129,7 +129,7 @@
 
    
     <!--ABOUT AREA-->
-	<section class="about-area gray-bg section-padding">
+	<section class="about-details-area gray-bg no-padding wow fadeIn">
 		<div class="container-signup">	
       		<div class="form-promter">
 				
@@ -139,6 +139,8 @@
 				<input type="email" placeholder="Enter your email" name="email">
 				<input type="password" placeholder="Enter the password" name="password">
 				<input type="password" placeholder="Re enter the password" name="re-password">
+				<!--<input type="password" placeholder="Enter the password" name="password">
+				<input type="password" placeholder="Re enter the password" name="re-password">-->
 				<input type="number" placeholder="Enter your phone number" name="phone">
 				<input type="text" placeholder="Enter the promoter web site*" name="website">
 				<input type="text" placeholder="Enter the promoter facebook link*" name="fblink">

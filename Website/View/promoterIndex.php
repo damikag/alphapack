@@ -1,6 +1,15 @@
 <?php
-
+	include_once("../Model/promoter.php");
 	session_start();
+	if(!(isset($_SESSION['userNamePromoter']))){
+		header("Location: ../View/404.php");
+		exit();
+	}
+	$tempPerson = new Promoter($_SESSION['userName'],$_SESSION['promoterName'],$_SESSION['uemail'],null,$_SESSION['mapLocation'],$_SESSION['phone'],$_SESSION['webLink'],$_SESSION['fbLink'],$_SESSION['rating']);
+	$username = $_SESSION['userNamePromoter'];
+	//$comments = $tempPerson->getCommentPromoter($_SESSION['userName']);
+	$comments = $tempPerson->getCommentPromoter($username);
+	$subCount = $tempPerson->subscribedCustomerCount();
 		
 ?>
 <!doctype html>
@@ -83,13 +92,11 @@
 								<li><a href="#">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <!--<li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
-										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
                                     </ul>
-                                </li>
+                                </li>-->
 								<li class="logged-user">
 									<?php
 									
@@ -123,7 +130,6 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="welcome-text text-center">
                             <h1>PROMOTE YOUR BUSINESS ALL AROUND SRI LANKA AND BEYOND</h1>
-                            <p>We have the maximum customer coverage around the country.</p>
                         </div>
                     </div>
                 </div>
@@ -169,9 +175,15 @@
                         </div>-->
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
-                            <h3><a href="single-blog.html">VIEW PROMOTIONS</a></h3>
+							<?php
+							echo('<h3><a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'">VIEW PROMOTIONS</a></h3>');
+							?>
+                            
                             <p>Click below to view promotions of your business.</p>
-                            <a href="#" class="read-more">VIEW</a>
+							<?php
+							echo('<a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'" class="read-more">VIEW</a>');
+							?>
+                          
                         </div>
                     </div>
                 </div>
@@ -181,123 +193,80 @@
     <!--BLOG AREA END-->
 
     <!--TESTMONIAL AREA -->
-    <section class="testmonial-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+	
+	<!-- COMMENT SECTION -->
+	<?php			
+			echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2>what customer’s say</h2>
+                        <h2>What does customers says..</h2>
+                        <p>Customer comments.</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                    <div class="client-photo-list wow fadeIn">
-                        <div class="client_photo">
-                            <div class="item">
-                                <img src="img/testmonial/1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/2.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/3.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/2.jpg" alt="">
-                            </div>
-                        </div>
+                	</div>
+            		</div>
+            		<div class="row">');
+			
+			if(empty($comments)){
+				echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-comment"></i></div>
+                        <h4>No comments just yet..</h4>
+                    	</div>
+                		</div>');
+			}
+			else{
+				
+				$len = sizeof($comments);
+				for ($i=0; $i<$len ; $i++){
+					$temp = $comments[$i];
+					echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-comment"></i></div>
+                        <h4>'.$temp[1].'</h4>
+						<h5>'.$temp[0].'</h5>
+                    	</div>
+                		</div>');
+				}
+				
+			}
+			echo('</div>
+				</div>
+    			</section>');
+	
+	
+	?>
+	
+	<!--SUBSCRIBERS SECTION-->
+	<?php
+	
+		echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2>Subscribers count</h2>
+                        <p>People who have subscribed you!</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="client_nav">
-                        <span class="fa fa-angle-left testi_prev"></span>
-                        <span class="fa fa-angle-right testi_next"></span>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-                    <div class="client-details-content wow fadeIn">
-                        <div class="client_details">
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--TESTMONIAL AREA END --> -->
+                	</div>
+            		</div>
+            		<div class="row">');
+	
+	
+		echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+             <div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+             <div class="service-icon-three"><i class="fa fa-users"></i></div>
+             <h4>'.$subCount.'</h4>
+             </div>
+               </div>');
+	
+		echo('</div>
+			</div>
+    		</section>');
+	
+	?>
 
-    <!--CLIENTS AREA-->
-    <section class="clients-area section-padding gray-bg wow fadeIn">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="client-list">
-                        <div class="single-client">
-                            <img src="img/client/1.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/2.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/3.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/4.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/5.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/1.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/2.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/3.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/4.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--CLIENTS AREA END-->
 
    <?php include "footer.php";?>
 </body>

@@ -1,7 +1,7 @@
 <?php
 
-include_once("../Controller/dbh.php");
-include_once("../Model/Promotion.php");
+require_once("../Controller/dbh.php");
+require_once("../Model/Promotion.php");
 require_once("../Model/Person.php");
 
 class Promoter extends Person{
@@ -136,68 +136,6 @@ class Promoter extends Person{
 		}
 	}
 	
-	public static function login(){
-			
-		$dbh= new Dbh();
-		
-		$username = $_POST["uid"];
-		$password = $_POST["password"];
-
-		if(empty($username)|| empty($password)){
-
-			header("Location: ../View/login.php?error=emptyFields_&uid=".$username);
-			exit();
-
-		}
-
-		else{
-			$conn = $dbh->connect();
-			$sql = $conn->prepare("SELECT * from promotor WHERE username = ? OR email  =?");
-				
-				$sql->bind_param("ss", $username, $username);
-				$sql->execute();
-				$results = $sql->get_result();
-				if($row = $results->fetch_array(MYSQLI_ASSOC)){
-					$passCheck = password_verify($password,$row["password"]);
-					
-					if($password==$row["password"]){
-						$passCheck=true;
-					}
-					else $passCheck=false;
-					
-					if ($passCheck == false){
-						header("Location: ../View/login.php?error=wrongPassword");
-						exit();
-					}
-					else if($passCheck==true){
-						session_start();
-
-						$_SESSION['userName']= $row['username'];
-						$_SESSION['promoterName'] = $row['promotor_name'];
-						$_SESSION['uemail']= $row['email'];
-						$_SESSION['mapLocation'] = $row['map_location'];
-						$_SESSION['phone'] = $row['phone'];
-						$_SESSION['webLink'] = $row['website'];
-						$_SESSION['fbLink'] = $row['fb_link'];
-						$_SESSION['rating'] = $row['rating'];
-
-						header("Location: ../View/promoterIndex.php");
-						exit();
-					}
-					/*else{
-						header("Location: ../View/login.php?error=noUser");
-						exit();
-					}*/
-				}
-
-				/*else{
-					header("Location: ../View/login.php?error=nouser");
-					exit();
-				}*/
-			
-		}
-	}
-	
 	public static function signup(){
 		
 		$dbh=new Dbh();
@@ -214,7 +152,7 @@ class Promoter extends Person{
 
 		if(empty($username) || empty($uemail) || empty($password) || empty($re_password) || empty($phone)||empty($promoterName)||empty($website)||empty($fblink)){
 
-			header("Location: ../View/promoterSignup.php?error=emptyFields_&uid=".$username."_&promoterName=".$promoterName."_&email=".$uemail."_&phone=".$phone."_&website".$website."_&fblink".$fblink);
+			header("Location: ../View/promoterSignup.php?error=emptyFields_&uid=".$username."&promoterName=".$promoterName."&email=".$uemail."&phone=".$phone."&website".$website."_&fblink".$fblink);
 			exit();
 		}
 
@@ -225,13 +163,13 @@ class Promoter extends Person{
 		}
 
 		elseif($password !== $re_password){
-			header("Location: ../View/promoterSignup.php?error=passwordError_&uid=".$username."_&email=".$uemail."_&phone=".$phone);
+			header("Location: ../View/promoterSignup.php?error=passwordError_&uid=".$username."&email=".$uemail."&phone=".$phone);
 			exit();
 
 		}
 		
 		elseif(strlen($password)<8){
-			header("Location: ../View/promoterSignup.php?error=passwordNotStrong_&uid=".$username."_&email=".$uemail."_&phone=".$phone);
+			header("Location: ../View/promoterSignup.php?error=passwordNotStrong_&uid=".$username."&email=".$uemail."&phone=".$phone);
 			exit();
 		}
 		
@@ -266,7 +204,7 @@ class Promoter extends Person{
 					$sql = $conn->prepare("INSERT INTO promotor(username, password, email,phone_no,promotor_name,website,fb_link) VALUES (?, ? ,?,?,?,?,?) ");
 					#$sql = $conn->prepare("INSERT INTO users(uname, email, password) VALUES (?, ? ,?) ");
 					$hPassword = password_hash($password, PASSWORD_DEFAULT);
-					$hPassword=$password;
+					#$hPassword=$password;
 					$sql->bind_param("sssssss", $username,$hPassword,$uemail,$phone,$promoterName,$website,$fblink);
 					$sql->execute();
 					$sql->store_result();
@@ -322,20 +260,16 @@ class Promoter extends Person{
 		while($sql -> fetch()){
 			$time_zone = new DateTimeZone('Asia/Colombo');
 			$current_time = new DateTime("now",$time_zone);
-//			echo gettype($start_date),$end_date;
+
 			$start_date_full = $start_date." 23:59:59";
 			$end_date_full = $end_date." 23:59:59";
 			$format = 'Y-m-d H:i:s';
-//			echo gettype($start_date),$end_date;
+
 			$startDT = DateTime::createFromFormat ( $format, $start_date_full);
 			$endDT = DateTime::createFromFormat ( $format, $end_date_full);
-//			echo "Hi<br>";
-//			echo date_format($current_time,"Y/m/d H:i:s")."<br>";
-//			echo date_format($startDT,"Y/m/d H:i:s")."<br>";
-//			echo date_format($endDT,"Y/m/d H:i:s")."<br>";
+
 			if($startDT<=$current_time and $endDT>$current_time){
 				$promotion = new Promotion($id,$category,$title,$description,$image_path,$link,$state,$start_date,$end_date,$location,$pr_username,$ad_username);
-//				echo $promotion->getTitle()."<br>";
 				$this->addPromotion($promotion);
 				
 			}

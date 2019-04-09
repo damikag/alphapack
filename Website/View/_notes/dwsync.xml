@@ -26,4 +26,19 @@
 <file name="electronic.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131978176321744072" remote="131978176320000000" Dst="0" />
 <file name="sports.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131978176450713626" remote="131978176450000000" Dst="0" />
 <file name="other.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131978176558016301" remote="131978176550000000" Dst="0" />
+<file name="style.css" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986537419842161" remote="131986537410000000" Dst="0" />
+<file name="adminView.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983968390813142" remote="131983968390000000" Dst="0" />
+<file name="header.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983930451638431" remote="131983930450000000" Dst="0" />
+<file name="footer.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983973782693499" remote="131983973780000000" Dst="0" />
+<file name="promoterIndex.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986601947420087" remote="131986601940000000" Dst="0" />
+<file name="login.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986006692556744" remote="131986006690000000" Dst="0" />
+<file name="promoterTemplate_temp.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983930451737602" remote="131983930450000000" Dst="0" />
+<file name="promoterTemplate.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131984474399591937" remote="131984474390000000" Dst="0" />
+<file name="temp.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983930451767801" remote="131983930450000000" Dst="0" />
+<file name="index.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131984419942214527" remote="131984419940000000" Dst="0" />
+<file name="movies.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983999678816934" remote="131983999670000000" Dst="0" />
+<file name="signup.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986030062038878" remote="131986030060000000" Dst="0" />
+<file name="promoterSignup.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986071429934384" remote="131986071420000000" Dst="0" />
+<file name="addPromo.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131986535631362085" remote="131986535630000000" Dst="0" />
+<file name="404.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131983995658020348" remote="131983995650000000" Dst="0" />
 </dwsync>

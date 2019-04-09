@@ -1,7 +1,7 @@
 <?php
 
-include_once("../Model/Promotion.php");
-include_once("../Model/promoter.php");
+require_once("../Model/Promotion.php");
+require_once("../Model/promoter.php");
 
 class Person{
 	
@@ -44,9 +44,10 @@ class Person{
 			}
 			$viewPromo[$i]=$tempPromo;
 		}
-		
+		$viewPromo = array_reverse($viewPromo,true);
 		return $viewPromo;
 	}
+	
 	
 	private function viewPromoterDetails($pr_username){
 		
@@ -76,7 +77,7 @@ class Person{
 	private function viewPromotionByPromoter($pr_username){
 		$dbh=new Dbh();
 		$conn = $dbh->connect();
-		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE pr_username = ?");
+		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE pr_username = ? and state = 'Accepted'");
 				
 		$sql->bind_param("s", $pr_username);
 		$sql->execute();
@@ -94,11 +95,41 @@ class Person{
 			$i++;
 		}
 		
+		$viewPromo = array_reverse($viewPromo,true);
 		return $viewPromo;
 	}
 	
 	public function getViewPromotionByPromoter($pr_username){
 		$viewPromo = $this->viewPromotionByPromoter($pr_username);
 		return $viewPromo;
+	}
+	
+	private function commentsPromoter($pr_username){
+		$dbh=new Dbh();
+		$conn = $dbh->connect();
+		$sql = $conn->prepare("SELECT * from promotor_commenting WHERE pr_username = ? ");
+				
+		$sql->bind_param("s", $pr_username);
+		$sql->execute();
+		$results = $sql->get_result();
+		$viewComments = [];
+		$i = 0;
+		while($row = $results->fetch_array(MYSQLI_ASSOC)){
+			
+			$temp = [];
+			$temp[0] = $row['cus_username'];
+			$temp[1] = $row['comment'];
+			$viewComments[$i] = $temp;
+			$i++;
+		}
+		
+		$viewComments = array_reverse($viewComments,true);
+		mysqli_close($conn);	
+		return $viewComments;
+		
+	}
+	
+	public function getCommentPromoter($pr_username){
+		return $this->commentsPromoter($pr_username);
 	}
 }

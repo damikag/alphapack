@@ -12,7 +12,7 @@ class Administrator extends Person{
 		$this->dbh = new Dbh();
 	}
 	
-	public static function login(){
+	/*public static function login(){
 		$dbh=new Dbh();
 		
 		$username = $_POST["uid"];
@@ -41,6 +41,7 @@ class Administrator extends Person{
 						session_start();
 
 						$_SESSION['userName']= $row['username'];
+						$_SESSION['userNameAdmin'] = $row['username'];
 						header("Location: ../View/adminView.php");
 						exit();
 					}
@@ -53,11 +54,11 @@ class Administrator extends Person{
 				else{
 					header("Location: ../View/login.php?error=nouser");
 					exit();
-				}*/
+				}
 			
 		}
 	}
-	}
+	}*/
 	
 	private function viewPromotion(){
 		

@@ -88,32 +88,48 @@
 								<li><a href="index.php">home</a></li>
 								<li><a href="about.html">about</a>
                                 </li>
-                                <li><a href="service.html">Service</a>
+                        		<?php
+									if(!(isset($_SESSION["userNamePromoter"]))){
+										echo ('<li><a href="#">Service</a>
                                     <ul>
-										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
+										<li><a href="promoterSignup.php">Register as a promoter</a></li>
                                     </ul>
-                                </li>
+                                </li>');
+									}
+								?>
 								<li class="logged-user">
 									<?php
 									
 									if (isset($_SESSION["userName"])){
 										
 										$username = $_SESSION["userName"];
-										echo '<a href="#" class="logged-user" background-colour="lightsalmon">
-									'.$username.'
-									</a>
-                                    <ul>
-                                        <li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
-                                        <li><a href="contact-2.html">Contact Version 2</a></li>
-                                    </ul>';
+										if (isset($_SESSION['userNameCustomer'])){
+											echo '<a href="index.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';
+										}
+										elseif(isset($_SESSION['userNamePromoter'])){
+											echo '<a href="promoterIndex.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										else{
+											echo '<a href="adminView.php" class="logged-user" background-colour="lightsalmon">
+											'.$username.'
+											</a>';											
+										}
+										
+
+										echo '<ul>
+											<li class="logout-submit"><a href="../Controller/logout.php">Logout</a></li>
+										</ul>';
 									}
 									
 									else{
-										echo '<a href="login.php">LOGIN AS A CUSTOMER</a>';		
+										echo '<a href="login.php">LOGIN</a>';		
 									}
 								?>								
-								</li>	
+								</li>		
                             </ul>
                         </div>
                     </div>

@@ -1,3 +1,17 @@
+<?php
+	include_once("../Model/promoter.php");
+	session_start();
+	if(!(isset($_SESSION['userNamePromoter']))){
+		header("Location: ../View/404.php");
+		exit();
+	}
+	$tempPerson = new Promoter($_SESSION['userName'],$_SESSION['promoterName'],$_SESSION['uemail'],null,$_SESSION['mapLocation'],$_SESSION['phone'],$_SESSION['webLink'],$_SESSION['fbLink'],$_SESSION['rating']);
+	$username = $_SESSION['userNamePromoter'];
+	//$comments = $tempPerson->getCommentPromoter($_SESSION['userName']);
+	$comments = $tempPerson->getCommentPromoter($username);
+	$subCount = $tempPerson->subscribedCustomerCount();
+		
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -43,7 +57,8 @@
     <!--SCROLL TO TOP-->
     <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
 
-    <!--START TOP AREA-->
+    <?php //include "header.php";?>
+    
     <header class="top-area" id="home">
         <div class="top-area-bg-promoter-index" data-stellar-background-ratio="0.6"></div>
         <div class="header-top-area">
@@ -77,13 +92,11 @@
 								<li><a href="#">home</a></li>
 								<li><a href="#">about</a>
                                 </li>
-                                <li><a href="#">Service</a>
+                                <!--<li><a href="#">Service</a>
                                     <ul>
 										<li><a href="promoterLogin.php">Login as a promoter</a></li>
-										<li><a href="promoterTemplate.php">Login as a promoter112</a></li>
-										<li><a href="promoterIndex.php">Login as a promoter112</a></li>
                                     </ul>
-                                </li>
+                                </li>-->
 								<li class="logged-user">
 									<?php
 									
@@ -117,7 +130,6 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="welcome-text text-center">
                             <h1>PROMOTE YOUR BUSINESS ALL AROUND SRI LANKA AND BEYOND</h1>
-                            <p>We have the maximum customer coverage around the country.</p>
                         </div>
                     </div>
                 </div>
@@ -137,9 +149,9 @@
                         </div>-->
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
-                            <h3><a href="single-blog.html">ADD PROMOTIONS</a></h3>
+                            <h3><a href="addPromo.php">ADD PROMOTIONS</a></h3>
                             <p>Click below to add a new promotion!</p>
-                            <a href="#" class="read-more">ADD</a>
+                            <a href="addPromo.php" class="read-more">ADD</a>
                         </div>
                     </div>
                 </div>
@@ -163,434 +175,100 @@
                         </div>-->
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
-                            <h3><a href="single-blog.html">VIEW PROMOTIONS</a></h3>
+							<?php
+							echo('<h3><a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'">VIEW PROMOTIONS</a></h3>');
+							?>
+                            
                             <p>Click below to view promotions of your business.</p>
-                            <a href="#" class="read-more">VIEW</a>
+							<?php
+							echo('<a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'" class="read-more">VIEW</a>');
+							?>
+                          
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--BLOG AREA END-->
-
-    <!--ABOUT AREA-->
-    <!--<section class="about-area gray-bg section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="quote-form-area wow fadeIn">
-                        <h3>Get A Quote</h3>
-                        <form class="quote-form" action="#">
-                            <p class="width-full">
-                                <input type="text" name="name" id="name" placeholder="Your Name">
-                            </p>
-                            <p class="width-half">
-                                <input type="email" name="email" id="email" placeholder="Email">
-                                <input class="pull-right" type="phone" name="phone" id="phone" placeholder="Phone">
-                            </p>
-                            <p class="width-half">
-                                <input type="text" name="type" id="type" placeholder="Type">
-                                <input class="pull-right" type="text" name="quantity" id="quantity" placeholder="Quantity">
-                            </p>
-                            <p class="width-full">
-                                <input type="text" name="destination" id="destination" placeholder="Destination">
-                            </p>
-                            <p>
-                                <textarea name="quote-message" id="quote-message" cols="30" rows="4" placeholder="Your Message..."></textarea>
-                            </p>
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-7 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12">
-                    <div class="about-content-area wow fadeIn">
-                        <div class="about-content">
-                            <h2>We have 25 years experience in this passion</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
-                            <a href="#">read more <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="about-count">
-                            <div class="single-about-count">
-                                <h4><i class="fa fa-suitcase"></i> 120</h4>
-                                <p>Project Done</p>
-                            </div>
-                            <div class="single-about-count">
-                                <h4><i class="fa fa-thumbs-o-up"></i> 100</h4>
-                                <p>Project Done</p>
-                            </div>
-                            <div class="single-about-count">
-                                <h4><i class="fa fa-users"></i> 30</h4>
-                                <p>Project Done</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!--ABOUT AREA END-->
-
-    <!--SERVICE AREA-->
-    <!--<section class="service-area-two section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>Our Service</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="service-content wow fadeIn">
-                        <h2>we offer quick & powerful logistics solution</h2>
-                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you.</p>
-                        <a href="service.html" class="read-more">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                    <div class="service-two-content wow fadeIn">
-                        <div class="row no-margin">
-                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
-                                <div class="single-service-two border">
-                                    <div class="service-icon-two"><i class="fa fa-truck"></i></div>
-                                    <h4>road freight</h4>
-                                    <p>Lorem Ipsum is simply dummy text.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
-                                <div class="single-service-two border-top border-bottom border-right">
-                                    <div class="service-icon-two"><i class="fa fa-plane"></i></div>
-                                    <h4>air freight</h4>
-                                    <p>Lorem Ipsum is simply dummy text.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
-                                <div class="single-service-two border-left border-right border-bottom">
-                                    <div class="service-icon-two"><i class="fa fa-ship"></i></div>
-                                    <h4>sea freight</h4>
-                                    <p>Lorem Ipsum is simply dummy text.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
-                                <div class="single-service-two border-right border-bottom">
-                                    <div class="service-icon-two"><i class="fa fa-dropbox"></i></div>
-                                    <h4>ware house</h4>
-                                    <p>Lorem Ipsum is simply dummy text.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
-                                <div class="single-service-two border-left border-right border-bottom">
-                                    <div class="service-icon-two"><i class="fa fa-cog"></i></div>
-                                    <h4>consulting</h4>
-                                    <p>Lorem Ipsum is simply dummy text.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 no-padding">
-                                <div class="single-service-two border-right border-bottom">
-                                    <div class="service-icon-two"><i class="fa fa-bicycle"></i></div>
-                                    <h4>fast delevary</h4>
-                                    <p>Lorem Ipsum is simply dummy text.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!--SERVICE AREA END-->
-
-    <!--BLOG AREA-->
-    <!--<section class="blog-area blog-bottom gray-bg section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>Our Service</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_1.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3><a href="single-blog.html">Ocean Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
-
-                        <div class="blog-image">
-                            <img src="img/blog/blog_2.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-plane"></i></a></div>
-                            <h3><a href="single-blog.html">Air Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-image">
-                            <img src="img/blog/blog_3.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-truck"></i></a></div>
-                            <h3><a href="single-blog.html">Street Freight</a></h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-                            <a href="single-blog.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
     <!--BLOG AREA END-->
 
     <!--TESTMONIAL AREA -->
-    <section class="testmonial-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+	
+	<!-- COMMENT SECTION -->
+	<?php			
+			echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2>what customer’s say</h2>
+                        <h2>What does customers says..</h2>
+                        <p>Customer comments.</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                    <div class="client-photo-list wow fadeIn">
-                        <div class="client_photo">
-                            <div class="item">
-                                <img src="img/testmonial/1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/2.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/3.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/testmonial/2.jpg" alt="">
-                            </div>
-                        </div>
+                	</div>
+            		</div>
+            		<div class="row">');
+			
+			if(empty($comments)){
+				echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-comment"></i></div>
+                        <h4>No comments just yet..</h4>
+                    	</div>
+                		</div>');
+			}
+			else{
+				
+				$len = sizeof($comments);
+				for ($i=0; $i<$len ; $i++){
+					$temp = $comments[$i];
+					echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    	<div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+                        <div class="service-icon-three"><i class="fa fa-comment"></i></div>
+                        <h4>'.$temp[1].'</h4>
+						<h5>'.$temp[0].'</h5>
+                    	</div>
+                		</div>');
+				}
+				
+			}
+			echo('</div>
+				</div>
+    			</section>');
+	
+	
+	?>
+	
+	<!--SUBSCRIBERS SECTION-->
+	<?php
+	
+		echo('<section class="service-area-three section-padding">
+        			<div class="container">
+            		<div class="row">
+                	<div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2>Subscribers count</h2>
+                        <p>People who have subscribed you!</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="client_nav">
-                        <span class="fa fa-angle-left testi_prev"></span>
-                        <span class="fa fa-angle-right testi_next"></span>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
-                    <div class="client-details-content wow fadeIn">
-                        <div class="client_details">
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                            <div class="item">
-                                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </q>
-                                <h3>JABIN KANE</h3>
-                                <p>CEO, TOPSMMPANEL.COM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--TESTMONIAL AREA END --> -->
-
-    <!--CLIENTS AREA-->
-    <section class="clients-area section-padding gray-bg wow fadeIn">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="client-list">
-                        <div class="single-client">
-                            <img src="img/client/1.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/2.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/3.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/4.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/5.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/1.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/2.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/3.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/4.jpg" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="img/client/5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--CLIENTS AREA END-->
-
-    <!--FOOTER AREA-->
-    <div class="footer-area dark-bg">
-        <div class="footer-area-bg"></div>
-        <div class="footer-top-area wow fadeIn">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <div class="subscribe-content">
-                            <h2>WAASI.LK</h2>
-                            <p>The biggest promotion collection in Sri Lanka.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-border"> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom-area wow fadeIn">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget footer-about"></div>
-                    </div>
-					
-                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget list-widget">
-                            <h3>Customer Service</h3>
-                            <ul>
-                                <li><a href="#">Support Forums</a></li>
-                                <li><a href="#">Communication</a></li>
-                                <li><a href="#">FAQS</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-					
-					<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget list-widget">
-                            <h3>Main Catgories</h3>
-                            <ul>
-                                <li><a href="#">Food</a></li>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Cloths and Accessories</a></li>
-								<li><a href="#">Electronic Equipments</a></li>
-                                <li><a href="#">Sports Equipments</a></li>
-								<li><a href="#">Other</a></li>
-                            </ul>
-                        </div>
-                    </div>
-					
-					<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget footer-about">
-                            <h3>About Us</h3>
-                            <p>We revolutionside the way of promotion in the country.</p>
-                            <ul>
-                                <li><i class="fa fa-phone"></i> <a href="callto:+8801911854378">011-299-9999</a></li>
-                                <li><i class="fa fa-envelope"></i> <a href="mailto:backpiper.com@gmail.com">xxx.com@gmail.com</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-border"> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <div class="footer-copyright wow fadeIn">
-                           
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <div class="footer-social-bookmark text-right wow fadeIn">
-                            <ul class="social-bookmark">
-								<li><a href="https://www.facebook.com/%E0%B7%80%E0%B7%8F%E0%B7%83%E0%B7%92lk-491144901414109/?modal=admin_todo_tour"><i class="fa fa-facebook fa-2x"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--FOOTER AREA END-->
+                	</div>
+            		</div>
+            		<div class="row">');
+	
+	
+		echo('<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+             <div class="single-service-three wow fadeInUp" data-wow-delay=".2s">
+             <div class="service-icon-three"><i class="fa fa-users"></i></div>
+             <h4>'.$subCount.'</h4>
+             </div>
+               </div>');
+	
+		echo('</div>
+			</div>
+    		</section>');
+	
+	?>
 
 
-    <!--====== SCRIPTS JS ======-->
-    <script src="../Extra/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="../Extra/js/vendor/bootstrap.min.js"></script>
-
-    <!--====== PLUGINS JS ======-->
-    <script src="../Extra/js/vendor/jquery.easing.1.3.js"></script>
-    <script src="../Extra/js/vendor/jquery-migrate-1.2.1.min.js"></script>
-    <script src="../Extra/js/vendor/jquery.appear.js"></script>
-    <script src="../Extra/js/owl.carousel.min.js"></script>
-    <script src="../Extra/js/stellar.js"></script>
-    <script src="../Extra/js/wow.min.js"></script>
-    <script src="../Extra/js/stellarnav.min.js"></script>
-    <script src="../Extra/js/contact-form.js"></script>
-    <script src="../Extra/js/jquery.sticky.js"></script>
-
-    <!--===== ACTIVE JS=====-->
-    <script src="../Extra/js/main.js"></script>
+   <?php include "footer.php";?>
 </body>
 
 </html>

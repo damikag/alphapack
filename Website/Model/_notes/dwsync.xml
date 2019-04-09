@@ -9,4 +9,16 @@
 <file name="Person.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131978153748456266" remote="131978153740000000" Dst="0" />
 <file name="customer.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131974499438390170" remote="131974499430000000" Dst="0" />
 <file name="promoter.php" server="C:/wamp64/www/Waasi.lk2/Website/" local="131974499559744629" remote="131974499550000000" Dst="0" />
+<file name="promoter.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989948852771192" remote="131989948850000000" Dst="0" />
+<file name="Promotion.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989887036729178" remote="131989887030000000" Dst="0" />
+<file name="Person.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989887051903654" remote="131989887050000000" Dst="0" />
+<file name="Administrator.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989938236487889" remote="131989938230000000" Dst="0" />
+<file name="customer.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989938789450250" remote="131989938780000000" Dst="0" />
+<file name="IStrategyLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989942480621844" remote="131989942480000000" Dst="0" />
+<file name="StrategyCustomerLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989911477665684" remote="131989911470000000" Dst="0" />
+<file name="StrategyPromoterLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989917785725339" remote="131989917780000000" Dst="0" />
+<file name="StrategyAdministratorLogin.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989913670625132" remote="131989913670000000" Dst="0" />
+<file name="StrategyCustomerSignup.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989953739433623" remote="131989953730000000" Dst="0" />
+<file name="StrategyPromoterSignup.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989960985238272" remote="131989960980000000" Dst="0" />
+<file name="IStrategySignup.php" server="C:/wamp64/www/Waasi.lk3/Website/" local="131989942925815979" remote="131989942920000000" Dst="0" />
 </dwsync>
