@@ -32,11 +32,11 @@ class StrategyPromoterLogin implements IStrategyLogin{
 				if($row = $results->fetch_array(MYSQLI_ASSOC)){
 					$passCheck = password_verify($password,$row["password"]);
 					
-					if($password==$row["password"]){
+					/*if($password==$row["password"]){
 						$passCheck=true;
 					}
 					else $passCheck=false;
-					
+					*/
 					if ($passCheck == false){
 						header("Location: ../View/login.php?error=wrongPassword");
 						exit();
