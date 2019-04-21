@@ -103,6 +103,36 @@ class Person{
 		$viewPromo = $this->viewPromotionByPromoter($pr_username);
 		return $viewPromo;
 	}
+
+    private function viewAllPromotionByPromoter($pr_username){
+        $dbh=new Dbh();
+        $conn = $dbh->connect();
+        $sql = $conn->prepare("SELECT * from confirmed_promotion WHERE pr_username = ? and (state = 'Accepted' OR state='Pending')");
+
+        $sql->bind_param("s", $pr_username);
+        $sql->execute();
+        $results = $sql->get_result();
+        $viewPromo = [];
+        $i = 0;
+        while($row = $results->fetch_array(MYSQLI_ASSOC)){
+
+            //__construct($promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$pr_username,$ad_username)
+
+            $tempPromo= new Promotion($row["promo_id"],$row["category"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row['state'],$row["start_date"],$row["end_date"],$row['location'],$row["pr_username"],$row["ad_username"]);
+
+            $viewPromo[$i] = $tempPromo;
+
+            $i++;
+        }
+
+        $viewPromo = array_reverse($viewPromo,true);
+        return $viewPromo;
+    }
+
+    public function getViewAllPromotionByPromoter($pr_username){
+        $viewPromo = $this->viewAllPromotionByPromoter($pr_username);
+        return $viewPromo;
+    }
 	
 	private function commentsPromoter($pr_username){
 		$dbh=new Dbh();

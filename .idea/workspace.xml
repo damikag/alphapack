@@ -2,8 +2,324 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93207e8a-7319-46fc-bac4-70f146b69ad7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Website/View/formValidation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Website/Controller/editPromo_submit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Website/View/editPromo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Website/View/myPromotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/alphapack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alphapack.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ERDiagram.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/ERDiagram.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/acceptRejectPromotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/acceptRejectPromotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/addPromo_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/addPromo_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/commentPromoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/commentPromoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/dbh.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/dbh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/monthly_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/monthly_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/monthly_timer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/monthly_timer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/signupPromoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/signupPromoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/subscribeCompany.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/subscribeCompany.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/unsubscribeCompany.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/unsubscribeCompany.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Controller/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/form1.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/form1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/ihover.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/ihover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/ihover.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/ihover.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/imagehover.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/imagehover.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/stellarnav.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/stellarnav.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/css/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/404.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/404.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/Logo/Untitled-1.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/Logo/Untitled-1.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/Logo/fb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/Logo/fb.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/Promoter/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/Promoter/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/Promoter/promo_bottom_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/Promoter/promo_bottom_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/about/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/about/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/about/about-cargo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/about/about-cargo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/about/about-details-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/about/about-details-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/about/about-details-bottom.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/about/about-details-bottom.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/about/about-details.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/about/about-details.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coat11s.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coat11s.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coat11s.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coat11s.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coats (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coats (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coats.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/04-fashion-upgrades-classic-coats.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/Girl_Soccer_Goalie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/Girl_Soccer_Goalie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/New folder/download.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/New folder/download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/New folder/tc.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/New folder/tc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/best-movie-covers-ever.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/best-movie-covers-ever.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/blog_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/blog_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/food-facebook-cover-timeline-banner-for-fb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/food-facebook-cover-timeline-banner-for-fb.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/howcuttingdo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/howcuttingdo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/movies.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/movies.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/perfect-selfie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/perfect-selfie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/this-is-the-best-way-to-keep-drive-thru-fries-crispy-240457828-Christian-Fischer-1024x683.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/this-is-the-best-way-to-keep-drive-thru-fries-crispy-240457828-Christian-Fischer-1024x683.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/blog/thumb-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/client/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/client/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/client/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/client/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/client/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/client/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/client/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/client/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/client/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/client/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/client/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/client/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/contact-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/contact-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/favicon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/favicon1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/footer-border.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/footer-border.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/footer-map-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/footer-map-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/04-fashion-upgrades-classic-coat11s.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/04-fashion-upgrades-classic-coat11s.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/04-fashion-upgrades-classic-coats (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/04-fashion-upgrades-classic-coats (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/04-fashion-upgrades-classic-coats.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/04-fashion-upgrades-classic-coats.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/Girl_Soccer_Goalie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/Girl_Soccer_Goalie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/movies.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/movies.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/instafeed/perfect-selfie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/instafeed/perfect-selfie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/pattarn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/pattarn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/promo/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/promo/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/promo/promo_bottom_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/promo/promo_bottom_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/promo/promo_top_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/promo/promo_top_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/promo/promo_troli.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/promo/promo_troli.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/reports/2012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/reports/2012.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/reports/2015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/reports/2015.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/reports/2016.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/reports/2016.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/reports/2017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/reports/2017.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/service/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/service/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/service/service-area-bg-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/service/service-area-bg-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/service/service-area-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/service/service-area-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/service/service-cargo-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/service/service-cargo-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/2021638-Zig-Ziglar-Quote-You-don-t-build-a-business-you-build-people-and.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/2021638-Zig-Ziglar-Quote-You-don-t-build-a-business-you-build-people-and.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/Coffee-on-the-desktop-with-people-using-the-computer-Stock-Photo-05 (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/Coffee-on-the-desktop-with-people-using-the-computer-Stock-Photo-05 (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/about-details-bottom.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/about-details-bottom.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/email-signup-1600x500.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/email-signup-1600x500.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/fygUqVnySTpxaY4y7djVfivi.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/fygUqVnySTpxaY4y7djVfivi.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/girl-blowing-bubbles.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/girl-blowing-bubbles.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/slide_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/slide_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/slide_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/slide_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/slide_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/slide_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/slider/xjmx1csashjww8j8jwyh.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/slider/xjmx1csashjww8j8jwyh.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/team/member-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/team/member-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/team/member-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/team/member-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/team/member-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/team/member-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/team/member-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/team/member-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/team/member-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/team/member-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/team/member-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/team/member-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/testmonial/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/testmonial/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/testmonial/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/testmonial/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/testmonial/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/testmonial/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/testmonial/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/testmonial/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/title-border.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/title-border.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/users/promotions/php1D03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/users/promotions/php1D03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/users/promotions/php1FB1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/users/promotions/php1FB1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/img/users/promotions/phpE3D7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/img/users/promotions/phpE3D7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/contact-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/contact-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/jquery.magnific-popup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/jquery.sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/jquery.sticky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/maps.active.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/maps.active.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/stellar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/stellar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/stellarnav.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/stellarnav.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery-1.12.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery-migrate-1.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery-migrate-1.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery.appear.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery.appear.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery.easing.1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/jquery.easing.1.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/vendor/modernizr-2.8.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Extra/js/wow.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Extra/js/wow.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/Administrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/Administrator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/IStrategyLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/IStrategyLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/IStrategySignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/IStrategySignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/Promotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/Promotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/StrategyAdministratorLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/StrategyAdministratorLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/StrategyCustomerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/StrategyCustomerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/StrategyCustomerSignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/StrategyCustomerSignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/StrategyPromoterSignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/StrategyPromoterSignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Model/promoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/promoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/_notes/dwsync.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Website/View/addPromo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/addPromo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/adminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/adminView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/cloths.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/cloths.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/electronic.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/electronic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/food.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/food.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/formValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/formValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/movies.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/movies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/other.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/other.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/promoterIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/promoterIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/promoterLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/promoterLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/promoterSignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/promoterSignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/promoterTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/promoterTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/promoterTemplate_temp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/promoterTemplate_temp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/sports.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/sports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/View/temp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/temp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/acceptRejectPromotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/acceptRejectPromotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/addPromo_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/addPromo_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/commentPromoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/commentPromoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/dbh.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/dbh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/monthly_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/monthly_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/signupPromoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/signupPromoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/subscribeCompany.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/subscribeCompany.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Controller/viewPromoterTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Controller/viewPromoterTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/ihover.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/ihover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/imagehover.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/imagehover.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/stellarnav.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/stellarnav.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/css/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/404.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/404.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/Promoter/promo_bottom_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/Promoter/promo_bottom_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/04-fashion-upgrades-classic-coat11s.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/04-fashion-upgrades-classic-coat11s.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/04-fashion-upgrades-classic-coats (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/04-fashion-upgrades-classic-coats (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/04-fashion-upgrades-classic-coats.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/04-fashion-upgrades-classic-coats.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/Girl_Soccer_Goalie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/Girl_Soccer_Goalie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/best-movie-covers-ever.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/best-movie-covers-ever.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/blog_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/food-facebook-cover-timeline-banner-for-fb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/food-facebook-cover-timeline-banner-for-fb.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/movies.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/movies.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/perfect-selfie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/perfect-selfie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/blog/this-is-the-best-way-to-keep-drive-thru-fries-crispy-240457828-Christian-Fischer-1024x683.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/blog/this-is-the-best-way-to-keep-drive-thru-fries-crispy-240457828-Christian-Fischer-1024x683.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/footer-border.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/footer-border.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/footer-map-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/footer-map-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/2021638-Zig-Ziglar-Quote-You-don-t-build-a-business-you-build-people-and.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/2021638-Zig-Ziglar-Quote-You-don-t-build-a-business-you-build-people-and.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/Coffee-on-the-desktop-with-people-using-the-computer-Stock-Photo-05 (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/Coffee-on-the-desktop-with-people-using-the-computer-Stock-Photo-05 (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/email-signup-1600x500.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/email-signup-1600x500.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/fygUqVnySTpxaY4y7djVfivi.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/fygUqVnySTpxaY4y7djVfivi.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/girl-blowing-bubbles.png" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/girl-blowing-bubbles.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/slide_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/slide_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/img/slider/xjmx1csashjww8j8jwyh.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/img/slider/xjmx1csashjww8j8jwyh.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/contact-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/contact-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/jquery.sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/jquery.sticky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/stellar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/stellar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/stellarnav.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/stellarnav.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery-1.12.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery-migrate-1.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery-migrate-1.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery.appear.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery.appear.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery.easing.1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/jquery.easing.1.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/modernizr-2.8.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Extra/js/wow.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Extra/js/wow.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/Administrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/Administrator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/IStrategyLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/IStrategyLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/IStrategySignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/IStrategySignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/Promotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/Promotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyAdministratorLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyAdministratorLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyAdministratorLogin.php.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyAdministratorLogin.php.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyCustomerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyCustomerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyCustomerSignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyCustomerSignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyPromoterLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyPromoterLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyPromoterLogin.php.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyPromoterLogin.php.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/StrategyPromoterSignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/StrategyPromoterSignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Model/promoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Model/promoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/addPromo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/addPromo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/adminView.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/adminView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/cloths.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/cloths.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/electronic.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/electronic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/food.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/food.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/movies.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/movies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/other.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/other.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/promoterIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/promoterIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/promoterLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/promoterLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/promoterSignup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/promoterSignup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/promoterTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/promoterTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/promoterTemplate_temp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/promoterTemplate_temp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/sports.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/sports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/View/temp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/View/temp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Website/Controller/dbh.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Website/Controller/dbh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Website/Model/IStrategyLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Website/Model/IStrategyLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Website/Model/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Website/Model/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Website/Model/Promotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Website/Model/Promotion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/Website/Website/Model/promoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Website/Website/Model/promoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/waasi.lk_version1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/waasi.lk_version1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/waasi_lk_version2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/waasi_lk_version2.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,31 +332,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/View/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+            <state relative-caret-position="2310">
+              <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/Extra/css/responsive.css">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Website/View/addPromo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3210">
+              <caret line="214" selection-start-line="214" selection-end-line="214" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/View/formValidation.js">
+        <entry file="file://$PROJECT_DIR$/Website/Controller/editPromo_submit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="397">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Website/View/myPromotion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3390">
+              <caret line="226" column="17" selection-start-line="226" selection-start-column="17" selection-end-line="226" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Website/View/addPromo.php">
+        <entry file="file://$PROJECT_DIR$/Website/View/editPromo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="209" column="89" selection-start-line="209" selection-start-column="89" selection-end-line="209" selection-end-column="89" />
+            <state relative-caret-position="187">
+              <caret line="226" column="99" selection-start-line="226" selection-start-column="99" selection-end-line="226" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Website/View/formValidation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Website/Model/Promotion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3795">
+              <caret line="253" column="41" lean-forward="true" selection-start-line="253" selection-start-column="41" selection-end-line="253" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -70,33 +417,29 @@
         <option value="$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php" />
         <option value="$PROJECT_DIR$/Website/View/_notes/formValidation.js" />
         <option value="$PROJECT_DIR$/Website/View/style.css" />
-        <option value="$PROJECT_DIR$/Website/View/formValidation.js" />
         <option value="$PROJECT_DIR$/Website/View/addPromo.php" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/alphapack.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/Website/Controller/addPromo_submit.php" />
+        <option value="$PROJECT_DIR$/Website/Controller/login.php" />
+        <option value="$PROJECT_DIR$/Website/Model/Person.php" />
+        <option value="$PROJECT_DIR$/Website/View/myPromotion.php" />
+        <option value="$PROJECT_DIR$/Website/View/formValidation.js" />
+        <option value="$PROJECT_DIR$/Website/Model/Promotion.php" />
+        <option value="$PROJECT_DIR$/Website/Controller/editPromo_submit.php" />
+        <option value="$PROJECT_DIR$/Website/View/editPromo.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1303" />
-    <option name="height" value="780" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1161" />
+    <option name="height" value="662" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,26 +462,6 @@
               <item name="alphapack" type="b2602c69:ProjectViewProjectNode" />
               <item name="alphapack" type="462c0819:PsiDirectoryNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="Extra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphapack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphapack" type="462c0819:PsiDirectoryNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="Extra" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphapack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphapack" type="462c0819:PsiDirectoryNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="Extra" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphapack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphapack" type="462c0819:PsiDirectoryNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -147,20 +470,15 @@
               <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="alphapack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphapack" type="462c0819:PsiDirectoryNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="_notes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -194,18 +512,21 @@
       <option name="presentableId" value="Default" />
       <updated>1554882732030</updated>
       <workItem from="1554882733425" duration="13537000" />
-      <workItem from="1555387693518" duration="12085000" />
+      <workItem from="1555387693518" duration="18186000" />
+      <workItem from="1555593277824" duration="14024000" />
+      <workItem from="1555844770248" duration="13317000" />
+      <workItem from="1555868578478" duration="1009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25622000" />
+    <option name="totallyTimeSpent" value="60073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25379092" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26735833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -235,44 +556,6 @@
         <state relative-caret-position="-540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/waasi_lk_version2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Model/StrategyAdministratorLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Controller/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Controller/dbh.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Model/Person.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="122" column="17" lean-forward="true" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Website/Model/Administrator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -287,16 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Model/promoter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Controller/addPromo_submit.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Website/View/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -304,27 +577,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/View/login.php">
+    <entry file="file://$PROJECT_DIR$/Website/Model/IStrategyLogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/StrategyAdministratorLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Website/Extra/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/View/formValidation.js">
+    <entry file="file://$PROJECT_DIR$/Website/Model/promoter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="159" column="54" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-518">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Controller/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/StrategyCustomerLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Controller/addPromo_submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="166" selection-end-line="118" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/promoterTemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3435">
+          <caret line="229" column="41" selection-end-line="431" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/promoterIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="153" column="76" lean-forward="true" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/Person.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waasi_lk_version2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Controller/dbh.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/StrategyCustomerSignup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Website/View/addPromo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="209" column="89" selection-start-line="209" selection-start-column="89" selection-end-line="209" selection-end-column="89" />
+        <state relative-caret-position="3210">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/myPromotion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3390">
+          <caret line="226" column="17" selection-start-line="226" selection-start-column="17" selection-end-line="226" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/formValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/Promotion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3795">
+          <caret line="253" column="41" lean-forward="true" selection-start-line="253" selection-start-column="41" selection-end-line="253" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Controller/editPromo_submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/editPromo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="226" column="99" selection-start-line="226" selection-start-column="99" selection-end-line="226" selection-end-column="99" />
         </state>
       </provider>
     </entry>

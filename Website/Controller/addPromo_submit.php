@@ -19,7 +19,8 @@ if (isset($_POST["addPromo-submit"])){
 	$state="pending";
 	$promoID=null;
 	$pr_username="demoPromotor1";
-	$ad_username="admin1";
+	$pr_username=$_SESSION['userName'];
+	$ad_username="admin";
 	
 	
 	require_once "../Model/Promotion.php";
@@ -30,7 +31,7 @@ if (isset($_POST["addPromo-submit"])){
 	$validation=Promotion::validatePromotion($promotion);
 	
 	if($validation){
-		header("Location: ../View/addPromo.php?error=".$validation."_&titile=".$titile."_&description=".$description);
+		header("Location: ../View/addPromo.php?error=".$validation."_&titile=".$title."_&description=".$description);
 		exit();
 	}
 	
@@ -85,13 +86,14 @@ if (isset($_POST["addPromo-submit"])){
 			echo "Sorry, there was an error uploading your file.";
 			header("Location: ../View/addPromo.php?error=fileUploadFailed");
 			exit();
+
 		}
 	}
 	// End of file upload
 
 	//$promotion->image=("../Extra/img/users/promotions/".$image);
 	$tmp=$_SESSION["userName"];
-	$promotion=new Promotion(null,$category,$title,$description,("../Extra/img/users/promotions/".$image),$link,$state,$startTime,$endTime,$location,$tmp,null);
+	$promotion=new Promotion(null,$category,$title,$description,("../Extra/img/users/promotions/".$image),$link,$state,$startTime,$endTime,$location,$tmp,$ad_username);
 	
 	Promotion::addPromotionToDB($promotion);
 

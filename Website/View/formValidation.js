@@ -43,7 +43,49 @@ $(document).ready(function() {
         }
     });
 
+    $("#editForm").validate({
+        rules: {
+            title: 'required',
+            description: 'required',
+            fileToUpload:{
 
+                accept:"jpg,png,jpeg,gif"
+
+            },
+            // fileToUpload: 'required',
+            url:'required',
+            field: {
+                required: true,
+                accept: "audio/*"
+            }
+            /*email: {
+                required: true,
+                email: true,
+            },
+            psword: {
+                required: true,
+                minlength: 8,
+            }*/
+        },
+        messages: {
+            title: 'This field is required',
+            description: 'This field is required',
+            fileToUpload: {
+
+                accept: "Only image type jpg/png/jpeg/gif is allowed"
+            },
+            url: 'Enter a valid URL'
+
+            /*,
+            user_email: 'Enter a valid email',
+            psword: {
+                minlength: 'Password must be at least 8 characters long'
+            }*/
+        },
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
 
 
 

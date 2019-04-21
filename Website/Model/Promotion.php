@@ -164,7 +164,7 @@ class Promotion{
 	
 	public static function readPromotionFromDB($promoID){
 		$dbh=new Dbh();
-		$conn = $this->dbh->connect();
+		$conn = $dbh->connect();
 		$sql = $conn->prepare("SELECT * from confirmed_promotion WHERE promo_id = ?");
 				
 		$sql->bind_param("s", $promoID);
@@ -172,8 +172,8 @@ class Promotion{
 		$results = $sql->get_result();
 		if($row = $results->fetch_array(MYSQLI_ASSOC)){
 
-			//$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
-			return new Promotion($row["promo_id"],$row["category"],$row["ad_username"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row["start_date"],$row["end_date"],$row["location"],$row["state"]);
+			//$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$pr_username,$ad_username
+            return new Promotion($row["promo_id"],$row["category"],$row["title"],$row["description"],$row["image_path"],$row["link"],$row["state"],$row["start_date"],$row["end_date"],$row["location"],$row['pr_username'],$row["ad_username"]);
 		}
 
 		else{
@@ -245,8 +245,70 @@ class Promotion{
 		}
 	}
 	
-	public static function updateToDB(){
-		
+	public static function updateToDB($promotion){
+        try{
+            $dbh=new Dbh();
+            $conn = $dbh->connect();
+
+
+            if(empty($promotion->image)){
+                //$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
+                $sql = $conn->prepare("UPDATE confirmed_promotion SET category=?,title=?,description=?,link=?,state=?,start_date=?,end_date=?,location=?,pr_username=?,ad_username=? WHERE promo_id=? ");
+
+                $sql->bind_param('sssssssssss',$promotion->category,$promotion->title,$promotion->description,$promotion->link,$promotion->state,$promotion->startDate,$promotion->endDate,$promotion->location,$promotion->pr_username,$promotion->ad_username,$promotion->promoID);
+
+
+
+                if($sql->execute()){
+                    echo("successsssssssssss");
+                    $sql->store_result();
+                    header("Location: ../View/myPromotion.php?message=sucess");
+                    exit();
+                }
+                else{
+                    echo("faileddddddddd");
+                    echo(mysqli_error($conn));
+                    //var_dump($promotion);
+
+                    //var_dump($_SESSION[]);
+                    header("Location: ../View/editPromo.php?error=UnableToRecordTheEntry");
+                    exit();
+                }
+
+
+            }
+            else{
+                //$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
+                $sql = $conn->prepare("UPDATE confirmed_promotion SET category=?,title=?,description=?,image_path=?,link=?,state=?,start_date=?,end_date=?,location=?,pr_username=?,ad_username=? WHERE promo_id=? ");
+
+                $sql->bind_param('ssssssssssss',$promotion->category,$promotion->title,$promotion->description,$promotion->image,$promotion->link,$promotion->state,$promotion->startDate,$promotion->endDate,$promotion->location,$promotion->pr_username,$promotion->ad_username,$promotion->promoID);
+
+
+
+                if($sql->execute()){
+                    echo("successsssssssssss");
+                    $sql->store_result();
+                    header("Location: ../View/myPromotion.php?message=sucess");
+                    exit();
+                }
+                else{
+                    echo("faileddddddddd");
+                    echo(mysqli_error($conn));
+                    //var_dump($promotion);
+
+                    //var_dump($_SESSION[]);
+                    header("Location: ../View/editPromo.php?error=UnableToRecordTheEntry");
+                    exit();
+                }
+
+
+            }
+
+
+        }
+        catch(Exception $e){
+
+        }
 	}
 	
 	/*private function loginFunction(){
