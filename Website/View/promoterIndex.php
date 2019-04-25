@@ -176,13 +176,17 @@
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><!--<i class="fa fa-ship"></i>--></a></div>
 							<?php
-							echo('<h3><a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'">VIEW PROMOTIONS</a></h3>');
-							?>
+							//echo('<h3><a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'">VIEW PROMOTIONS</a></h3>');
+                                echo('<h3><a href="myPromotion.php">VIEW PROMOTIONS</a></h3>');
+
+                            ?>
                             
                             <p>Click below to view promotions of your business.</p>
 							<?php
-							echo('<a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'" class="read-more">VIEW</a>');
-							?>
+							//echo('<a href="promoterTemplate.php?pr_username='.$_SESSION['userName'].'" class="read-more">VIEW</a>');
+                                echo('<a href="myPromotion.php" class="read-more">VIEW</a>');
+
+                            ?>
                           
                         </div>
                     </div>
