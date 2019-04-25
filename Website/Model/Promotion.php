@@ -310,7 +310,47 @@ class Promotion{
 
         }
 	}
-	
+
+    public static function deletePromo($promoID){
+        try{
+            $dbh=new Dbh();
+            $conn = $dbh->connect();
+
+
+
+
+            //$promoID,$category,$title,$description,$image,$link,$state,$startDate,$endDate,$location,$promoter,$ad_username
+            $sql = $conn->prepare("UPDATE confirmed_promotion SET state='Deleted' WHERE promo_id=? ");
+
+            $sql->bind_param('s',$promoID);
+
+
+
+            if($sql->execute()){
+                echo("successsssssssssss");
+                $sql->store_result();
+                header("Location: ../View/myPromotion.php?message=DeleteSuccessful");
+                exit();
+            }
+            else{
+                echo("faileddddddddd");
+                echo(mysqli_error($conn));
+                //var_dump($promotion);
+
+                //var_dump($_SESSION[]);
+                header("Location: ../View/myPromotion.php?error=unableToDeleteRecord");
+                exit();
+                }
+
+
+
+
+
+        }
+        catch(Exception $e){
+
+        }
+    }
 	/*private function loginFunction(){
 			
 		$username = $_POST["uid"];

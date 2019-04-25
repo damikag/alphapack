@@ -205,6 +205,7 @@ if(!isset($_SESSION["userNamePromoter"])){
                     for ($i=0; $i<$len; $i++){
                         $tempPromo = $viewPromo[$i];
                         $editurl='editPromo.php?promoID='.$tempPromo->getPromoID();
+                        $deleteurl='../Controller/deletePromo.php?promoID='.$tempPromo->getPromoID();
                         echo('<div class="single-blog wow fadeIn">
 								<div class="blog-image">
 									<img src="'.$tempPromo->getImage().'" alt="">
@@ -221,6 +222,7 @@ if(!isset($_SESSION["userNamePromoter"])){
 								</div>
 								
 								<div class="blog-details"> <a href='.$editurl.'  class="btn btn-primary">Edit</a></div>
+								<div class="blog-details"> <a href='.$deleteurl.'  class="btn btn-primary">Delete</a></div>
 								
 							</div><br />');
                     }

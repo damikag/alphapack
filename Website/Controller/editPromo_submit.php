@@ -34,7 +34,9 @@ if (isset($_POST["editPromo-submit"])){
         exit();
     }
 
-    if(empty($_FILES['fileToUpload'])==false){
+    //if(empty($_FILES['fileToUpload'])==false){
+    if($_FILES['fileToUpload']["error"] == 0){
+
 
         // File upload
 
