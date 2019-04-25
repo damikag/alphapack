@@ -186,6 +186,8 @@ if(!isset($_SESSION["userNamePromoter"])){
 <section class="blog-area blog-page section-padding">
     <div class="container">
         <div class="row">
+            <h1>Your Promotions</h1>
+            <br>
             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 
                 <?php
@@ -212,213 +214,29 @@ if(!isset($_SESSION["userNamePromoter"])){
 								</div>
 								<div class="blog-details">
 									<div class="blog-meta"></div>
-									<h3>Category - '.$tempPromo->getCategory().'</h3>
-									<div class="post-date"><a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getStartDate().'</a>&nbsp; &nbsp; to &nbsp; &nbsp; <a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getEndDate().'</a></div>
-									<br />
-									<h5>content</h5>
-									<p>'.$tempPromo->getDescription().'</p>
-									<h5>State</h5>
-									<p>'.$tempPromo->getState().'</p>
+									<label for="pcategory">Category:</label>
+									<p id="pcategory">'.$tempPromo->getCategory().'</p>
+									<label for="ptitle">Title:</label>
+									<p id="ptitle">'.$tempPromo->getTitle().'</p>
+									<label for="pdescription">Description:</label>
+									<p id=""pdescription>'.$tempPromo->getDescription().'</p>
+									<label for="validtime">Valied Time Period:</label>
+									<p id="validtime"><div  class="post-date"><a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getStartDate().'</a>&nbsp; &nbsp; to &nbsp; &nbsp; <a href="#"><i class="fa fa-calendar"></i>'.$tempPromo->getEndDate().'</a></div>
+									</p>
+									<label for="pstate">State:</label>
+									<p id="pstate">'.$tempPromo->getState().'</p>
 								</div>
 								
-								<div class="blog-details"> <a href='.$editurl.'  class="btn btn-primary">Edit</a></div>
-								<div class="blog-details"> <a href='.$deleteurl.'  class="btn btn-primary">Delete</a></div>
-								
+								<div class="blog-details">
+								     <a href='.$editurl.'  class="btn btn-primary">Edit</a>
+								     <a href='.$deleteurl.'  class="btn btn-primary">Delete</a>
+                                </div>
 							</div><br />');
                     }
                 }
                 ?>
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                <div class="sidebar-area wow fadeIn">
-                    <?php
-
-                    if (isset($_SESSION['userNameCustomer'])){
-                        if ($check){
-                            echo('<div class="single-sidebar-widget widget_categories">
-								<form class="quote-form subscribe" action="../Controller/unsubscribeCompany.php?pr_username='.$_GET['pr_username'].'" method="post">
-								<button type="submit" name="subscribe-submit">unSubscribe</button>	
-								</form>
-                   	  			</div>');
-                        }
-                        else{
-                            echo('<div class="single-sidebar-widget widget_categories">
-								<form class="quote-form subscribe" action="../Controller/subscribeCompany.php?pr_username='.$_GET['pr_username'].'" method="post">
-								<button type="submit" name="subscribe-submit">Subscribe</button>	
-								</form>
-                   	  			</div>');
-                        }
-
-                    }
-
-                    ?>
-                    <!-- <div class="single-sidebar-widget widget_categories">
-                           <form class="quote-form subscribe" action="../Controller/subscribeCompany.php" method='post'>
-                               <button type="submit" name="subscribe-submit">Subscribe</button>
-                           </form>
-                        </div>-->
-                    <div class="single-sidebar-widget widget_search">
-                        <h4>Search</h4>
-                        <form action="#">
-                            <input type="text" name="s" id="s" placeholder="Search Here...">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="single-sidebar-widget widget_search">
-                        <h4>Contact us</h4>
-                        <?php
-
-                        $email = $tempPromoter->getEmail();
-                        $fb = $tempPromoter->getFblink();
-                        $phone = $tempPromoter->getPhoneNumber();
-                        $phoneVal = strval($phone);
-                        $web = $tempPromoter->getWeblink();
-                        if(is_null($fb)){
-                            if(is_null($web)){
-                                echo('<ul>
-										<li><i class="fa fa-phone"></i> <a href="callto:'.$phone.'">&nbsp;&nbsp;'.$phoneVal.'</a></li>
-										<li><i class="fa fa-envelope"></i> <a href="mailto:'.$email.'">&nbsp;'.$email.'</a></li>
-										</ul>');
-                            }
-                            else{
-                                echo('<ul>
-										<li><i class="fa fa-phone"></i> <a href="callto:'.$phone.'">&nbsp;&nbsp;'.$phoneVal.'</a></li>
-										<li><i class="fa fa-envelope"></i> <a href="mailto:'.$email.'">&nbsp;'.$email.'</a></li>
-										<li><i class="fa fa-globe"></i> <a href="'.$web.'">&nbsp;&nbsp;Web Link</a></li>
-										</ul>');
-                            }
-                        }
-                        elseif(is_null($web)){
-                            echo('<ul>
-									<li><i class="fa fa-phone"></i> <a href="callto:'.$phone.'">&nbsp;&nbsp;'.$phoneVal.'</a></li>
-									<li><i class="fa fa-envelope"></i> <a href="mailto:'.$email.'">&nbsp;'.$email.'</a></li>
-									<li><i class="fa fa-facebook"></i> <a href="'.$fb.'">&nbsp;&nbsp;&nbsp;Facebook Link</a></li>
-									</ul>');
-                        }
-                        else{
-                            echo('<ul>
-									<li><i class="fa fa-phone"></i> <a href="callto:'.$phone.'">&nbsp;&nbsp;'.$phoneVal.'</a></li>
-									<li><i class="fa fa-envelope"></i> <a href="mailto:'.$email.'">&nbsp;'.$email.'</a></li>
-									<li><i class="fa fa-facebook"></i> <a href="'.$fb.'">&nbsp;&nbsp;&nbsp;Facebook Link</a></li>
-									<li><i class="fa fa-globe"></i> <a href="'.$web.'">&nbsp;&nbsp;Web Link</a></li>
-									</ul>');
-                        }
-
-
-
-
-
-
-                        ?>
-                        <!--<ul>
-                            <li><i class="fa fa-phone"></i> <a href="callto:+8801911854378">&nbsp;&nbsp;011-299-9999</a></li>
-                            <li><i class="fa fa-envelope"></i> <a href="mailto:backpiper.com@gmail.com">&nbsp;xxx.com@gmail.com</a></li>
-                            <li><i class="fa fa-facebook"></i> <a href="#">&nbsp;&nbsp;&nbsp;Facebook Link</a></li>
-                            <li><i class="fa fa-globe"></i> <a href="#">&nbsp;&nbsp;Facebook Link</a></li>
-                        </ul>-->
-                    </div>
-                    <div class="single-sidebar-widget widget_categories">
-                        <h3>Star rating</h3>
-                        <div class="box">
-
-                        </div>
-                    </div>
-                    <?php
-
-                    if(isset($_SESSION['userNameCustomer'])){
-                        echo('<div class="single-sidebar-widget widget_categories">
-									<h3>Give a comment</h3>
-									<form class="quote-form" action="../Controller/commentPromoter.php?pr_username='.$_GET['pr_username'].'" method = "post">
-									<p>
-									<textarea name="comment" id="quote-message" cols="30" rows="4" placeholder="Your Comment..."></textarea>
-									</p>
-									<button type="submit" name="commentPromoter">Comment</button>
-									</form>
-                    				</div>');
-                    }
-
-                    $len = sizeof($comments);
-                    echo('<div class="single-sidebar-widget widget_categories">
-								<h3>comments</h3>
-								<ul>');
-
-                    if ($len>0){
-
-                        if ($len>5){
-                            for($i=0;$i<5;$i++){
-                                $temp = $comments[$i];
-                                echo('<li><h5>"'.$temp[1].'"&nbsp;-&nbsp;'.$temp[0].'</h5></li>');
-                            }
-                        }
-                        else{
-                            for($i=0;$i<$len;$i++){
-                                $temp = $comments[$i];
-                                echo('<li><h5>"'.$temp[1].'"&nbsp;-&nbsp;'.$temp[0].'</h5></li>');
-                            }
-
-                        }
-                    }
-                    else{
-                        echo('<li><a href="#">No comments just yet!</a></li>');
-                    }
-
-                    echo ('</ul>
-							</div>');
-
-                    ?>
-                    <!--<div class="single-sidebar-widget widget_categories">
-                        <h3>comments</h3>
-                        <form class="quote-form" action="#">
-                        </form>
-                    </div>-->
-
-                    <div class="single-sidebar-widget widget_categories">
-                        <h4>Main Categories</h4>
-                        <ul>
-                            <li><a href="food.php">Food</a></li>
-                            <li><a href="cloths.php">Cloths and Accessories</a></li>
-                            <li><a href="movies.php">Movies</a></li>
-                            <li><a href="electronic.php">Electronic Devices</a></li>
-                            <li><a href="sports.php">Sports Equipments</a></li>
-                            <li><a href="other.php">Other</a></li>
-                        </ul>
-                    </div>
-                    <!--<div class="single-sidebar-widget widget_recent_entries">
-                         <h4>Latest Post</h4>
-                         <ul>
-                             <li>
-                                 <div class="alignleft"><img src="img/blog/thumb-1.jpg" alt=""></div>
-                                 <a href="#">2016 Latest News From Logistics Transportation Service.</a>
-                             </li>
-                             <li>
-                                 <div class="alignleft"><img src="img/blog/thumb-2.jpg" alt=""></div>
-                                 <a href="#">2016 Latest News From Logistics Cargo Service.</a>
-                             </li>
-                             <li>
-                                 <div class="alignleft"><img src="img/blog/thumb-3.jpg" alt=""></div>
-                                 <a href="#">2016 Latest News From Logistics Transportation Service.</a>
-                             </li>
-                             <li>
-                                 <div class="alignleft"><img src="img/blog/thumb-4.jpg" alt=""></div>
-                                 <a href="#">2016 Latest News From Logistics Cargo Service.</a>
-                             </li>
-                         </ul>
-                     </div>-->
-                    <!-- <div class="single-sidebar-widget widget_tag_cloud">
-                         <h4>Pupular Tags</h4>
-                         <div class="tagcloud">
-                             <a href="#">Design</a>
-                             <a href="#">Transport</a>
-                             <a href="#">Cargo</a>
-                             <a href="#">Freight</a>
-                             <a href="#">Logistic</a>
-                             <a href="#">Truck</a>
-                             <a href="#">Shipping</a>
-                             <a href="#">ware house</a>
-                         </div>
-                     </div>-->
-                </div>
-            </div>
+<!--
         </div>
         <!--<div class="row">
             <div class="col-md-12 col-xs-12">

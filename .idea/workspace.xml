@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93207e8a-7319-46fc-bac4-70f146b69ad7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Website/Controller/deletePromo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Website/Controller/editPromo_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Controller/editPromo_submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Website/Model/Promotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/Model/Promotion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Website/View/myPromotion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/myPromotion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Website/View/promoterIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/Website/View/promoterIndex.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,47 +12,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/View/addPromo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3210">
-              <caret line="214" selection-start-line="214" selection-end-line="214" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/Controller/editPromo_submit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Website/Controller/deletePromo.php">
+        <entry file="file://$PROJECT_DIR$/Website/View/myPromotion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/View/editPromo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="128">
+              <caret line="216" column="36" selection-start-line="216" selection-start-column="36" selection-end-line="216" selection-end-column="36" />
+              <folding>
+                <element signature="e#563#569#0" expanded="true" />
+                <element signature="e#570#576#0" expanded="true" />
+                <element signature="e#580#586#0" expanded="true" />
+                <element signature="e#587#593#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,17 +30,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/Model/Promotion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1815">
-              <caret line="331" column="73" selection-start-line="331" selection-start-column="73" selection-end-line="331" selection-end-column="73" />
+            <state relative-caret-position="-705">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/View/promoterIndex.php">
+        <entry file="file://$PROJECT_DIR$/Website/View/editPromo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+            <state relative-caret-position="330">
+              <caret line="226" column="108" lean-forward="true" selection-start-line="225" selection-start-column="24" selection-end-line="226" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -111,11 +76,11 @@
         <option value="$PROJECT_DIR$/Website/Model/Person.php" />
         <option value="$PROJECT_DIR$/Website/View/formValidation.js" />
         <option value="$PROJECT_DIR$/Website/View/promoterIndex.php" />
-        <option value="$PROJECT_DIR$/Website/View/myPromotion.php" />
         <option value="$PROJECT_DIR$/Website/Controller/editPromo_submit.php" />
         <option value="$PROJECT_DIR$/Website/View/editPromo.php" />
         <option value="$PROJECT_DIR$/Website/Model/Promotion.php" />
         <option value="$PROJECT_DIR$/Website/Controller/deletePromo.php" />
+        <option value="$PROJECT_DIR$/Website/View/myPromotion.php" />
       </list>
     </option>
   </component>
@@ -207,12 +172,12 @@
       <workItem from="1555844770248" duration="13317000" />
       <workItem from="1555868578478" duration="1285000" />
       <workItem from="1555917944664" duration="790000" />
-      <workItem from="1556167051115" duration="6926000" />
+      <workItem from="1556167051115" duration="9797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68065000" />
+    <option name="totallyTimeSpent" value="70936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="7" />
@@ -354,13 +319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/View/addPromo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3210">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Website/View/formValidation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
@@ -372,19 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="188" column="59" selection-start-line="188" selection-start-column="45" selection-end-line="188" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/View/myPromotion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="207" column="50" selection-start-line="207" selection-start-column="50" selection-end-line="207" selection-end-column="50" />
-          <folding>
-            <element signature="e#15#21#0" expanded="true" />
-            <element signature="e#22#28#0" expanded="true" />
-            <element signature="e#15#21#0" expanded="true" />
-            <element signature="e#22#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -402,27 +347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Model/Promotion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="331" column="73" selection-start-line="331" selection-start-column="73" selection-end-line="331" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/Controller/editPromo_submit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/View/editPromo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Website/Model/StrategyPromoterLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -434,6 +358,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Controller/editPromo_submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/addPromo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/Model/Promotion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-705">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/editPromo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="226" column="108" lean-forward="true" selection-start-line="225" selection-start-column="24" selection-end-line="226" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/View/myPromotion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="216" column="36" selection-start-line="216" selection-start-column="36" selection-end-line="216" selection-end-column="36" />
+          <folding>
+            <element signature="e#563#569#0" expanded="true" />
+            <element signature="e#570#576#0" expanded="true" />
+            <element signature="e#580#586#0" expanded="true" />
+            <element signature="e#587#593#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
