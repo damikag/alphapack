@@ -214,7 +214,7 @@ if(!isset($_SESSION["userNamePromoter"])){
 								</div>
 								<div class="blog-details">
 									<div class="blog-meta"></div>
-									<label for="pcategory">Category:</label>
+									    <label for="pcategory">Category:</label>
 									<p id="pcategory">'.$tempPromo->getCategory().'</p>
 									<label for="ptitle">Title:</label>
 									<p id="ptitle">'.$tempPromo->getTitle().'</p>
