@@ -1,0 +1,6 @@
+Redirect /Waasi.lk5/System_Design/ http://localhost/Waasi.lk5/Website/View/
+Redirect /Waasi.lk5/Website/Model/ http://localhost/Waasi.lk5/Website/View/
+Redirect /Waasi.lk5/Website/Extra/ http://localhost/Waasi.lk5/Website/View/
+Redirect /Waasi.lk5/Website/Controller/  http://localhost/Waasi.lk5/Website/View/
+
+
